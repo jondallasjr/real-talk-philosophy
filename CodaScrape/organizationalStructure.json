@@ -1,0 +1,292 @@
+{
+    "Organizational Structure": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Team",
+          "display": true,
+          "format": {
+            "type": "select",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Projects",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Description",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Artwork",
+            "Description": "Managing the development and maintenance of artwork exploring the moral and emotional dilemma of each issue"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Expert Interviews",
+            "Description": "Identifying, contacting, scheduling, and conducting recorded video/audio interviews with experts in fields related to topics we explore"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Game Design",
+            "Description": "Managing the development and maintenance of games encouraging collaboration while exploring the major arguments around contemporary divisive issues"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Healthy Conversation Guidelines",
+            "Description": "Managing the development and maintenance of Healthy Conversation Guidelines to be taught at each event, in online videos, in emails, etc."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Infographic Design",
+            "Description": "Managing the development and maintenance of infographics condensing the research into easily digestible visual reference sheets"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Misc Event Resources",
+            "Description": "Managing the development of and maintenance any other resources needed for events"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Music",
+            "Description": "Managing the development and maintenance of songs exploring the moral and emotional dilemma of each issue"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Presentation Design",
+            "Description": "Managing the development and maintenance of presentations based on the research, artwork, etc. developed for each topic"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Presenter Notes",
+            "Description": "Managing the development and maintenance of Presenter Notes to accompany Presentations"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Research",
+            "Description": "Managing the development and maintenance of Research exploring a contemporary divisive issue"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Resource Development",
+            "Projects": "Vocabulary Sheets",
+            "Description": "Managing the development and maintenance of vocabulary sheets breaking down keywords related to each topic"
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Community Voices",
+            "Description": "Planning, coordinating, and facilitating TEDx-style Community Voices events."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "EFL",
+            "Description": "Using Event Resources to produce and facilitate online and in-person classes teaching English as a Foreign Language."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Festivals",
+            "Description": "Using Event Resources to produce and facilitate events/workshops at Festivals."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Local Chapter Leaders (LCLs)",
+            "Description": "Using Event Resources to produce and facilitate weekly/biweekly/monthly live, in-person local community events."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Podcast Production",
+            "Description": "Using Event Resources to produce podcasts."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Online Forum",
+            "Description": "Using Event Resources to produce and facilitate international, online events."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Video Production",
+            "Description": "Using Event Resources to produce videos for free online consumption."
+          }
+        },
+        {
+          "values": {
+            "Team": "Event Production",
+            "Projects": "Yogic Philosophy",
+            "Description": "Using Event Resources to produce and facilitate classes exploring the philosophy of yoga for Yoga Teacher Trainings"
+          }
+        },
+        {
+          "values": {
+            "Team": "Marketing",
+            "Projects": "Advertising (Paid)",
+            "Description": "Maximizing event exposure through paid advertizing on Social Media, etc."
+          }
+        },
+        {
+          "values": {
+            "Team": "Marketing",
+            "Projects": "Advertising (Organic)",
+            "Description": "Maximizing event exposure through free, organic advertizing on Social Media, etc."
+          }
+        },
+        {
+          "values": {
+            "Team": "Marketing",
+            "Projects": "Customer Data & Satisfaction",
+            "Description": "Managing the collection and analysis of customer data so we can stay connected, ensure diversity, measure impact, and track event success."
+          }
+        },
+        {
+          "values": {
+            "Team": "Marketing",
+            "Projects": "Brand",
+            "Description": "Managing the development, maintenance, and iteration of identifiable aesthetic standards including fonts, color palette, logo, etc."
+          }
+        },
+        {
+          "values": {
+            "Team": "Marketing",
+            "Projects": "Email Marketing",
+            "Description": "Managing the creation and deployment of regular external emails keeping customers engaged and informed."
+          }
+        },
+        {
+          "values": {
+            "Team": "Marketing",
+            "Projects": "Website",
+            "Description": "Managing the creation and improvement of internal and external website to keep customers and team members informed."
+          }
+        },
+        {
+          "values": {
+            "Team": "Management",
+            "Projects": "Advisors",
+            "Description": "Identifying, contacting, and maintaining relationships with potential advisors."
+          }
+        },
+        {
+          "values": {
+            "Team": "Management",
+            "Projects": "Blossoming Projects",
+            "Description": "Managing the early stages of new projects."
+          }
+        },
+        {
+          "values": {
+            "Team": "Management",
+            "Projects": "Documents & Spreadsheets",
+            "Description": "Managing the creation, organization, and maintenance of internal documents and spreadsheets to ensure that information is delivered in an actionable, understandable format."
+          }
+        },
+        {
+          "values": {
+            "Team": "Management",
+            "Projects": "Hiring",
+            "Description": "Managing the process of advertising job openings, interviewing, hiring, and onboarding."
+          }
+        },
+        {
+          "values": {
+            "Team": "Management",
+            "Projects": "Internal Organization",
+            "Description": "Managing the organization of our tasks, projects, and teams."
+          }
+        },
+        {
+          "values": {
+            "Team": "Management",
+            "Projects": "Partnerships",
+            "Description": "Identifying, contacting, and maintaining potential strategic partnerships."
+          }
+        },
+        {
+          "values": {
+            "Team": "Fundraising",
+            "Projects": "Investors",
+            "Description": "Identifying and contacting potential investors; preparing and submitting applications."
+          }
+        },
+        {
+          "values": {
+            "Team": "Fundraising",
+            "Projects": "Patreon",
+            "Description": "Managing and increasing relationships with our Patreon subscribers."
+          }
+        },
+        {
+          "values": {
+            "Team": "Executive",
+            "Projects": "Business Strategy",
+            "Description": "Developing top-level guidelines and protocols."
+          }
+        },
+        {
+          "values": {
+            "Team": "Executive",
+            "Projects": "Finance",
+            "Description": "Developing guidelines and protocols to ensure financial sustainability and maximize profitability."
+          }
+        },
+        {
+          "values": {
+            "Team": "Executive",
+            "Projects": "HR",
+            "Description": "Developing guidelines and protocols to ensure team member safety, satisfaction, and remuneration."
+          }
+        },
+        {
+          "values": {
+            "Team": "Executive",
+            "Projects": "Legal",
+            "Description": "Developing guidelines and protocols to ensure legal compliance in all active regions."
+          }
+        }
+      ]
+    }
+  }

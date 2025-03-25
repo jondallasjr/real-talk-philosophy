@@ -1,0 +1,917 @@
+{
+    "Roles DB": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Role",
+          "display": true,
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Summary",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Notes",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Team(s)",
+          "format": {
+            "type": "select",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Image",
+          "format": {
+            "type": "image",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Stage of Local Chapter Development",
+          "format": {
+            "table": {
+              "id": "grid-sRJSCKcK81",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-sRJSCKcK81",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-sRJSCKcK81",
+              "name": "Stages of Chapter Development"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Description",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Priority",
+          "format": {
+            "table": {
+              "id": "grid-fzcnV3rO9I",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-fzcnV3rO9I",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-fzcnV3rO9I",
+              "name": "Priorities"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Points Per Hour",
+          "format": {
+            "precision": 22,
+            "useThousandsSeparator": true,
+            "type": "number",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Sign Up",
+          "format": {
+            "label": "Sign Up",
+            "action": "OpenWindow(\n  Concatenate(\n    \"https://coda.io/form/Untitled-Form_dBq4OAc9YYI\",\"?Roles=\",Role.EncodeForUrl()\n  )\n)",
+            "type": "button",
+            "isArray": false
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Role": "Kitchen Manager",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Bar Tender",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Parking Attendant",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Venue Manager",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Founder",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Vibe Officer",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Researcher",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Presentation Designer ",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Live Scribe",
+            "Summary": "Create real-time visual representations of event discussions\nSynthesize and organize complex ideas into accessible visuals\nCollaborate with RTP team to enhance event experience\nProvide final visual artifacts for post-event sharing\nAdapt to various event setups and technical requirements",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Live Scribe Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs a Live Scribe for Real Talk Philosophy, you'll play a crucial role in capturing and visualizing the dynamic discussions that take place during our events in real-time. Your ability to listen, synthesize, and represent complex ideas graphically will enhance the audience's understanding and engagement with the topics being explored.\nKey Responsibilities\nReal-Time Visual Note-Taking\nCreate visual representations of discussions, arguments, and key points as they unfold during events\nUse a combination of text, illustrations, and diagrams to capture and clarify complex ideas\nEnsure that diverse perspectives and nuanced arguments are fairly represented\nDigital or Physical Medium Management\nProficiently use digital drawing tools or manage large-format paper and art supplies as required\nAdapt to various event setups and technical requirements\nContent Synthesis\nQuickly identify and highlight central themes, connections, and contrasts in the discussion\nOrganize information in a logical, easy-to-follow manner\nBalance detail with overall clarity to create comprehensive yet accessible visual summaries\nCollaboration with RTP Team\nWork closely with presenters and moderators to understand event structure and key concepts in advance\nCoordinate with the technical team to ensure proper display of live scribing (if digital)\nProvide final visual artifacts to the Blog Manager for post-event publication\nAudience Engagement\nBe prepared to briefly explain your visual notes to the audience if called upon\nCreate visuals that enhance audience understanding and stimulate further discussion\nPost-Event Processing\nRefine and finalize visual notes after the event if necessary\nProvide high-quality versions of visual notes for archiving and sharing\nQualifications\nProven experience in graphic facilitation, visual note-taking, or similar roles\nExcellent listening and information synthesis skills\nStrong artistic abilities and visual communication skills\nAbility to work quickly and accurately under pressure\nFamiliarity with philosophical concepts and contemporary social issues\nDesired Qualities\nImpartiality and ability to represent diverse viewpoints fairly\nQuick thinking and adaptability to follow dynamic discussions\nInterest in philosophy and current events\nComfort with public speaking (for potential explanations of visuals)\nAbility to simplify complex ideas without losing essential meaning\nTechnical Skills\nProficiency with digital drawing tools (e.g., iPad with Procreate, Microsoft Surface, etc.) if using digital medium\nFamiliarity with large-format drawing and various artistic media if using physical medium\nBasic understanding of audiovisual setups for live projection (if applicable)\nTime Commitment and Compensation\nPart-time role based on event schedule\nAvailability for evening and weekend events required\nSome preparation time before events and processing time after events\nCompensation may include:\nPer-event rate\nAdditional fee for finalized, high-quality versions of visual notes\nPerformance bonuses based on audience and team feedback\nComplimentary access to RTP events when not working\nHow to Apply\nIf you're passionate about visualizing complex discussions and have a talent for real-time graphic facilitation, we'd love to see your work. Please submit your resume, a cover letter explaining your interest in the role, and a portfolio showcasing your live scribing or visual note-taking skills. Include examples that demonstrate your ability to capture philosophical or complex discussions if possible.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Flair",
+            "Points Per Hour": 3,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Games Manager",
+            "Summary": "Develop games that encourage discussion and introspection about divisive social issues\nImplement and facilitate interactive activities during events\nCollaborate with team to integrate games into event flow\nContinuously improve games based on feedback and dialogue effectiveness\nManage game resources and documentation",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Games Manager Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Games Manager for Real Talk Philosophy, you'll be responsible for designing, implementing, and facilitating interactive games and activities that enhance our events. Your role is crucial in creating engaging experiences that help attendees explore complex topics in a fun and thought-provoking manner.\nKey Responsibilities\nGame Design and Development\nCreate original games and adapt existing ones to align with RTP's event themes and objectives\nEnsure games encourage critical thinking, empathy, and open-minded exploration of diverse perspectives\nDevelop clear rules and instructions for each game\nEvent Implementation\nSet up game materials and spaces at events\nExplain game rules and facilitate gameplay during events\nAdapt games on the fly if necessary to suit audience dynamics or time constraints\nCollaboration with RTP Team\nWork closely with presenters and other team members to integrate games seamlessly into the event flow\nContribute ideas on how games can enhance the overall event experience and learning objectives\nContinuous Improvement\nGather feedback from participants and team members on game effectiveness\nIterate and improve games based on feedback and observations\nStay updated on new game design trends and interactive learning techniques\nResource Management\nMaintain an inventory of game materials and equipment\nPropose and manage budget for game-related expenses\nDocumentation\nCreate and maintain documentation for all games, including rules, setup instructions, and required materials\nDevelop training materials to help other team members facilitate games\nQualifications\nExperience in game design, particularly educational or discussion-based games\nStrong understanding of how games can be used to facilitate learning and dialogue\nExcellent communication and facilitation skills\nCreativity and problem-solving abilities\nBasic knowledge of philosophical concepts and contemporary issues\nDesired Qualities\nPassion for using interactive methods to explore complex topics\nAbility to engage diverse groups and make people feel comfortable participating\nAdaptability and quick thinking to adjust games as needed during events\nInterest in philosophy and current events\nCommitment to fostering inclusive and respectful gameplay environments\nTechnical Skills\nProficiency with design software for creating game materials (e.g., Adobe Creative Suite)\nFamiliarity with project management tools\nBasic crafting or prototyping skills (a plus)\nTime Commitment and Compensation\nPart-time role with flexible hours\nRequires availability for evening and weekend events\nCompensation may include:\nBase salary or hourly rate\nPerformance bonuses based on game effectiveness and participant feedback\nComplimentary access to RTP events\nHow to Apply\nIf you're passionate about creating interactive experiences that spark meaningful conversations and have a talent for game design, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and examples of games or interactive activities you've designed.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Flair",
+            "Points Per Hour": 3,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Merchandise Manager",
+            "Summary": "Develop and design RTP merchandise - buttons, postcards, totes, shirts, etc. featuring Real Talk artwork.\nManage vendors, production, and inventory\nImplement sales strategies and manage finances\nCollaborate on marketing and promotion of products\nEnsure customer satisfaction and sustainable practices",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Merchandise Manager Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) hosts engaging, interactive events exploring contemporary divisive issues through presentations, discussions, artwork, music, and games.\nRole Overview\nAs Merchandise Manager for RTP, you'll oversee the development, production, and sales of merchandise that aligns with our mission and enhances our brand. Your role is crucial in creating additional revenue streams and extending RTP's impact beyond events.\nKey Responsibilities\nProduct Development\nConceptualize and design merchandise that reflects RTP's brand and mission\nCollaborate with artists and designers to create unique, appealing products\nEnsure merchandise aligns with themes from RTP events and discussions\nVendor Management\nSource and manage relationships with suppliers and manufacturers\nNegotiate contracts and ensure quality control\nCoordinate production timelines and logistics\nInventory Management\nMonitor stock levels and manage inventory\nForecast demand and plan orders accordingly\nImplement efficient storage and distribution systems\nSales Strategy\nDevelop pricing strategies for merchandise\nCreate sales targets and track performance\nExplore various sales channels (e.g., event sales, online store, partnerships)\nFinancial Management\nManage the merchandise budget\nTrack sales, costs, and profits\nProvide regular financial reports on merchandise performance\nMarketing and Promotion\nCollaborate with the marketing team to promote merchandise\nDevelop creative displays for event merchandise booths\nContribute to social media and online promotion of products\nCustomer Service\nEnsure high-quality customer service for merchandise purchases\nHandle customer inquiries and resolve any issues\nSustainability\nPrioritize eco-friendly and ethically sourced products where possible\nImplement sustainable packaging solutions\nQualifications\nExperience in retail management, product development, or related fields\nStrong understanding of inventory management and sales strategies\nExcellent organizational and project management skills\nCreative mindset with an eye for design and trends\nDesired Qualities\nPassion for RTP's mission and ability to translate complex ideas into marketable products\nBusiness acumen and entrepreneurial spirit\nAbility to balance profit motives with ethical considerations\nStrong communication and negotiation skills\nTechnical Skills\nProficiency with inventory management and point-of-sale systems\nFamiliarity with e-commerce platforms\nBasic graphic design skills (a plus)\nTime Commitment and Compensation\nPart-time to full-time role, depending on merchandise program scale\nFlexible hours with increased activity around events\nCompensation may include:\nBase salary or hourly rate\nPerformance bonuses based on sales targets\nProfit-sharing options\nHow to Apply\nIf you're creative, business-minded, and excited about developing merchandise that sparks conversations, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest, and any examples of merchandise programs you've managed or product lines you've developed.\nReal Talk Philosophy is an Equal Opportunity Employer.",
+            "Priority": "Opportunity/Opimization",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Business Adviser",
+            "Summary": "Provide strategic guidance for sustainable growth\nAdvise on financial management and operational efficiency\nExplore new revenue streams and business model innovations\nOffer insights on marketing and audience growth strategies\nAssist in performance evaluation and risk management",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Business Adviser Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Business Adviser for Real Talk Philosophy, you'll provide strategic guidance to help RTP grow sustainably while maintaining its mission and values. Your expertise will be crucial in developing business strategies, improving operational efficiency, and exploring new revenue streams.\nKey Responsibilities\nStrategic Planning\nAssist in developing and refining RTP's long-term business strategy\nProvide insights on market trends and opportunities for growth\nHelp set realistic goals and key performance indicators (KPIs)\nFinancial Management\nAdvise on budgeting and financial planning\nSuggest strategies for cost optimization and revenue enhancement\nAssist in developing pricing strategies for events and potential merchandise\nOperational Efficiency\nAnalyze current operations and suggest improvements\nAdvise on best practices for event management and scaling operations\nRecommend tools and technologies to streamline processes\nBusiness Model Innovation\nExplore potential new revenue streams aligned with RTP's mission\nAdvise on the viability of new initiatives or expansions\nProvide guidance on potential partnerships or collaborations\nMarketing and Audience Growth\nOffer insights on marketing strategies to reach new audiences\nAdvise on brand development and positioning\nSuggest ways to increase audience engagement and retention\nFundraising and Investment\nProvide guidance on fundraising strategies, if applicable\nAdvise on potential investment opportunities or funding models\nAssist in developing pitches or proposals for investors or sponsors\nRisk Management\nIdentify potential business risks and suggest mitigation strategies\nAdvise on business insurance needs\nPerformance Evaluation\nHelp develop metrics for measuring business performance\nProvide regular assessments of RTP's business health and growth\nQualifications\nSignificant experience in business management, consulting, or entrepreneurship\nStrong understanding of event-based or community-focused business models\nExperience in strategic planning and financial management\nKnowledge of the non-profit sector (a plus)\nDesired Qualities\nPassion for RTP's mission of fostering meaningful dialogue\nInnovative thinking and problem-solving skills\nAbility to balance financial goals with social impact objectives\nStrong communication skills to explain complex business concepts\nNetworking abilities to connect RTP with potential partners or sponsors\nTechnical Skills\nProficiency with financial modeling and analysis tools\nFamiliarity with project management and business intelligence software\nUnderstanding of digital marketing and audience growth strategies\nTime Commitment and Compensation\nPart-time advisory role with flexible hours\nRegular meetings with RTP leadership (frequency to be determined)\nCompensation may include:\nHourly consulting rate\nPerformance-based bonuses tied to RTP's growth\nEquity options (if applicable)\nHonorary position with appropriate recognition\nHow to Apply\nIf you're an experienced business professional passionate about fostering open dialogue and interested in helping a unique organization like RTP grow, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and a brief outline of how you would approach RTP's business development.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Community Voices Coordinator",
+            "Summary": "Find locals with relevant knowledge/experience to speak at each event\nOrganize regular \"Community Voices\" events - special gatherings where locals share their own ideas, beliefs, and experiences related to philosophical and contemporary issues\nSupport and prepare community speakers for their presentations\nBuild and maintain a network of diverse community contacts",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Community Voices Coordinator Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Community Voices Coordinator for Real Talk Philosophy, you'll play a crucial role in amplifying local perspectives and expertise at our events. You'll be responsible for identifying and engaging community members with relevant knowledge or experiences related to our event topics, as well as organizing dedicated \"Community Voices\" events.\nKey Responsibilities\nSpeaker Identification and Engagement\nFor each event, identify locals with special knowledge and/or experiences related to the topic\nReach out to potential speakers and brief them on the event format and expectations\nCoordinate with speakers on their presentations or contributions to the event\n\"Community Voices\" Event Organization\nPlan and organize regular \"Community Voices\" events where locals share presentations with their own ideas and beliefs\nCurate a diverse range of speakers and topics for these events\nEnsure that events maintain a balance of perspectives and align with RTP's mission of fostering open dialogue\nSpeaker Support and Preparation\nProvide guidance to community speakers on effective presentation techniques\nHelp speakers refine their ideas to fit within the event format and time constraints\nCoordinate with other RTP team members to integrate community voices seamlessly into the overall event structure\nCommunity Outreach and Relationship Building\nDevelop and maintain a network of community contacts across various fields and backgrounds\nRepresent RTP at local events and gatherings to scout potential speakers\nBuild relationships with local organizations and institutions to identify expert speakers\nEvent Promotion\nCollaborate with the marketing team to promote \"Community Voices\" events\nEncourage community speakers to share event information within their networks\nFeedback and Improvement\nGather feedback from audience members and speakers after events\nUse feedback to continually improve the integration of community voices into RTP events\nProvide constructive feedback to speakers to help them improve their presentations\nQualifications\nStrong networking and interpersonal skills\nExperience in event planning or community organizing\nExcellent communication skills, both written and verbal\nAbility to work with people from diverse backgrounds and perspectives\nUnderstanding of a wide range of social and philosophical issues\nDesired Qualities\nPassion for community engagement and fostering local dialogue\nAbility to remain impartial when dealing with controversial topics\nExcellent judgment in selecting appropriate speakers for sensitive topics\nCreativity in finding unique voices and perspectives within the community\nStrong organizational and time management skills\nTime Commitment and Compensation\nPart-time role with flexible hours\nRequires availability for evening and weekend events\nCompensation may include:\nBase salary or hourly rate\nPerformance bonuses based on event success and speaker diversity\nComplimentary access to RTP events\nHow to Apply\nIf you're passionate about amplifying community voices and fostering meaningful dialogue on important issues, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and any relevant experience in community organizing or event planning.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Legal Adviser",
+            "Summary": "Provides advice to the local team related to legal compliance.",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Legal Adviser Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Legal Adviser for Real Talk Philosophy, you'll provide crucial guidance on legal matters to ensure our operations comply with relevant laws and regulations. Your expertise will help protect RTP's interests as we navigate the complexities of hosting public events and engaging in discussions on sensitive topics.\nKey Responsibilities\nLegal Compliance\nEnsure RTP's activities comply with all relevant local, state, and federal laws\nAdvise on legal requirements for public events, including permits and licenses\nContract Review and Drafting\nReview contracts for vendors, venues, and partners\nReview standard agreements for speakers, artists, and other contributors\nIntellectual Property Management\nAdvise on copyright issues related to content created during events\nReview policies for the use and protection of RTP's intellectual property\nRisk Management\nIdentify potential legal risks in RTP's operations and suggest mitigation strategies\nAdvise on liability issues and insurance needs\nPrivacy and Data Protection\nAdvise on compliance with data protection laws and privacy regulations\nReview privacy policies for event attendees and online users\nDispute Resolution\nProvide guidance on handling any legal disputes or complaints\nRepresent RTP in legal proceedings if necessary\nLegal Training and Education\nConduct training sessions for RTP staff on relevant legal issues\nKeep the organization informed about changes in laws that may affect operations\nEthics and Governance\nAdvise on ethical considerations related to discussing sensitive topics\nAssist in developing and maintaining organizational policies and procedures\nQualifications\nLaw degree (J.D.) and active bar membership in the relevant jurisdiction\nExperience in non-profit law, entertainment law, or related fields\nStrong understanding of intellectual property and contract law\nFamiliarity with laws governing public events and free speech\nDesired Qualities\nInterest in philosophy and contemporary social issues\nAbility to explain complex legal concepts in simple terms\nProactive approach to identifying and addressing potential legal issues\nStrong ethical standards and commitment to integrity\nTechnical Skills\nProficiency with legal research tools and databases\nFamiliarity with contract management software\nBasic understanding of data protection technologies\nTime Commitment and Compensation\nPart-time role with flexible hours\nOn-call availability for urgent legal matters\nCompensation may include:\nHourly rate or retainer fee\nPro bono arrangement with appropriate recognition\nComplimentary access to RTP events\nHow to Apply\nIf you're a legal professional passionate about fostering open dialogue and interested in the unique challenges of an organization like RTP, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and any relevant experience in advising organizations similar to RTP.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Guest Experience Manager",
+            "Summary": "Create a welcoming and inclusive environment for all guests\nManage guest experience, addressing inquiries and facilitating connections\nOversee refreshments and event space setup\nCollect and analyze guest feedback for continuous improvement\nHandle conflict resolution and ensure respectful discussions",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Guest Experience Manager Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Hospitality (Guest Satisfaction) Manager for Real Talk Philosophy, you'll be responsible for ensuring a welcoming, comfortable, and engaging experience for all attendees at our events. Your role is crucial in creating an atmosphere that encourages open dialogue and fosters a sense of community among diverse participants.\nKey Responsibilities\nEvent Atmosphere\nCreate a welcoming and inclusive environment for all guests\nOversee the setup and arrangement of event spaces to facilitate comfortable discussions and interactions\nEnsure proper lighting, temperature, and seating arrangements\nGuest Experience Management\nGreet and orient guests, making them feel welcome and informed about the event structure\nAddress guest inquiries, concerns, or special needs promptly and courteously\nFacilitate introductions and connections between guests to encourage networking and dialogue\nRefreshments and Catering\nCoordinate refreshments and, if applicable, catering services for events\nEnsure dietary restrictions and preferences are accommodated\nManage the setup, replenishment, and cleanup of refreshment areas\nFeedback Collection\nDesign and implement guest feedback systems (e.g., surveys, comment cards)\nActively seek out guest feedback during events\nAnalyze feedback and suggest improvements for future events\nConflict Resolution\nHandle any interpersonal conflicts or disagreements that may arise during discussions with tact and diplomacy\nEnsure that all guests feel heard and respected, even in the context of divisive topics\nTeam Coordination\nCollaborate with other team members (e.g., Front Door Manager, Community Voices Coordinator) to ensure a seamless guest experience\nBrief volunteers or staff on guest service expectations and event protocols\nPost-Event Follow-up\nCoordinate thank-you messages or follow-up communications to attendees\nManage any post-event inquiries or feedback\nQualifications\nExperience in hospitality, event management, or customer service\nStrong interpersonal and communication skills\nAbility to remain calm and professional in high-pressure situations\nUnderstanding of diversity and inclusion principles\nExperience in conflict resolution or mediation (a plus)\nDesired Qualities\nWarm and welcoming demeanor\nAbility to engage with people from diverse backgrounds and perspectives\nInterest in philosophy and contemporary social issues\nAttention to detail and strong organizational skills\nCreativity in enhancing guest experiences\nTime Commitment and Compensation\nPart-time role with flexible hours\nRequires availability for evening and weekend events\nCompensation may include:\nBase salary or per-event rate\nPerformance bonuses based on guest satisfaction metrics\nComplimentary access to RTP events\nHow to Apply\nIf you're passionate about creating exceptional experiences for guests and have a keen interest in fostering meaningful dialogues, we'd love to hear from you. Please submit your resume and a cover letter explaining your interest in the role and your approach to ensuring guest satisfaction in the context of philosophical discussions.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Artist",
+            "Summary": "Create art in any medium (visual, poetry, performance, etc.) exploring the topic's emotional depth and complexity\nAllow your art to be shown and discussed at live events\nOptionally present about your work at events\nCollaborate on potential merchandising of your art (and receive a profit share) \nExamples",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "2019.10.30 Occultism Thursday by Carly Sanderson 25.jpeg"
+            ],
+            "Stage of Local Chapter Development": "Lite",
+            "Description": "Artist Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs an Artist for Real Talk Philosophy, you'll create thought-provoking art in any medium that explores the emotion, nuance, and dilemmas presented by our event topics. Your work will play a crucial role in enhancing our events, stimulating discussions, and providing a different perspective on complex issues.\nKey Responsibilities\nArtistic Creation\nCreate art in any medium (visual art, poetry, etc.) that explores the emotions, nuances, and dilemmas of the given topic\nEnsure your work presents a balanced view, highlighting the complexity of the issue rather than advocating for a single perspective\nEvent Participation\nAllow your art to be shown to and discussed by the live audience during events\nOptionally, speak about your creation at live events, providing insight into your creative process and interpretation of the topic\nBroader Engagement\nBe open to having your art shown to and discussed by other audiences beyond the initial event\nCollaborate with RTP on potential merchandising of your art, with profit-sharing arrangements\nCollaboration and Communication\nWork closely with the RTP team to understand event themes and objectives\nBe receptive to feedback and willing to make adjustments if necessary\nQualifications\nProven artistic ability in your chosen medium\nAbility to create thoughtful, nuanced work that explores complex topics\nStrong communication skills\nComfort with having your work publicly displayed and discussed\nInterest in contemporary social and philosophical issues\nDesired Qualities\nOpenness to diverse perspectives and ability to represent multiple viewpoints in your work\nAbility to work on deadlines and deliver pieces in time for events\nWillingness to engage with audiences about your work\nCollaborative spirit and ability to work within the broader RTP team\nTime Commitment and Compensation\nFlexible, project-based role\nTime commitment varies based on the number of events you contribute to and the complexity of your pieces\nCompensation may include:\nCommission for each piece created\nProfit-sharing for merchandised artwork\nExposure to RTP's audience and potential for broader recognition\nHow to Apply\nIf you're an artist passionate about exploring complex social issues through your work, we'd love to hear from you. Please submit your portfolio, a brief artist statement, and a cover letter explaining why you're interested in contributing to Real Talk Philosophy events.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all contributors.",
+            "Priority": "Very Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Community Music and Arts Coordinator",
+            "Summary": "Find local musicians and artists to contribute to events\nCoordinate with artists regarding event themes and logistics\nEngage with local arts community to promote RTP events",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 47 - Very Best.jpg"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Community Music and Arts Coordinator Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Community Music and Arts Coordinator for Real Talk Philosophy, you'll play a crucial role in enriching our events with local artistic talent. You'll be responsible for finding and coordinating with musicians and artists in the community, as well as managing the technical aspects of musical performances at our events.\nKey Responsibilities\nTalent Scouting and Coordination\nIdentify and recruit local musicians and artists to contribute to RTP events\nMaintain a database of local artistic talent\nCoordinate with artists and musicians regarding event themes, expectations, and logistics\nEnsure artistic contributions align with RTP's mission of presenting balanced, nuanced perspectives on complex topics\nEvent Production\nManage sound equipment, including setup, operation during events, takedown, and storage\nEnsure high-quality audio experiences for both performers and attendees\nCoordinate with other team members to integrate artistic elements smoothly into the event flow\nArtist Liaison\nServe as the primary point of contact between RTP and contributing artists\nBrief artists on event themes and objectives\nProvide necessary support to artists before and during events\nCommunity Engagement and Cross-Cultural Competence\nBuild and maintain relationships with diverse local arts organizations and music venues\nRepresent RTP at local arts events to network and scout talent\nContribute to promoting RTP events within local arts communities\nEnsure representation of various cultural perspectives in artistic selections\nDocumentation and Archiving\nCoordinate the documentation of performances and artworks for RTP's archives and future promotional use\nManage the organization and accessibility of artistic content archives\nFeedback and Continuous Improvement\nGather feedback on artistic elements from attendees, artists, and RTP team members\nUse feedback to continually improve the integration of arts into RTP events\nDevelop and refine best practices for incorporating arts into philosophical discussions\nQualifications\nExperience in event production, particularly in music or arts events\nKnowledge of sound equipment and audio technology\nStrong networking and interpersonal skills across diverse communities\nFamiliarity with the local arts and music scene\nExcellent organizational and time management skills\nUnderstanding of philosophical concepts and contemporary issues\nDesired Qualities\nPassion for philosophy and exploring complex, divisive topics\nAppreciation for diverse art forms, musical genres, and cultural expressions\nAbility to work in a fast-paced, dynamic environment\nCreative problem-solving skills\nCommitment to fostering an inclusive and diverse artistic community\nStrong cross-cultural competence\nTechnical Skills\nProficiency with sound equipment and audio software\nBasic understanding of lighting systems and video production (a plus)\nFamiliarity with project management and database tools\nTime Commitment and Compensation\nPart-time role with flexible hours\nRequires availability for evening and weekend events\nCompensation may include:\nBase salary or hourly rate\nPerformance bonuses based on event success\nComplimentary access to RTP events\nHow to Apply\nIf you're passionate about bringing together philosophy and the arts, and have a talent for coordinating live performances, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and any relevant experience in event production or arts coordination.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Marketing Manager",
+            "Summary": "Promote events through various channels (Facebook, WhatsApp, Meetup.com, etc.) to maximize attendance\nRun paid advertising campaigns (Meta ads, local newspapers, online event sites)\nEngage with the online community",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Marketing Manager Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Marketing Manager for Real Talk Philosophy, you'll be responsible for promoting our events, growing our audience, and maintaining our online presence. Your role is crucial in attracting new attendees, engaging our community, and spreading awareness of RTP's mission and events.\nKey Responsibilities\nSocial Media Management\nCreate and manage content across our social media platforms (Facebook, Instagram, WhatsApp)\nDevelop and implement a social media strategy aligned with RTP's mission and values\nRespond to comments, messages, and inquiries in a timely and professional manner\nEvent Promotion\nCreate and publish Facebook events for upcoming RTP discussions\nDevelop and execute marketing campaigns to maximize event attendance\nCollaborate with the local team to tailor marketing efforts to the local audience\nContent Creation\nProduce engaging content including posts, event updates, and announcements\nShare photos from events, contest submissions (haiku/drawing), and performance videos\nCreate visually appealing graphics and promotional materials\nCommunity Engagement\nFoster an active and engaged online community around RTP events and philosophy\nFacilitate online discussions and interactions among community members\nGather and analyze feedback to improve community engagement strategies\nAnalytics and Reporting\nMonitor and report on social media metrics and campaign performance\nUse data insights to refine marketing strategies and improve reach\nBrand Management\nEnsure all marketing materials and communications align with RTP's brand guidelines\nMaintain consistency in messaging across all platforms\nQualifications\nProven experience in social media management and digital marketing\nProficiency with social media platforms, especially Facebook, Instagram, and WhatsApp\nStrong written and verbal communication skills\nExperience with content creation and basic graphic design\nAnalytical skills for interpreting social media metrics\nBachelor's degree in Marketing, Communications, or related field (or equivalent experience)\nDesired Qualities\nCreativity and innovation in approaching marketing challenges\nInterest in philosophy and contemporary issues\nAbility to communicate complex ideas in an engaging, accessible manner\nAdaptability and willingness to learn new marketing tools and techniques\nStrong organizational skills and ability to manage multiple projects simultaneously\nTime Commitment and Compensation\nPart-time role with flexible hours\nExpect to dedicate approximately 15-20 hours per week\nCompensation varies based on location and may include:\nMonthly retainer\nPerformance-based bonuses tied to event attendance or community growth\nComplimentary access to RTP events\nHow to Apply\nIf you're passionate about digital marketing and excited about promoting thought-provoking philosophical discussions, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and examples of successful social media campaigns you've managed.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Very Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Front Door Manager",
+            "Summary": "Manage event entry and cash transactions\nTrack attendance and maintain records\nProvide excellent customer service\nHandle additional tasks like merchandise sales (as needed)",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "Lite",
+            "Description": "Front Door Manager Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs a Front Door Manager, you'll be the first point of contact for our guests, ensuring a smooth and welcoming start to each event. Your role is crucial in maintaining the integrity of our events and providing a positive first impression to attendees.\nKey Responsibilities\nEvent Entry Management\nArrive 30 minutes before event start time and remain at the door until the event concludes\nHandle cash transactions for entrance fees and provide change as needed\nSell membership cards to interested attendees\nStamp guests' hands upon entry (if required)\nAttendance Tracking\nMaintain and oversee the Member and Guest Tracking worksheet\nReview the tracking worksheet with the Local Chapter Leader at the end of each event\nFinancial Handling\nManage and secure the cash box throughout the event\nAccurately record all transactions\nCustomer Service\nGreet guests warmly and answer any questions about the event or organization\nHandle any entry-related issues professionally and efficiently\nAdditional Tasks (as needed)\nStamp parking tickets for attendees\nManage the sale of merchandise (e.g., stickers)\nQualifications\nStrong organizational and multitasking skills\nExperience in customer service roles (preferred)\nAbility to handle cash transactions accurately\nExcellent interpersonal and communication skills\nReliability and punctuality\nComfort working in a fast-paced environment\nBasic computer skills for tracking attendance\nDesired Qualities\nFriendly and welcoming demeanor\nAttention to detail\nAbility to remain calm under pressure\nInterest in philosophy and contemporary issues (a plus)\nTime Commitment and Compensation\nPart-time role with a flexible schedule\nCommitment to arrive 30 minutes before each assigned event and stay until it concludes\nCompensation varies based on location and may include:\nHourly rate\nFlat fee per event\nComplimentary event entry\nHow to Apply\nIf you're organized, reliable, and excited about contributing to thought-provoking events, we'd love to hear from you. Please submit your resume and a brief cover letter explaining why you're interested in this role and any relevant experience you have.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Necessary",
+            "Points Per Hour": 3,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Musician & Songwriter",
+            "Summary": "Write songs exploring the emotional and cognitive complexity presented by the topic. \nPerform live at events and participate in discussions\nHelp promote events through personal networks\nCollaborate with RTP team to align music with event objectives",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Musician & Song Writer Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs a Musician & Song Writer for Real Talk Philosophy, you'll craft and perform songs that explore the emotion, nuance, and dilemmas presented by our event topics. Your music will add emotional depth to our forums and help connect with our audiences on a deeper level.\nKey Responsibilities\nSong Creation\nReview provided materials (slides, arguments, stories, artwork, questions) to understand the essence of each event\nWrite a song that encapsulates the nuance and dilemma of the chosen topic, highlighting its complexity rather than presenting a single-sided argument\nDeliver a demo of the song 1-2 days before the event\nPerformance\nArrive early at the event to set up\nPerform your piece live at the event\nParticipate in post-performance discussions as needed\nPromotion\nHelp spread the word about the event by sharing it on your social media channels\nInvite your friends and fans to attend the event\nCollaboration\nWork with the RTP team to ensure your song aligns with the event's objectives\nBe open to feedback and willing to make adjustments if necessary\nQualifications\nPrevious songwriting experience with a portfolio demonstrating your ability to craft thoughtful, balanced narratives\nKnowledge and interest in contemporary social and philosophical issues\nExcellent communication and collaboration skills\nComfortable performing in front of diverse audiences\nAbility to work on tight deadlines\nDesired Qualities\nAbility to write from a place of empathy and understanding\nSkill in creating art that encourages people to think deeply about complex issues\nOpenness to exploring multiple perspectives on controversial topics\nAdaptability and quick learning to grasp new concepts for each event\nTime Commitment and Compensation\nFlexible, project-based role\nTime commitment varies based on the number of events you contribute to\nCompensation includes:\nBase fee for each song created and performed\nPercentage of ticket sales for the event\nPotential ongoing royalties if the song is used in future RTP materials\nHow to Apply\nIf you believe you can enrich our events and inspire our audience with your musical talent, we would love to hear from you. Please send us your resume, a brief statement on why you're interested in this role, and samples of your work (preferably songs that demonstrate your ability to tackle complex themes).\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all contributors.",
+            "Priority": "Very Important",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Scribe",
+            "Summary": "Document and take comprehensive notes during RTP events, including particularly surprising/interesting discussion topics, questions, arguments, and points from all sides. \nSynthesize discussions into coherent, well-structured summaries\nCollaborate with RTP team to ensure accurate representation of ideas\nMaintain an organized archive of event reports and insights",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Scribe Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs a Scribe for Real Talk Philosophy, you'll play a crucial role in capturing, synthesizing, and documenting the rich discussions and insights that emerge during our events. Your work will help preserve the valuable content generated and enable its dissemination to a wider audience.\nKey Responsibilities\nEvent Documentation\nAttend RTP events and take comprehensive notes on presentations, discussions, and key points raised\nCapture diverse perspectives and arguments presented during debates and dialogues\nDocument questions, responses, and significant moments of interaction\nContent Synthesis\nSynthesize raw notes into coherent, well-structured summaries\nIdentify and highlight key themes, arguments, and counterarguments\nEnsure that the nuance and complexity of discussions are accurately represented\nReport Creation\nProduce clear, concise reports of each event, including main topics covered, key insights, and notable quotes\nOrganize content in a logical, easy-to-follow format\nInclude relevant context and background information where necessary\nCollaboration with RTP Team\nWork closely with presenters and the Community Voices Coordinator to ensure accurate representation of ideas\nCoordinate with the Marketing Manager to provide content for promotional materials or social media\nAssist the Videographer in identifying key moments for video highlights\nContent Management\nMaintain an organized archive of event reports and raw notes\nAssist in creating a searchable database of topics, arguments, and insights from events\nQuality Assurance\nReview and edit reports for clarity, accuracy, and completeness\nSeek feedback from event organizers and participants to ensure faithful representation of discussions\nQualifications\nExcellent writing and note-taking skills\nStrong ability to synthesize complex information quickly and accurately\nFamiliarity with philosophical concepts and contemporary social issues\nExperience in journalism, academic writing, or similar fields (preferred)\nAbility to remain objective and represent diverse viewpoints fairly\nDesired Qualities\nKeen attention to detail and strong listening skills\nInterest in philosophy and current events\nAbility to work efficiently under time pressure\nComfort with discussing and documenting sensitive or controversial topics\nCommitment to impartiality and balanced representation of ideas\nTechnical Skills\nProficiency with word processing software and cloud-based document sharing platforms\nFamiliarity with various note-taking methods and tools\nBasic understanding of content management systems (a plus)\nTime Commitment and Compensation\nPart-time role with flexible hours\nRequires attendance at RTP events (evenings and weekends)\nAdditional time for post-event synthesis and report writing\nCompensation may include:\nPer-event rate\nHourly rate for additional writing and editing time\nPerformance bonuses based on report quality and timeliness\nHow to Apply\nIf you're passionate about preserving thought-provoking discussions and have a talent for clear, concise writing, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and a writing sample that demonstrates your ability to summarize complex discussions or arguments.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Important",
+            "Points Per Hour": 1,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Special Events Coordinator",
+            "Summary": "Conceptualize and plan unique, high-impact events beyond regular programming\nCollaborate with RTP team and external stakeholders\nManage logistics, including venue, speakers, and budgets\nOversee marketing and promotion for special events\nEvaluate event success and implement improvements",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "Full",
+            "Description": "Special Events Coordinator Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Special Events Coordinator for Real Talk Philosophy, you'll be responsible for planning, organizing, and executing unique, high-impact events that go beyond our regular programming. These special events will aim to broaden our reach, deepen community engagement, and create memorable experiences that align with RTP's mission of fostering open dialogue on complex issues.\nKey Responsibilities\nEvent Conceptualization and Planning\nDevelop creative concepts for special events that align with RTP's mission and values\nCreate detailed event plans, including timelines, budgets, and resource requirements\nIdentify and secure appropriate venues for special events\nStakeholder Collaboration\nWork closely with the RTP team to ensure special events complement regular programming\nCollaborate with the Community Voices Coordinator to incorporate local perspectives\nLiaise with external partners, sponsors, and vendors as needed\nGuest Speaker and VIP Management\nIdentify and invite high-profile speakers or special guests for events\nManage all aspects of guest speaker experiences, including travel arrangements and hospitality\nMarketing and Promotion\nCollaborate with the Marketing Manager to develop promotional strategies for special events\nCreate compelling event descriptions and materials to attract attendees\nLogistics Coordination\nOversee all logistical aspects of special events, including setup, technical requirements, and catering\nCoordinate with vendors and service providers to ensure smooth event execution\nBudget Management\nDevelop and manage budgets for special events\nSeek cost-effective solutions without compromising event quality\nPost-Event Evaluation\nGather and analyze feedback from attendees, speakers, and team members\nPrepare post-event reports and recommendations for future improvements\nInnovation in Event Design\nStay updated on event industry trends and innovative formats\nPropose and implement new ideas to keep RTP events fresh and engaging\nQualifications\nProven experience in event planning and management, particularly for thought leadership or cultural events\nStrong project management skills with attention to detail\nExcellent communication and interpersonal skills\nExperience in budget management and vendor negotiations\nAbility to work effectively under pressure and meet deadlines\nDesired Qualities\nCreativity and innovation in event conceptualization\nPassion for fostering meaningful dialogue on complex issues\nAbility to think strategically and align events with organizational goals\nAdaptability and problem-solving skills\nInterest in philosophy, current events, and social issues\nTechnical Skills\nProficiency with event management software and tools\nFamiliarity with marketing and promotional techniques\nBasic understanding of audio-visual and technical event requirements\nTime Commitment and Compensation\nFull-time or part-time role, depending on event frequency and scale\nFlexible hours with occasional evenings and weekends required\nCompensation may include:\nCompetitive salary commensurate with experience\nPerformance bonuses based on event success\nOpportunities for professional development in event management\nHow to Apply\nIf you're passionate about creating impactful events that spark meaningful conversations and have a talent for innovative event planning, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and a brief proposal for a special event concept that aligns with RTP's mission.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Flair",
+            "Points Per Hour": 2,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Photographer",
+            "Summary": "Capture high-quality, diverse photos at RTP events\nEdit and submit photos after each event\nFollow RTP's Photography Guidelines\nEnsure professionalism and reliability",
+            "Notes": "",
+            "Team(s)": "Local Chapter",
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Role Overview\nAs a Photographer for Real Talk Philosophy, you'll be responsible for visually documenting our events, capturing the essence of our discussions, and the engagement of our participants. Your images will play a crucial role in our marketing efforts and in sharing the RTP experience with a wider audience.\nKey Responsibilities\nEvent Photography\nAttend RTP events and capture high-quality photos of participants, presenters, and the overall event atmosphere\nDocument key moments including small group discussions, presentations, audience interactions, and artistic elements of the event\nPhoto Editing and Submission\nPerform basic editing tasks to enhance photo quality\nSubmit edited photos to Real Talk Philosophy via Dropbox or Google Drive after each event\nAdherence to Guidelines\nFollow RTP's Photography Guidelines to ensure consistency and quality across all events\nCapture a variety of shots as outlined in our guidelines, including group discussions, presenters, audience reactions, and event activities\nReliability and Professionalism\nArrive on time for each assigned event\nAct professionally and discreetly during events to avoid disrupting discussions\nIf unable to attend an event, find a suitable replacement and inform the event organizer\nQualifications\nProficiency in photography, with a strong portfolio showcasing event or documentary-style work\nExperience with photo editing software\nAbility to work independently and in a fast-paced environment\nExcellent eye for composition and lighting\nReliable and punctual\nOwn equipment (camera, lenses, editing software)\nDesired Qualities\nInterest in philosophy and contemporary issues\nAbility to capture candid, natural moments\nCreative eye for unique and compelling shots\nAdaptability to various lighting conditions and event spaces\nTime Commitment and Compensation\nPart-time role with a flexible schedule\nCommitment to attend assigned events (typically evenings or weekends)\nCompensation varies based on location and may include:\nFlat fee per event\nHourly rate\nPotential for usage rights fees for marketing materials\nHow to Apply\nIf you're passionate about visual storytelling and interested in capturing thought-provoking events, we'd love to see your work. Please submit your resume, a brief cover letter explaining your interest in the role, and a portfolio of your best event or documentary-style photography.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.\n",
+            "Priority": "Necessary",
+            "Points Per Hour": 2,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Promoter",
+            "Summary": "Actively promote RTP events through various channels\nConduct community outreach to build relationships and attract diverse attendees\nEngage on social media to increase event visibility\nAttend events to gain firsthand experience for better promotion\nHelp develop strategies for reaching new audiences",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Promoter Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs a Promoter for Real Talk Philosophy, you'll play a crucial role in spreading the word about our events and growing our audience. Your enthusiasm and networking skills will be key in attracting diverse participants to our thought-provoking discussions.\nKey Responsibilities\nEvent Promotion\nActively promote RTP events through various channels, including social media, local community boards, and word-of-mouth\nDistribute flyers and promotional materials in strategic locations\nEngage with potential attendees to explain the unique value of RTP events\nCommunity Outreach\nIdentify and connect with local groups, organizations, and institutions that might be interested in RTP events\nAttend community events and gatherings to network and promote RTP\nBuild and maintain relationships with community leaders and influencers\nSocial Media Engagement\nCreate and share engaging content about upcoming events on personal and RTP social media platforms\nEncourage your network to share event information\nRespond to inquiries about events on social media\nAudience Development\nHelp identify and target new demographic groups that might be interested in RTP events\nGather feedback from attendees and potential attendees to improve promotional strategies\nCollaborate with the RTP team to develop strategies for reaching diverse audiences\nEvent Attendance\nAttend RTP events regularly to gain firsthand experience and better promote future events\nWelcome and engage with new attendees at events\nCollect testimonials and success stories from participants to use in future promotions\nQualifications\nStrong interpersonal and communication skills\nExperience in marketing, sales, or community outreach (preferred)\nFamiliarity with social media platforms and their effective use for promotion\nUnderstanding of local community dynamics and networks\nDesired Qualities\nEnthusiasm for philosophy and intellectual discussions\nAbility to explain complex concepts in an engaging, accessible manner\nSelf-motivation and ability to work independently\nCreativity in finding new ways to reach potential attendees\nComfort with engaging diverse groups of people\nTechnical Skills\nProficiency with social media platforms\nBasic graphic design skills for creating promotional materials (a plus)\nFamiliarity with event promotion tools and strategies\nTime Commitment and Compensation\nPart-time role with flexible hours\nIncreased activity in the days leading up to events\nCompensation may include:\nBase rate per event promoted\nPerformance bonuses based on attendance numbers\nCommission structure for new attendees brought in\nComplimentary access to RTP events\nHow to Apply\nIf you're passionate about spreading ideas, building communities, and have a talent for getting people excited about events, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and any examples of successful promotional work you've done in the past.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Opportunity/Opimization",
+            "Points Per Hour": 0,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "President",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Local Chapter Leader",
+            "Summary": "Establish and manage RTP events your local area\nRecruit and manage a local team\nMaintain relationships with local partners, venues, and potential sponsors\nManage event budgets and financial reporting\nFinal decision maker, final responsibility",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "Prospective",
+            "Description": "Local Chapter Leader (LCL) Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is a pioneering organization dedicated to combating sociopolitical polarization through facilitated intercultural dialogue. Since 2017, we have been hosting engaging, impartial discussions on contemporary divisive issues across the globe. Our events incorporate lectures, small-group discussions, artwork, music, games, and expert Q&As to create a unique, entertaining, and enlightening experience.\nRole Overview\nAs a Local Chapter Leader (LCL), you will be the driving force behind Real Talk Philosophy events in your area. You will assemble and coordinate a local team, oversee event planning and execution, and ensure that each event aligns with RTP's mission and values. This role requires strong leadership, organizational skills, and a passion for fostering meaningful dialogue on complex issues.\nKey Responsibilities\nEvent Planning and Execution\nPlan and coordinate regular RTP events in your local area\nEnsure events follow the RTP format, incorporating all required elements (lectures, discussions, artwork, music, games, etc.)\nSecure appropriate venues for events\nManage event budgets and financial reporting\nTeam Management\nRecruit, train, and coordinate a local team, including presenters, facilitators, front door managers, photographers, and other support staff\nAssign roles and responsibilities for each event\nProvide guidance and support to team members\nConduct regular team meetings and performance evaluations\nContent Development\nCollaborate with the Event Resource Development team to adapt content for local audiences\nEnsure all presented content remains impartial and aligns with RTP's values\nCommunity Building\nFoster a strong, engaged local community of RTP attendees\nManage local social media accounts and marketing efforts\nRespond to inquiries from potential attendees and community members\nStakeholder Management\nLiaise with RTP headquarters to ensure alignment with organizational goals and standards\nBuild relationships with local partners, venues, and potential sponsors\nRepresent RTP at local events and networking opportunities\nContinuous Improvement\nGather and analyze feedback from events to drive continuous improvement\nStay informed about local issues and trends to inform event topics\nParticipate in LCL training and development opportunities provided by RTP\nQualifications\nStrong leadership and organizational skills\nExcellent communication and interpersonal skills\nDemonstrated ability to manage diverse teams\nExperience in event planning and execution\nPassion for philosophy, contemporary issues, and fostering open dialogue\nAbility to remain impartial when discussing divisive topics\nProficiency in using technology for event management and communication\nBachelor's degree or equivalent experience (advanced degree in philosophy, social sciences, or related field is a plus)\nFluency in English and the primary language of the local area\nDesired Qualities\nIntellectual curiosity and a love for learning\nEmpathy and the ability to understand diverse perspectives\nCreativity in problem-solving and event design\nAdaptability and resilience in facing challenges\nCommitment to RTP's mission and values\nTime Commitment and Compensation\nThis is a part-time role with a flexible schedule, requiring approximately 15-20 hours per event\nCompensation varies based on location and event performance, potentially including:\nBase stipend per event\nPercentage of event revenue\nPerformance bonuses based on attendance and community growth\nHow to Apply\nIf you are passionate about fostering meaningful dialogue and have the skills to lead a local chapter of Real Talk Philosophy, we want to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and a brief proposal for how you would establish or grow an RTP chapter in your area.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is a pioneering organization dedicated to combating sociopolitical polarization through facilitated intercultural dialogue. Since 2017, we have been hosting engaging, impartial discussions on contemporary divisive issues across the globe. Our events incorporate lectures, small-group discussions, artwork, music, games, and expert Q&As to create a unique, entertaining, and enlightening experience.\nRole Overview\nAs a Local Chapter Leader (LCL), you will be the driving force behind Real Talk Philosophy events in your area. You will assemble and coordinate a local team, oversee event planning and execution, and ensure that each event aligns with RTP's mission and values. This role requires strong leadership, organizational skills, and a passion for fostering meaningful dialogue on complex issues.\nKey Responsibilities\nEvent Planning and Execution\nPlan and coordinate regular RTP events in your local area\nEnsure events follow the RTP format, incorporating all required elements (lectures, discussions, artwork, music, games, etc.)\nSecure appropriate venues for events\nManage event budgets and financial reporting\nTeam Management\nRecruit, train, and coordinate a local team, including presenters, facilitators, front door managers, photographers, and other support staff\nAssign roles and responsibilities for each event\nProvide guidance and support to team members\nConduct regular team meetings and performance evaluations\nContent Development\nCollaborate with the Event Resource Development team to adapt content for local audiences\nEnsure all presented content remains impartial and aligns with RTP's values\nCommunity Building\nFoster a strong, engaged local community of RTP attendees\nManage local social media accounts and marketing efforts\nRespond to inquiries from potential attendees and community members\nStakeholder Management\nLiaise with RTP headquarters to ensure alignment with organizational goals and standards\nBuild relationships with local partners, venues, and potential sponsors\nRepresent RTP at local events and networking opportunities\nContinuous Improvement\nGather and analyze feedback from events to drive continuous improvement\nStay informed about local issues and trends to inform event topics\nParticipate in LCL training and development opportunities provided by RTP\nQualifications\nStrong leadership and organizational skills\nExcellent communication and interpersonal skills\nDemonstrated ability to manage diverse teams\nExperience in event planning and execution\nPassion for philosophy, contemporary issues, and fostering open dialogue\nAbility to remain impartial when discussing divisive topics\nProficiency in using technology for event management and communication\nBachelor's degree or equivalent experience (advanced degree in philosophy, social sciences, or related field is a plus)\nFluency in English and the primary language of the local area\nDesired Qualities\nIntellectual curiosity and a love for learning\nEmpathy and the ability to understand diverse perspectives\nCreativity in problem-solving and event design\nAdaptability and resilience in facing challenges\nCommitment to RTP's mission and values\nTime Commitment and Compensation\nThis is a part-time role with a flexible schedule, requiring approximately 15-20 hours per event\nCompensation varies based on location and event performance, potentially including:\nBase payment per event\nPercentage of event revenue\nPerformance bonuses based on attendance and community growth\nHow to Apply\nIf you are passionate about fostering meaningful dialogue and have the skills to lead a local chapter of Real Talk Philosophy, we want to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and a brief proposal for how you would establish or grow an RTP chapter in your area.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Necessary",
+            "Points Per Hour": 5,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Presenter & Discussion Facilitator",
+            "Summary": "Deliver engaging, impartial presentations on divisive issues\nFacilitate small and large group discussions\nIntroduce event activities (artwork, music, games)\nPrepare thoroughly for each event (approx. 7 hours/week)",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "Lite",
+            "Description": "Presenter & Discussion Facilitator Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization dedicated to fostering meaningful dialogue on divisive issues through interactive, multimedia events. Since 2017, we've been hosting engaging discussions that explore various perspectives on contemporary topics, combining lectures, small-group discussions, artwork, music, and games.\nRole Overview\nAs a Presenter & Discussion Facilitator, you will be at the forefront of RTP events, delivering engaging presentations and facilitating thought-provoking discussions. Your role is crucial in ensuring our events are both enlightening and entertaining, while maintaining an impartial stance on complex issues.\nKey Responsibilities\nContent Delivery\nStudy and practice delivery of prepared presentation material\nPresent lectures exploring all sides of divisive social issues in an impartial and entertaining manner\nAdapt presentation style to engage diverse audiences\nDiscussion Facilitation\nFacilitate small-group and large-group discussions\nEnsure all opinions are respected and heard\nGuide conversations to promote deeper understanding and empathy\nEvent Flow Management\nIntroduce various segments of the event, including artwork, musical performances, and games\nMaintain the pace and energy of the event\nAdapt to unexpected situations or changes in the event schedule\nPreparation and Development\nDedicate approximately 7 hours per week to prepare for each event\nStay informed about current events and philosophical concepts related to discussion topics\nParticipate in training and development opportunities provided by RTP\nCommunity Building\nEngage with attendees before and after events to build rapport\nContribute to creating a welcoming and inclusive atmosphere\nQualifications\nFluency in English (additional languages are a plus)\nStrong public speaking and improvisational skills\nExcellent facilitation and group management abilities\nDemonstrated ability to present complex arguments in an engaging manner\nStrong empathy and the ability to remain nonjudgmental\nBachelor's degree or equivalent experience (degree in philosophy, social sciences, or related field is a plus)\nDesired Qualities\nCharisma and stage presence\nIntellectual curiosity and a passion for exploring diverse viewpoints\nAbility to think on your feet and handle unexpected situations gracefully\nSense of humor and ability to keep events entertaining\nCommitment to RTP's mission and values\nTime Commitment and Compensation\nPart-time role with a flexible schedule\nApproximately 7 hours of preparation time per event, plus event duration\nCompensation varies based on location and may include:\nFlat fee per event\nPercentage of event revenue\nComplimentary event entry for a friend and a free drink\nHow to Apply\nIf you're passionate about fostering open dialogue and have the skills to engage diverse audiences, we want to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and a 3-5 minute video demonstrating your presentation skills on a topic of your choice.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Necessary",
+            "Points Per Hour": 4,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Local Operations Assistant",
+            "Summary": "Provide general support at live events (setup, equipment, materials)\nHandle administrative tasks (printing, translations, website updates)\nAssist with communication across various platforms\nFill in for other team roles as needed",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Local Operations Assistant Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs a Project Assistant for Real Talk Philosophy, you'll play a crucial supporting role in ensuring the smooth operation of our events and day-to-day activities. This dynamic position requires adaptability, initiative, and a willingness to tackle a wide range of tasks to support the RTP team and mission.\nKey Responsibilities\nEvent Support\nAssist with event setup and teardown\nHelp musicians with equipment setup, including cables and sound boards\nDistribute materials such as colored pencils and paper for haiku/drawing contests\nProvide general support during live events as needed\nAdministrative Tasks\nHandle various administrative duties, including printing documents and buying supplies\nAssist with translations when required\nEdit presentations using Google Slides\nMake necessary updates to the RTP website (Squarespace)\nCreate event banner images using Canva\nCommunication Support\nManage messaging across various platforms (Facebook, WhatsApp, Instagram)\nAssist with creating and distributing event flyers\nFlexible Support\nFill in for other team roles as needed, such as front door management or photography\nUndertake miscellaneous tasks as they arise to support the RTP team\nQualifications\nFluency in English (additional languages are a plus)\nStrong problem-solving skills and ability to think on your feet\nProficiency with Microsoft Office suite, Google Workspace, and Canva\nExperience with basic website management (Squarespace experience is a plus)\nExcellent organizational skills and high attention to detail\nBachelor's degree or currently pursuing one\nDesired Qualities\nInterest in philosophy and/or contemporary world issues\nNon-judgmental attitude and openness to diverse perspectives\nOptimistic outlook and positive demeanor\nSelf-motivated with the ability to work independently\nAdaptability and willingness to learn new skills\nTechnical Requirements\nPersonal laptop (Mac preferred)\nReliable internet connection\nTime Commitment and Compensation\nPart-time role with flexible hours\nAvailability to work evenings and weekends for events\nCompensation varies based on location and may include:\nHourly rate\nEvent-based compensation\nComplimentary access to RTP events\nHow to Apply\nIf you're a versatile, proactive individual excited about supporting thought-provoking events and philosophical discussions, we'd love to hear from you. Please submit your resume and a cover letter explaining your interest in the role and highlighting your relevant skills and experiences.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Necessary",
+            "Points Per Hour": 1,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "LCL Coordinator",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Project Assistant",
+            "Summary": "",
+            "Notes": "Project Assistant Role Description\nResponsibilities\nPost to Social Media (Facebook & Instagram)\nPosting Facebook events\nAdvertising Facebook events\nPresentation edits in PowerPoint and Keynote Online\nTranslations\nResearch\nScheduling meetings\nCommunicating information to Local Teams\nResponding to Email and Social Media messages\nEmailing partner organizations\nTranscriptions\nZoom call management\nPrint documents\nEditing website\nAd hoc administrative tasks \nCreate event banner images \nAd hoc shopping \nGeneral support at live events \n\n\nQualities of a Project Assistant\nFluent in English\nCollege degree (or working on it)\nOwn a laptop (Mac preferred) \nInterest in philosophy and/or contemporary world issues\nNon-judgmental\nOptimistic\nStrong organizational skills \nAttention to detail \nSelf-motivated\n\n\nTechnology\nGmail\nGoogle Docs and Sheets \nMicrosoft Excel and Word\nTrello\nApple Keynote (preferred, but optional)",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Game Designer",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Event Resource Production"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Presentation Designer",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Event Resource Production"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Researcher",
+            "Summary": "",
+            "Notes": "Researcher\nThis is a paid position\nThe Researcher gathers facts and major arguments from reputable sources.\n\n\nResponsibilities\nGather interesting statistics/facts, major arguments on both sides of the issues, studies, general knowledge, stories, definitions, and quotes related to the chosen topic. \nOnly use reputable sources\nCite all sources\nWhile researching, compile a list of questions for further exploration and small-group discussion \nDeliver research 1 week before event\nOptional: Attend weekly team meetings to discuss the group's direction\nFollow the Research Guidelines\nUse the Research Template\nRemuneration\n5% of weekly event profits (avg. $3-5/hr) for 4 hours/week\nIn Hanoi, net profits average $233/week. 5% of this is $12. For Hanoi’s top performing events, net profits average $394/week. 5% of this is $20. \nFree entry to all events \nThe ideal candidate is fluent in English, punctual, interested in contemporary world issues, and friendly.",
+            "Team(s)": [
+              "Research"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Research Coordinator",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Research"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Research Assistant",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Research"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "EFL Teacher",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "EFL"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "EFL Manager",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "EFL"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Online Host",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Online"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Online Technical Assistant",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Online"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Videographer",
+            "Summary": "Capture high-quality video footage of RTP events and discussions\nEdit and produce engaging video content for various platforms\nCollaborate with team to align video content with overall strategy\nDevelop creative ways to visually represent philosophical discussions\nManage video equipment and content archives",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "",
+            "Description": "Videographer Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Videographer for Real Talk Philosophy, you'll be responsible for capturing, editing, and producing high-quality video content of our events and discussions. Your role is crucial in documenting our unique events and creating compelling visual content to share our mission and expand our reach.\nKey Responsibilities\nEvent Videography\nCapture high-quality video footage of RTP events, including presentations, discussions, artistic performances, and audience interactions\nEnsure proper lighting and audio capture during filming\nAdapt to various event venues and lighting conditions\nVideo Editing and Production\nEdit raw footage to create engaging video content for various platforms (e.g., YouTube, social media, website)\nProduce different types of video content, including event highlights, promotional videos, and full-length event recordings\nAdd graphics, lower thirds, and other visual elements to enhance video content\nCollaboration with RTP Team\nWork closely with the marketing team to align video content with overall marketing strategy\nCoordinate with event organizers to understand key moments to capture\nCollaborate with the Community Music and Arts Coordinator to effectively showcase artistic elements\nContent Management\nOrganize and archive video footage\nManage the RTP YouTube channel or other video hosting platforms\nInnovative Storytelling\nDevelop creative ways to visually represent complex philosophical discussions\nCreate short, engaging video snippets that capture the essence of RTP events\nTechnical Management\nMaintain and operate video equipment\nStay updated on latest videography techniques and technologies\nQualifications\nProven experience in videography and video editing\nProficiency with video editing software (e.g., Adobe Premiere Pro, Final Cut Pro)\nStrong understanding of storytelling through visual medium\nExperience in event or documentary-style videography\nExcellent eye for composition and lighting\nDesired Qualities\nInterest in philosophy and contemporary social issues\nAbility to capture the nuance and complexity of discussions visually\nCreativity in representing abstract concepts through video\nAdaptability to work in various event settings\nStrong communication skills to coordinate with speakers and participants\nTechnical Skills\nProficiency with professional-grade video cameras and audio equipment\nExperience with lighting setups for various environments\nFamiliarity with video hosting platforms and social media video requirements\nBasic graphic design skills (a plus)\nTime Commitment and Compensation\nPart-time role with flexible hours\nRequires availability for evening and weekend events\nCompensation may include:\nBase salary or per-event rate\nPotential profit-sharing from video content monetization\nCredit in all produced videos\nHow to Apply\nIf you're passionate about visual storytelling and have a keen interest in capturing thought-provoking discussions, we'd love to see your work. Please submit your resume, a cover letter explaining your interest in the role, and a demo reel showcasing your videography and editing skills.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Opportunity/Opimization",
+            "Points Per Hour": 3,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Video Editor",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Social Media Manager",
+            "Summary": "",
+            "Notes": "Social Media Manager\nThis is a paid position. \n\n\nThe social media manager is responsible for getting fans of our page and attendees to our events. Because there is a strong link between the effectiveness of the Social Media Manager and the net profits of the event, the Social Media Manager is paid a distributive share of net profits. \n\n\nResponsibilities\nStrategize to boost event attendance and online community engagement \nFollow the Social Media Manager Procedure & Guidelines\nRecord best practices in the Social Media Manager Procedure & Guidelines\nCreate daily posts on instagram and facebook keeping the audience engaged\nCreate ads drawing people to our page and events \nCreate the Facebook event\nInvite members and post to local groups (e.g. Hanoi Massive, etc.) \nBoost events\nReminder posts on the day of the event \nRemuneration\nThe Social Media Manager will receive free entry + a 5% distributive share of net profits from each event. \nIn Hanoi, net profits average $233/week. 5% of this is $212. For Hanoi’s top performing events, net profits average $394/week. 5% of this is $19.\nRequirements\nFluent in English with perfect spelling and grammar \nPersonal laptop \nThe Ideal Candidate:\nIs independent, self-driven, and goal-focused\nIs witty and has their finger on the pulse of the people\nHas 1+ years of experience ",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Podcast Manager",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Website Developer",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Animator",
+            "Summary": "",
+            "Notes": "Remuneration\n$50/10 mins + Free Entry to All Events + Free Parking\n\n\nResponsibilities\nCreate short animated videos for online consumption based on the topics covered at the live events\n\n\nResources\nThe animator will be provided an in-house generated script, voiceover, artwork, music, and graphic designs\n\n\nWorkflow\nLive events take place on Wednesdays and Thursdays\nScripts will be written on Fridays and Saturdays\nScripts, artwork, music, et al will be sent on Saturdays\nCompleted animated video must be returned in 720p or 1080i by the following Friday (6 day return time) \n\n\nInspiration\nhttps://www.youtube.com/watch?v=GTSXBkHlUJE\nThe School of Life \nKurzgesagt\n8-Bit Philosophy\nCrash Course Philosophy\n\n\n1 Minute Demo Script #1\n“Polyamory, from the Greek poly, “many,” and the Latin amor, “love,” is the practice of having multiple romantic or sexual relationships simultaneously with all partners’ full knowledge and consent. Some psychologists like Dr. Christopher Ryan argue that humans are naturally polyamorous, pointing to chimps as bonobos who mate mate 1-4x an hour with up to 12 partners a day. Others, like Jordan Peterson, argue that there is value to the sacrifice of marriage, and that “Societies function less violently when there’s one woman per man.” So, Is it possible to simultaneously be in love with more than one person? What is the role of marriage? Should we allow children to be raised in polyamorous homes? Modern humans are currently running an experiment testing the necessity of monogamy. Results to be revealed soon. \n\n\nLow Quality Audio Recording: \nhttps://www.dropbox.com/s/3c3er3kf7uo3eqa/1%20minute%20polyamory%20animation%20demo.m4a?dl=0\n\n\nArtwork Created for Opening Up: https://www.dropbox.com/sh/envxe2xcobn4zyx/AAAQU-1xh9p0vZcDSn8aeZ70a?dl=0\n\n\nImages from the Internet: https://www.dropbox.com/sh/hoir0prwh9tnjy8/AAAuigjHMB7ZO-u1WNYsIgLRa?dl=0\n\n\nPDF of Slides: https://www.dropbox.com/s/ypexinl7jd80xc8/2019.03.13-14%20Polyamory.pdf?dl=0\n\n\nJPGs of Slides: https://www.dropbox.com/sh/93bz3s2tiedusv7/AACiE4laIeu_UNGaxueJ-UoJa?dl=0\n\n30 Second Demo Script #2\n“The Zen Buddhist doctrine “do not mistake the finger for the moon” advises that we not take the words of the Buddha (or any spiritual teacher) literally, but instead see beyond the words to the glimpse of truth revealed indirectly through them, a truth so grand it would be impossible to communicate or grasp explicitly. Extending the metaphor, we might say that the moon itself is just a reflection of the sun. We can not stare at the sun directly, though. Otherwise we risk being blinded by its awesome light.” ",
+            "Team(s)": [
+              "Event Resource Production"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Blog Manager",
+            "Summary": "Publish pre-generated event content on the RTP blog (Squarespace and Coda.io)\nEnsure proper formatting and organization of all blog content\nCollaborate with RTP team for timely content gathering and publication",
+            "Notes": "",
+            "Team(s)": [
+              "Local Chapter"
+            ],
+            "Image": [
+              "image.png"
+            ],
+            "Stage of Local Chapter Development": "Full",
+            "Description": "Blog Manager Job Description\nAbout Real Talk Philosophy\nReal Talk Philosophy (RTP) is an innovative organization that hosts engaging, interactive events exploring contemporary divisive issues. Since 2017, we've been fostering meaningful dialogues through a unique blend of presentations, discussions, artwork, music, and games.\nRole Overview\nAs the Blog Manager for Real Talk Philosophy, you'll be responsible for maintaining and updating our blog with content generated from our events. Your role is crucial in ensuring that the rich discussions and creative outputs from our events are accurately represented and easily accessible to our online audience.\nKey Responsibilities\nContent Publication\nPost pre-generated content onto the RTP blog for each event, including:\nScribe notes\nEvent photographs\nHaiku and drawings created by participants\nArtwork related to event themes\nVideo content from events\nEnsure all content is properly formatted and presented consistently\nPlatform Management\nManage the RTP blog using Squarespace and Coda.io\nOrganize content logically and maintain a user-friendly blog structure\nEnsure the blog is up-to-date and all event-related content is published in a timely manner\nQuality Assurance\nReview all content before publication to ensure accuracy and appropriateness\nMake minor edits or formatting adjustments as needed\nCoordinate with content creators (e.g., Scribe, Photographer, Videographer) if any clarifications or adjustments are needed\nArchiving and Organization\nMaintain an organized archive of all published content\nEnsure content is easily searchable and accessible\nBasic SEO Implementation\nApply basic SEO practices to blog posts, such as using appropriate tags and categories\nEnsure proper metadata is included for all published content\nCollaboration with RTP Team\nWork closely with other team members to gather all necessary content for each event\nCommunicate effectively with the team to ensure timely content delivery and publication\nQualifications\nExperience with content management systems, particularly Squarespace and Coda.io\nStrong attention to detail and organizational skills\nBasic understanding of SEO principles\nExcellent written communication skills\nAbility to work efficiently and meet deadlines\nDesired Qualities\nInterest in philosophy and contemporary issues\nCommitment to accurately representing diverse viewpoints\nAbility to work independently and as part of a team\nAdaptability and willingness to learn new tools or processes\nTechnical Skills\nProficiency with Squarespace and Coda.io\nBasic HTML knowledge (a plus)\nFamiliarity with image and video embedding in blog posts\nTime Commitment and Compensation\nPart-time role with flexible hours\nTime commitment based on event frequency and content volume\nCompensation may include:\nHourly rate or per-event fee\nPerformance bonuses based on timeliness and accuracy of publications\nHow to Apply\nIf you're detail-oriented, tech-savvy, and interested in helping share thought-provoking content with a wider audience, we'd love to hear from you. Please submit your resume, a cover letter explaining your interest in the role, and examples of any relevant experience with blog management or content publication.\nReal Talk Philosophy is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees and volunteers.",
+            "Priority": "Opportunity/Opimization",
+            "Points Per Hour": 2,
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Graphic Designer",
+            "Summary": "",
+            "Notes": "Graphic Designer\nThis is a paid position.\nMany of the ideas we encounter in Real Talk Philosophy are complex, and might best be disseminated visually. \nResponsibilities\nCreate miscellaneous graphics related to the week’s topic\nCreate graphics to visually represent complex philosophical concepts\nCreate fun graphics to engage the audience\nUpdate Opening Up logo  \nRemuneration\nNegotiable",
+            "Team(s)": [
+              "Central"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        },
+        {
+          "values": {
+            "Role": "Songwriter",
+            "Summary": "",
+            "Notes": "",
+            "Team(s)": [
+              "Event Resource Production"
+            ],
+            "Image": "",
+            "Stage of Local Chapter Development": "",
+            "Description": "",
+            "Priority": "",
+            "Points Per Hour": "",
+            "Sign Up": ""
+          }
+        }
+      ]
+    }
+  }

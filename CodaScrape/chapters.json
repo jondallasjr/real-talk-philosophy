@@ -1,0 +1,1260 @@
+{
+    "Chapters": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Chapter",
+          "display": true,
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "City",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Country",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Local Chapter Leader",
+          "format": {
+            "table": {
+              "id": "grid-vytNe2GvVN",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-vytNe2GvVN",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-vytNe2GvVN",
+              "name": "Team DB"
+            },
+            "type": "lookup",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Notes",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Stage",
+          "format": {
+            "table": {
+              "id": "grid-sRJSCKcK81",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-sRJSCKcK81",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-sRJSCKcK81",
+              "name": "Stages of Chapter Development"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Local Currency",
+          "format": {
+            "table": {
+              "id": "grid-1A_bcxY4qa",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-1A_bcxY4qa",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-1A_bcxY4qa",
+              "name": "Currencies - Today's Exchange Rate"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Cover",
+          "format": {
+            "type": "image",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "LCL Profile Picture",
+          "format": {
+            "type": "image",
+            "isArray": true
+          },
+          "formula": "[Local Chapter Leader].[Profile Picture]"
+        },
+        {
+          "type": "column",
+          "name": "LCL Bio",
+          "format": {
+            "type": "text",
+            "isArray": false
+          },
+          "formula": "[Local Chapter Leader].Bio"
+        },
+        {
+          "type": "column",
+          "name": "About",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Events",
+          "format": {
+            "table": {
+              "id": "grid-NzRsjzbDhI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-NzRsjzbDhI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-NzRsjzbDhI",
+              "name": "Events"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "Events.Filter(Chapter.Contains(thisRow))"
+        },
+        {
+          "type": "column",
+          "name": "Print Shop Email Address",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Local Trade Name",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Team",
+          "format": {
+            "table": {
+              "id": "grid-vytNe2GvVN",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-vytNe2GvVN",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-vytNe2GvVN",
+              "name": "Team DB"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "[Team DB].Filter(Chapter.Contains(thisRow) and not(Status.contains(Inactive,[Test Account],[Expressed Interest])))"
+        },
+        {
+          "type": "column",
+          "name": "Facebook Group",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "WhatsApp Group Join Link",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Current Venue",
+          "format": {
+            "table": {
+              "id": "grid-Nl4cOg0Lxu",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-Nl4cOg0Lxu",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-Nl4cOg0Lxu",
+              "name": "Venues 2"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Venue Address",
+          "format": {
+            "type": "text",
+            "isArray": false
+          },
+          "formula": "[Current Venue].Address"
+        },
+        {
+          "type": "column",
+          "name": "Venue Google Maps Link",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          },
+          "formula": "[Current Venue].[Google Maps Link]"
+        },
+        {
+          "type": "column",
+          "name": "Venue Description",
+          "format": {
+            "table": {
+              "id": "grid-Nl4cOg0Lxu",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-Nl4cOg0Lxu",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-Nl4cOg0Lxu",
+              "name": "Venues 2"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "[Current Venue].Description"
+        },
+        {
+          "type": "column",
+          "name": "Facebook Group QR Code",
+          "format": {
+            "type": "packObject",
+            "isArray": false
+          },
+          "formula": "Barcodeqr([Facebook Group])"
+        },
+        {
+          "type": "column",
+          "name": "WhatsApp Group QR Code",
+          "format": {
+            "type": "packObject",
+            "isArray": false
+          },
+          "formula": "Barcodeqr([WhatsApp Group Join Link])"
+        },
+        {
+          "type": "column",
+          "name": "Chapter-Specific Intro Slides",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Chapter-Specific Closing Slides",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Royalty",
+          "format": {
+            "precision": 22,
+            "useThousandsSeparator": false,
+            "type": "percent",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Favorite Event Photos",
+          "format": {
+            "table": {
+              "id": "grid-jdwGpB-P-G",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-jdwGpB-P-G",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-jdwGpB-P-G",
+              "name": "Event Photos"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "[Event Photos].Filter(Chapter.Contains(thisRow) AND Favorite.count()>=1)"
+        },
+        {
+          "type": "column",
+          "name": "Most Recent Event",
+          "format": {
+            "table": {
+              "id": "grid-NzRsjzbDhI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-NzRsjzbDhI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-NzRsjzbDhI",
+              "name": "Events"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "Events.filter(Chapter=thisRow.sort(false,Date)).first()"
+        },
+        {
+          "type": "column",
+          "name": "Most Recent Event Date",
+          "format": {
+            "table": {
+              "id": "grid-NzRsjzbDhI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-NzRsjzbDhI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-NzRsjzbDhI",
+              "name": "Events"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "Events.filter(Chapter=thisRow.sort(false,Date)).first().Date"
+        },
+        {
+          "type": "column",
+          "name": "Name",
+          "format": {
+            "type": "text",
+            "isArray": false
+          },
+          "formula": "IfBlank([Local Trade Name],Chapter)"
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Chapter": "Hanoi, Vietnam",
+            "City": "Hanoi",
+            "Country": "Vietnam",
+            "Local Chapter Leader": [
+              "Amber Hoffmann"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "1 - Very Best.jpg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "T01H7NL7AM9-U01H7JC6J2E-189b59be3fa8-512.png"
+              ]
+            ],
+            "LCL Bio": [
+              ""
+            ],
+            "About": "",
+            "Events": [
+              "#228: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Wed, Apr 21, 2021",
+              "#225: Polyamory at Real Talk Hanoi, Tue, Apr 13, 2021",
+              "#222: Conspiracy Theories at Real Talk Hanoi, Tue, Apr 6, 2021",
+              "#220: Toxic Masculinity at Real Talk Hanoi, Tue, Mar 30, 2021",
+              "#218: Consciousness at Real Talk Hanoi, Tue, Mar 23, 2021",
+              "#217: Psychedelics at Real Talk Hanoi, Tue, Mar 16, 2021",
+              "#211: Should We Have Children? at Real Talk Hanoi, Tue, Jan 26, 2021",
+              "#209: Social Media at Real Talk Hanoi, Tue, Jan 19, 2021",
+              "#208: Free Will at Real Talk Hanoi, Tue, Jan 12, 2021",
+              "#205: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Tue, Jan 5, 2021",
+              "#159: Comedy at Real Talk Hanoi, Wed, Nov 13, 2019",
+              "#158: Comedy at Real Talk Hanoi, Tue, Nov 12, 2019",
+              "#157: Consciousness at Real Talk Hanoi, Sat, Nov 9, 2019",
+              "#156: Free Will at Real Talk Hanoi, Wed, Nov 6, 2019",
+              "#155: Free Will at Real Talk Hanoi, Tue, Nov 5, 2019",
+              "#154: Descartes: Meditations on First Philosophy at Real Talk Hanoi, Sat, Nov 2, 2019",
+              "#153: Occultism at Real Talk Hanoi, Wed, Oct 30, 2019",
+              "#152: Occultism at Real Talk Hanoi, Tue, Oct 29, 2019",
+              "#151: Sam Harris: Free Will at Real Talk Hanoi, Sun, Oct 27, 2019",
+              "#150: Metaphors We Live By at Real Talk Hanoi, Sat, Oct 19, 2019",
+              "#149: Should We Have Children? at Real Talk Hanoi, Wed, Oct 16, 2019",
+              "#148: Should We Have Children? at Real Talk Hanoi, Tue, Oct 15, 2019",
+              "#147: Yogic Philosophy at Real Talk Hanoi, Wed, Oct 9, 2019",
+              "#146: Yogic Philosophy at Real Talk Hanoi, Tue, Oct 8, 2019",
+              "#145: Carl Jung: Man and His Symbols at Real Talk Hanoi, Fri, Oct 4, 2019",
+              "#144: Confucius at Real Talk Hanoi, Sun, Sep 29, 2019",
+              "#143: Bertrand Russell at Real Talk Hanoi, Fri, Sep 27, 2019",
+              "#142: Buddhism at Real Talk Hanoi, Wed, Sep 25, 2019",
+              "#141: Buddhism at Real Talk Hanoi, Tue, Sep 24, 2019",
+              "#140: Simone De Beauvoir at Real Talk Hanoi, Sun, Sep 22, 2019",
+              "#139: Plato: Republic at Real Talk Hanoi, Fri, Sep 20, 2019",
+              "#138: Fetishes at Real Talk Hanoi, Wed, Sep 18, 2019",
+              "#137: Fetishes at Real Talk Hanoi, Tue, Sep 17, 2019",
+              "#136: The Presocratics at Real Talk Hanoi, Sun, Sep 15, 2019",
+              "#135: Political Correctness at Real Talk Hanoi, Wed, Sep 11, 2019",
+              "#134: Political Correctness at Real Talk Hanoi, Tue, Sep 10, 2019",
+              "#133: Michel Foucault’s History of Madness at Real Talk Hanoi, Sun, Sep 8, 2019",
+              "#132: Pornography at Real Talk Hanoi, Wed, Sep 4, 2019",
+              "#131: Pornography at Real Talk Hanoi, Tue, Sep 3, 2019",
+              "#130: Noam Chomsky at Real Talk Hanoi, Sun, Sep 1, 2019",
+              "#129: Conspiracy Theories at Real Talk Hanoi, Wed, Aug 28, 2019",
+              "#128: Conspiracy Theories at Real Talk Hanoi, Tue, Aug 27, 2019",
+              "#127: Jean-Paul Sartre’s Existentialism is a Humanism at Real Talk Hanoi, Sun, Aug 25, 2019",
+              "#126: Surveillance Capitalism at Real Talk Hanoi, Wed, Aug 21, 2019",
+              "#125: Surveillance Capitalism at Real Talk Hanoi, Tue, Aug 20, 2019",
+              "#124: Hume on Human Understanding at Real Talk Hanoi, Fri, Aug 16, 2019",
+              "#123: Psychedelics at Real Talk Hanoi, Wed, Aug 14, 2019",
+              "#122: Psychedelics at Real Talk Hanoi, Tue, Aug 13, 2019",
+              "#121: Albert Camus: The Myth of Sisyphus at Real Talk Hanoi, Fri, Aug 9, 2019",
+              "#120: Consciousness at Real Talk Hanoi, Wed, Aug 7, 2019",
+              "#119: Consciousness at Real Talk Hanoi, Tue, Aug 6, 2019",
+              "#118: LGBTQ+ (Sexual Orientation) at Real Talk Hanoi, Wed, Jul 31, 2019",
+              "#117: LGBTQ+ (Sexual Orientation) at Real Talk Hanoi, Tue, Jul 30, 2019",
+              "#116: Kierkegaard - Fear and Trembling at Real Talk Hanoi, Fri, Jul 26, 2019",
+              "#115: Open Mic Vol. 5 (Community Voices) at Real Talk Hanoi, Wed, Jul 24, 2019",
+              "#114: Open Mic Vol. 5 (Community Voices) at Real Talk Hanoi, Tue, Jul 23, 2019",
+              "#113: Nietzsche: Beyond Good and Evil at Real Talk Hanoi, Fri, Jul 19, 2019",
+              "#112: Sex Work at Real Talk Hanoi, Wed, Jul 17, 2019",
+              "#111: Sex Work at Real Talk Hanoi, Tue, Jul 16, 2019",
+              "#110: Schopenhauer: The World as Will and Idea at Real Talk Hanoi, Fri, Jul 12, 2019",
+              "#109: Cults at Real Talk Hanoi, Wed, Jul 10, 2019",
+              "#108: Cults at Real Talk Hanoi, Tue, Jul 9, 2019",
+              "#107: Marcus Aurelius: Meditations at Real Talk Hanoi, Fri, Jul 5, 2019",
+              "#106: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Wed, Jul 3, 2019",
+              "#105: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Tue, Jul 2, 2019",
+              "#104: Artificial Intelligence at Real Talk Hanoi, Wed, Jun 26, 2019",
+              "#103: Artificial Intelligence at Real Talk Hanoi, Tue, Jun 25, 2019",
+              "#102: Feminism at Real Talk Hanoi, Wed, Jun 19, 2019",
+              "#101: Feminism at Real Talk Hanoi, Tue, Jun 18, 2019",
+              "#100: Veganism at Real Talk Hanoi, Wed, Jun 12, 2019",
+              "#99: Veganism at Real Talk Hanoi, Tue, Jun 11, 2019",
+              "#98: The Existence of God at Real Talk Hanoi, Wed, Jun 5, 2019",
+              "#97: The Existence of God at Real Talk Hanoi, Tue, Jun 4, 2019",
+              "#96: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Mon, Jun 3, 2019",
+              "#95: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Wed, May 29, 2019",
+              "#94: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Tue, May 28, 2019",
+              "#93: Open Mic Vol. 4 (Community Voices) at Real Talk Hanoi, Wed, May 22, 2019",
+              "#92: Open Mic Vol. 4 (Community Voices) at Real Talk Hanoi, Tue, May 21, 2019",
+              "#91: White Privilege at Real Talk Hanoi, Wed, May 15, 2019",
+              "#90: White Privilege at Real Talk Hanoi, Tue, May 14, 2019",
+              "#89: Social Media at Real Talk Hanoi, Mon, May 13, 2019",
+              "#88: Social Media at Real Talk Hanoi, Wed, May 8, 2019",
+              "#87: Social Media at Real Talk Hanoi, Tue, May 7, 2019",
+              "#86: The Fashion Industry at Real Talk Hanoi, Wed, Apr 24, 2019",
+              "#85: The Fashion Industry at Real Talk Hanoi, Tue, Apr 23, 2019",
+              "#84: Genetalia at Real Talk Hanoi, Wed, Apr 17, 2019",
+              "#83: Genetalia at Real Talk Hanoi, Tue, Apr 16, 2019",
+              "#82: Gender Fluidity at Real Talk Hanoi, Wed, Apr 10, 2019",
+              "#81: Gender Fluidity at Real Talk Hanoi, Tue, Apr 9, 2019",
+              "#80: Toxic Masculinity at Real Talk Hanoi, Wed, Apr 3, 2019",
+              "#79: Toxic Masculinity at Real Talk Hanoi, Tue, Apr 2, 2019",
+              "#78: The Animal Dilemma (Animal Husbandry) at Real Talk Hanoi, Wed, Mar 27, 2019",
+              "#77: The Animal Dilemma (Animal Husbandry) at Real Talk Hanoi, Tue, Mar 26, 2019",
+              "#76: Cultural Appropriation at Real Talk Hanoi, Wed, Mar 20, 2019",
+              "#75: Cultural Appropriation at Real Talk Hanoi, Tue, Mar 19, 2019",
+              "#74: Polyamory at Real Talk Hanoi, Wed, Mar 13, 2019",
+              "#73: Polyamory at Real Talk Hanoi, Tue, Mar 12, 2019",
+              "#72: 2 Year Anniversary Party at Real Talk Hanoi, Tue, Mar 5, 2019",
+              "#71: Abortion at Real Talk Hanoi, Tue, Feb 26, 2019",
+              "#70: Pornography at Real Talk Hanoi, Tue, Feb 19, 2019",
+              "#68: Indigenous American Philosophy (Indigenous American Philosophy) at Real Talk Hanoi, Tue, Jan 29, 2019",
+              "#67: Teaching English at Real Talk Hanoi, Tue, Jan 22, 2019",
+              "#66: Euthanasia (Euthanasia) at Real Talk Hanoi, Tue, Jan 15, 2019",
+              "#65: Open Mic Vol. 3 (Community Voices) at Real Talk Hanoi, Tue, Dec 11, 2018",
+              "#64: Treehouse Festival Vol. 2 Winter Jungle at Real Talk Hanoi, Fri, Dec 7, 2018",
+              "#63: Bhagavad Gita (Hinduism) at Real Talk Hanoi, Tue, Dec 4, 2018",
+              "#62: Fetishes at Real Talk Hanoi, Tue, Nov 27, 2018",
+              "#61: Climate Change at Real Talk Hanoi, Tue, Nov 13, 2018",
+              "#60: Open Mic Vol. 2 (Community Voices) at Real Talk Hanoi, Tue, Nov 6, 2018",
+              "#59: Occultism at Real Talk Hanoi, Tue, Oct 30, 2018",
+              "#58: Drag Performance at Real Talk Hanoi, Tue, Oct 23, 2018",
+              "#57: Veganism at Real Talk Hanoi, Tue, Oct 16, 2018",
+              "#56: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Tue, Oct 9, 2018",
+              "#55: Yogic Philosophy at Real Talk Hanoi, Tue, Oct 2, 2018",
+              "#54: Psychedelics at Real Talk Hanoi, Tue, Sep 25, 2018",
+              "#53: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Tue, Sep 11, 2018",
+              "#52: Sex Work at Real Talk Hanoi, Tue, Sep 4, 2018",
+              "#51: Open Mic Vol. 1 (Community Voices) at Real Talk Hanoi, Tue, Aug 28, 2018",
+              "#50: Gurdjieff at Real Talk Hanoi, Tue, Aug 21, 2018",
+              "#49: Polyamory at Real Talk Hanoi, Tue, Aug 14, 2018",
+              "#48: Conspiracy Theories at Real Talk Hanoi, Tue, Aug 7, 2018",
+              "#47: Alan Watts at Real Talk Hanoi, Tue, Jul 31, 2018",
+              "#46: Orientalism at Real Talk Hanoi, Tue, Jul 17, 2018",
+              "#45: Teaching English at Real Talk Hanoi, Tue, Jul 10, 2018",
+              "#44: Tao Te Ching at Real Talk Hanoi, Tue, Jul 3, 2018",
+              "#43: Cryptocurrency at Real Talk Hanoi, Tue, Jun 26, 2018",
+              "#42: The Psychological Significance of the Biblical Stories (The Bible) at Real Talk Hanoi, Tue, Jun 19, 2018",
+              "#41: Gender Pronouns & Political Correctness (Gender Fluidity) at Real Talk Hanoi, Tue, Jun 12, 2018",
+              "#40: Cultural Appropriation at Real Talk Hanoi, Tue, Jun 5, 2018",
+              "#39: Qigong at Real Talk Hanoi, Tue, May 29, 2018",
+              "#38: Why We Play Games at Real Talk Hanoi, Tue, May 15, 2018",
+              "#37: The Fashion Industry at Real Talk Hanoi, Tue, May 8, 2018",
+              "#36: Alain de Botton’s Religion for Atheists at Real Talk Hanoi, Tue, May 1, 2018",
+              "#35: Alain de Botton’s Religion for Atheists at Real Talk Hanoi, Tue, Apr 24, 2018",
+              "#34: Mother Goddess at Real Talk Hanoi, Tue, Apr 17, 2018",
+              "#33: Albert Camus: The Outsider at Real Talk Hanoi, Tue, Apr 10, 2018",
+              "#32: Albert Camus: The Myth of Sisyphus at Real Talk Hanoi, Tue, Apr 3, 2018",
+              "#31: Jean-Paul Sartre’s Existentialism is a Humanism at Real Talk Hanoi, Tue, Mar 27, 2018",
+              "#30: Kierkegaard - Fear and Trembling at Real Talk Hanoi, Tue, Mar 20, 2018",
+              "#29: Nietzsche: Beyond Good and Evil at Real Talk Hanoi, Mon, Mar 12, 2018",
+              "#28: Veganism at Real Talk Hanoi, Tue, Mar 6, 2018",
+              "#27: Immanuel Kant: Critique of Pure Reason at Real Talk Hanoi, Tue, Feb 27, 2018",
+              "#26: Nationalism at Real Talk Hanoi, Tue, Feb 6, 2018",
+              "#25: Immanuel Kant: Critique of Pure Reason at Real Talk Hanoi, Tue, Jan 30, 2018",
+              "#24: Would You Plug In? at Real Talk Hanoi, Sat, Jan 27, 2018",
+              "#23: Life 3.0 at Real Talk Hanoi, Sat, Jan 20, 2018",
+              "#22: Immanuel Kant: Critique of Pure Reason at Real Talk Hanoi, Sat, Dec 16, 2017",
+              "#21: Hume on Human Understanding at Real Talk Hanoi, Sat, Nov 25, 2017",
+              "#20: Modernism at Real Talk Hanoi, Sat, Nov 18, 2017",
+              "#19: Nonviolent Communication at Real Talk Hanoi, Tue, Nov 7, 2017",
+              "#18: Berkeley’s “A Treatise Concerning the Principles of Human Knowledge” at Real Talk Hanoi, Sat, Oct 21, 2017",
+              "#17: Sex for Sale (Sex Work) at Real Talk Hanoi, Wed, Oct 11, 2017",
+              "#16: Socialism vs. Capitalism at Real Talk Hanoi, Wed, Oct 4, 2017",
+              "#15: John Locke’s “An Essay Concerning Human Understanding” at Real Talk Hanoi, Sat, Sep 23, 2017",
+              "#14: The Biology of Love at Real Talk Hanoi, Sat, Sep 16, 2017",
+              "#13: Polyamory at Real Talk Hanoi, Sun, Sep 3, 2017",
+              "#12: Effective Altruism at Real Talk Hanoi, Sat, Jul 22, 2017",
+              "#11: Noam Chomsky at Real Talk Hanoi, Sat, May 20, 2017",
+              "#10: Albert Ellis at Real Talk Hanoi, Sat, May 13, 2017",
+              "#9: Reinhold Niebuhr at Real Talk Hanoi, Sat, May 6, 2017",
+              "#8: Schopenhauer at Real Talk Hanoi, Wed, Apr 19, 2017",
+              "#7: The Tao Te Ching at Real Talk Hanoi, Sat, Apr 15, 2017",
+              "#6: Carl Jung: The Collective Unconscious at Real Talk Hanoi, Sat, Apr 8, 2017",
+              "#5: Carl Jung: Man and His Symbols at Real Talk Hanoi, Sat, Apr 1, 2017",
+              "#4: Michel Foucault’s History of Madness at Real Talk Hanoi, Sat, Mar 25, 2017",
+              "#3: Michel Foucault’s History of Madness at Real Talk Hanoi, Thu, Mar 16, 2017",
+              "#2: Nietzsche: Beyond Good and Evil at Real Talk Hanoi, Thu, Mar 9, 2017",
+              "#1: First Meeting at Real Talk Hanoi, Fri, Mar 3, 2017"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "Real Talk Hanoi",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [
+              "2017.03.03 First HPF Meeting by Jon Dallas6 - Very Best.jpg",
+              "2017.03.03 First HPF Meeting by Jon Dallas1 - Very Best.jpg",
+              "2017.09.04 Polyamory 2.jpg",
+              "2018.05.03 Carl Jung 1.jpg",
+              "2018.06.06 Cultural Appropriation 13 - Very Best.jpg",
+              "2018.07.18 Orientalism 12 - Very Best.jpg",
+              "2018.07.18 Orientalism 17 - Very Best.jpg",
+              "2018.05.16 Why We Play Games 2.jpg",
+              "2018.05.16 Why We Play Games 28 - Very Best.jpg",
+              "2018.08.15 Polyamory by Frances Scott 11.jpg",
+              "2018.08.15 Polyamory by Frances Scott 15.jpg",
+              "2018.08.15 Polyamory by Frances Scott 24.jpg",
+              "2018.08.15 Polyamory by Frances Scott 23 - Very Best.jpg",
+              "2018.08.15 Polyamory by Frances Scott 35.jpg",
+              "2018.08.22 Gurdjieff by Frances Scott 30.jpg",
+              "2018.08.15 Polyamory by Frances Scott 8.jpg",
+              "2018.08.15 Polyamory by Frances Scott 21.jpg",
+              "2018.08.15 Polyamory by Frances Scott 29 - Very Best.jpg",
+              "2018.09.26 Drugs by Thu Hoai Nguyen 23 - Very Best.jpg",
+              "2018.11.28 Fetishes by Andrew Fearon 60.png",
+              "2018.08.29 Open Mic Philosophy by Frances Scott 33 - Very Best.jpg",
+              "2018.10.24 Philosophy of Drag by Thu Hoai Nguyen 19 - Very Best.JPG",
+              "2018.09.05 The Ethics of Sex Work by Frances Scott 1 - Very Best.JPG",
+              "2018.08.29 Open Mic Philosophy by Frances Scott 2.jpg",
+              "2018.08.29 Open Mic Philosophy by Frances Scott 13.jpg",
+              "2018.09.05 The Ethics of Sex Work by Frances Scott 40.JPG",
+              "2018.09.12 East Brain West Brain by Thu Hoai Nguyen 58.JPG",
+              "2018.09.12 East Brain West Brain by Thu Hoai Nguyen 25 - Very Best.JPG",
+              "2018.08.29 Open Mic Philosophy by Frances Scott 20 - Very Best.jpg",
+              "2018.11.28 Fetishes by Andrew Fearon 7.jpeg",
+              "2018.11.28 Fetishes by Andrew Fearon 38 - Very Best.jpeg",
+              "2018.11.28 Fetishes by Andrew Fearon 44.jpeg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 59 - Very Best.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 41 - Very Best.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 38 - Very Best.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 35 - Very Best.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 31 - Very Best.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 17.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 47 - Very Best.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 21 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 3 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 69.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 53.jpg",
+              "2019.03.13-14 Polyamory by Lavonne Bosman 40 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 68.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 57.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 46.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 47 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 54 - Very Best.jpg",
+              "2019.04.03 Toxic Masculinity by Lavonne Bosman 2 - Very Best.jpg",
+              "2019.04.03 Toxic Masculinity by Lavonne Bosman 26 - Very Best.jpg",
+              "2019.04.03 Toxic Masculinity by Lavonne Bosman 40 - Very Best.jpg",
+              "2019.04.03 Toxic Masculinity by Lavonne Bosman 37 - Very Best.jpg",
+              "2019.04.03 Toxic Masculinity by Lavonne Bosman 73 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 37 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Lavonne Bosman 25 - Very Best.jpg",
+              "2019.03.20-21 Cultural Appropriation by Lavonne Bosman 31 - Very Best.jpg",
+              "2019.03.20-21 Cultural Appropriation by Lavonne Bosman 18 - Very Best.jpg",
+              "2019.03.20-21 Cultural Appropriation by Lavonne Bosman 30 - Very Best.jpg",
+              "2019.03.06 2 Year Anniversary by Kaleb Daniel San 15 - Very Best.JPG",
+              "2019.01.30 Indigenous American Philosophy by Andrew Feaon 116 - Very Best.JPG",
+              "2019.01.30 Indigenous American Philosophy by Andrew Feaon 97.JPG",
+              "2019.02.27 Ethics of Abortion by Andrew Fearon 45.JPG",
+              "2019.02.27 Ethics of Abortion by Andrew Fearon 51.JPG",
+              "2019.03.06 2 Year Anniversary by Kaleb Daniel San 13.JPG",
+              "2019.02.20 Ethics of Pornraphy by Andrew Fearon 290.JPG",
+              "2019.02.27 Ethics of Abortion by Andrew Fearon 24.JPG",
+              "2021.03.31 Toxic Masculinity Hanoi Photos by Edson Quiroz OG(45).jpg",
+              "2021.03.31 Toxic Masculinity Hanoi Photos by Edson Quiroz OG(48).jpg"
+            ],
+            "Most Recent Event": "#228: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Wed, Apr 21, 2021",
+            "Most Recent Event Date": "2021-04-21T15:00:00.000+02:00",
+            "Name": "Real Talk Hanoi"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Da Nang, Vietnam",
+            "City": "Da Nang",
+            "Country": "Vietnam",
+            "Local Chapter Leader": [
+              "Mat Gallinger",
+              "Valentina Bravo"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "2021.03.24 Artificial Intelligence Da Nang Photos by Mat and Valentina OG (6).jpeg"
+            ],
+            "LCL Profile Picture": [
+              "2021.03.24 Artificial Intelligence Da Nang Photos by Mat and Valentina OG (10).jpeg",
+              [
+                "Valentina Bravo.jpg"
+              ]
+            ],
+            "LCL Bio": [
+              "",
+              ""
+            ],
+            "About": "",
+            "Events": [
+              "#229: Cultural Appropriation at Da Nang, Vietnam, Tue, Apr 27, 2021",
+              "#226: Sexual Orientation at Da Nang, Vietnam, Tue, Apr 13, 2021",
+              "#221: Sex Work at Da Nang, Vietnam, Tue, Mar 30, 2021",
+              "#219: Artificial Intelligence at Da Nang, Vietnam, Tue, Mar 23, 2021",
+              "#216: Polyamory at Da Nang, Vietnam, Tue, Mar 9, 2021",
+              "#215: The Psychological Differences Easterners and Westerners at Da Nang, Vietnam, Tue, Mar 2, 2021",
+              "#214: Antinatalism (Should We Have Children?) at Da Nang, Vietnam, Tue, Feb 23, 2021",
+              "#213: Comedy at Da Nang, Vietnam, Tue, Feb 16, 2021",
+              "#199: Psychedelics at Da Nang, Vietnam, Sat, Nov 21, 2020",
+              "#197: Veganism at Da Nang, Vietnam, Sat, Nov 14, 2020",
+              "#194: Conspiracy Theories at Da Nang, Vietnam, Sat, Oct 31, 2020",
+              "#192: Social Media at Da Nang, Vietnam, Sat, Oct 24, 2020",
+              "#188: Free Will at Da Nang, Vietnam, Tue, Sep 29, 2020",
+              "#186: Toxic Masculinity at Da Nang, Vietnam, Tue, Sep 22, 2020",
+              "#178: Comedy at Da Nang, Vietnam, Tue, Jul 21, 2020",
+              "#176: The Psychological Differences Easterners and Westerners at Da Nang, Vietnam, Tue, Jul 14, 2020",
+              "#175: Polyamory at Da Nang, Vietnam, Tue, Jul 7, 2020"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [
+              "109483060_417536815874236_6073246861815513658_n - Very Best.jpg",
+              "2021.03.03 East Brain West Brain Da Nang Photos by Mat and Valentina OG (11).jpeg",
+              "2021.03.24 Artificial Intelligence Da Nang Photos by Mat and Valentina OG (10).jpeg",
+              "2021.03.24 Artificial Intelligence Da Nang Photos by Mat and Valentina OG (2).jpeg",
+              "2021.03.24 Artificial Intelligence Da Nang Photos by Mat and Valentina OG (4).jpeg"
+            ],
+            "Most Recent Event": "#229: Cultural Appropriation at Da Nang, Vietnam, Tue, Apr 27, 2021",
+            "Most Recent Event Date": "2021-04-27T15:00:00.000+02:00",
+            "Name": "Da Nang, Vietnam"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Saigon, Vietnam",
+            "City": "Saigon",
+            "Country": "Vietnam",
+            "Local Chapter Leader": [
+              "Shahin Kaveh"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "131259584_10225525095302940_4247092277233693059_o.jpg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "IMG_0349 - Shahin Kaveh (1).JPG"
+              ]
+            ],
+            "LCL Bio": [
+              "Hi, my name is Shahin Kaveh. I have a B.Sc. in theoretical physics from Sharif University in Tehran, Iran. I have Master's degrees in philosophy from Texas Tech University (focused on Ethics and Aesthetics, resulting in an Ethics Certificate) and Johns Hopkins University (focused on systems of thought), as well as a PhD in History and Philosophy of Science from the University of Pittsburgh. I am a certified philosophical counselor and help people all over the world apply philosophy to their life problems and mental health issues.\n​\nI have founded several university organizations (including Real Talk @Pitt, and BridgePittsburgh) specifically aimed at bringing people together for civil disagreement, where I helped people practice one thing: perceiving contradictory information as a thrill, rather than a threat. I have a knack for making people comfortable with exploring ideas freely!\n"
+            ],
+            "About": "",
+            "Events": [
+              "#212: Should We Have Children? at Saigon, Vietnam, Wed, Jan 27, 2021",
+              "#206: Social Media at Saigon, Vietnam, Wed, Jan 6, 2021",
+              "#204: Rules of Dating, Sex, and Consent at Saigon, Vietnam, Wed, Dec 16, 2020"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [
+              "132281487_10225525093142886_2106904840132825462_o.jpg",
+              "131259584_10225525095302940_4247092277233693059_o.jpg",
+              "20201111211649_IMG_6152 - Very Best.jpg",
+              "20201111211709_IMG_6154.jpg",
+              "20201111203924_IMG_6096.jpg",
+              "20201111220250_IMG_6182 - Very Best.jpg",
+              "20201111210538_IMG_6129 - Very Best.jpg"
+            ],
+            "Most Recent Event": "#212: Should We Have Children? at Saigon, Vietnam, Wed, Jan 27, 2021",
+            "Most Recent Event Date": "2021-01-27T14:00:00.000+02:00",
+            "Name": "Saigon, Vietnam"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Chiang Mai, Thailand",
+            "City": "Chiang Mai",
+            "Country": "Thailand",
+            "Local Chapter Leader": [
+              "Jon Dallas"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "image.png"
+            ],
+            "LCL Profile Picture": [
+              [
+                "2018.09.12 East Brain West Brain by Thu Hoai Nguyen 49 - Very Best.JPG"
+              ]
+            ],
+            "LCL Bio": [
+              "Jon Dallas founded Real Talk Philosophy in Hanoi, Vietnam in March, 2017. Jon is a TEDx speaker, PADI SCUBA Dive Master, yoga instructor, and world traveler. He holds a BA in Theatre Performance from Towson University. Jon is originally from Jarrettsville, MD, USA, but lived for several years in Hanoi, Vietnam and Chiang Mai, Thailand. He now lives in Harare, Zimbabwe with his wife Jess. Find out more at jondallasjr.org."
+            ],
+            "About": "",
+            "Events": [
+              "#231: Comedy at Chiang Mai, Thailand, Wed, Jul 7, 2021",
+              "#203: Expert Voices: Consciousness (Consciousness) at Chiang Mai, Thailand, Tue, Dec 15, 2020",
+              "#202: On The Origins of Sexual Orientation (Sexual Orientation) at Chiang Mai, Thailand, Tue, Dec 8, 2020",
+              "#201: Artificial Intelligence at Chiang Mai, Thailand, Tue, Dec 1, 2020",
+              "#200: Toxic Masculinity at Chiang Mai, Thailand, Tue, Nov 24, 2020",
+              "#198: Psychedelics at Chiang Mai, Thailand, Tue, Nov 17, 2020",
+              "#196: Fetishes at Chiang Mai, Thailand, Tue, Nov 10, 2020",
+              "#195: Social Media at Chiang Mai, Thailand, Tue, Nov 3, 2020",
+              "#193: Should We Have Children? at Chiang Mai, Thailand, Tue, Oct 27, 2020",
+              "#191: Conspiracy Theories at Chiang Mai, Thailand, Tue, Oct 20, 2020",
+              "#190: Rules of Dating, Sex, and Consent at Chiang Mai, Thailand, Tue, Oct 6, 2020",
+              "#189: Free Will at Chiang Mai, Thailand, Tue, Sep 29, 2020",
+              "#187: Polyamory at Chiang Mai, Thailand, Tue, Sep 22, 2020",
+              "#185: The Psychological Differences Easterners and Westerners at Chiang Mai, Thailand, Tue, Sep 15, 2020",
+              "#184: Sex Work at Chiang Mai, Thailand, Tue, Sep 8, 2020",
+              "#183: Cultural Appropriation at Chiang Mai, Thailand, Tue, Sep 1, 2020",
+              "#182: Pornography at Chiang Mai, Thailand, Tue, Aug 25, 2020",
+              "#181: Veganism at Chiang Mai, Thailand, Tue, Aug 18, 2020",
+              "#180: Comedy at Chiang Mai, Thailand, Tue, Aug 11, 2020",
+              "#160: Polyamory at Chiang Mai, Thailand, Sat, Feb 1, 2020",
+              "#69: Polyamory at Chiang Mai, Thailand, Fri, Feb 1, 2019"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [
+              "2020.02.03 Polyamory at Jai Thep by John Kiss 14.JPG",
+              "2020.09.23 Polyamory by Bay SM (54).jpeg",
+              "2020.09.23 Polyamory by Bay SM (19).jpeg",
+              "2020.09.23 Polyamory by Bay SM (138) - Very Best.jpeg",
+              "2020.08.12 To Meat or Not To Meat by Joanna Berg (2).jpg",
+              "2020.02.03 Polyamory at Jai Thep by John Kiss 23 - Very Best.jpg",
+              "2020.09.23 Polyamory by Bay (5).jpeg",
+              "2020.09.23 Polyamory by Bay (54).jpeg",
+              "2020.09.23 Polyamory by Bay (89) - Very Best.jpeg",
+              "2020.09.23 Polyamory by Bay (130).jpeg",
+              "2020.09.23 Polyamory by Bay (57) - Very Best.jpeg",
+              "2020.12.09 Sexual Orientation by Chertchai OG 5 - Very Best.jpg",
+              "2020.12.09 Sexual Orientation by Chertchai OG 11.jpg",
+              "2020.12.09 Sexual Orientation by Chertchai OG 15.jpg",
+              "2020.12.09 Sexual Orientation by Chertchai OG 48.jpg",
+              "2020.12.09 Sexual Orientation by Chertchai OG 66.jpg",
+              "2020.12.09 Sexual Orientation by Chertchai SM 4 - Very Best.jpg",
+              "2020.10.28 Antinatalism Chiang Mai by Bay OG (51) - Very Best.jpg",
+              "2020.10.28 Antinatalism Chiang Mai by Bay OG (41).jpg",
+              "2020.10.28 Antinatalism Chiang Mai by Bay OG (34).jpg",
+              "DSCF6879 - Very Best.jpg",
+              "DSCF6942.jpg",
+              "DSCF6815 - Very Best.jpg",
+              "DSCF6879 - Very Best.jpg",
+              "DSCF7156 - Very Best.jpg",
+              "DSCF7165.jpg",
+              "DSCF7203 - Very Best.jpg",
+              "DSCF7259 - Very Best.jpg",
+              "DSCF7280.jpg",
+              "DSCF7109 - Very Best.jpg",
+              "DSCF7203 - Very Best.jpg",
+              "DSCF7477 - Very Best.jpg",
+              "IMG_0732.JPG",
+              "IMG_0766.JPG",
+              "IMG_0812.JPG",
+              "IMG_0791.JPG",
+              "IMG_0880.JPG",
+              "IMG_0992.JPG",
+              "IMG_1021.JPG",
+              "IMG_0948.JPG",
+              "20201216204207_IMG_7696.jpg",
+              "20201216193043_IMG_7606.jpg",
+              "20201216193556_IMG_7615 - Very Best.jpg",
+              "20201216193905_IMG_7619.jpg",
+              "20201216201002_IMG_7647.jpg",
+              "20201216200921_IMG_7642.jpg",
+              "20201216202840_IMG_7669.jpg",
+              "20201216195208_IMG_7631.jpg",
+              "20201216203740_IMG_7688 - Very Best.jpg",
+              "20201216205505_IMG_7701.jpg"
+            ],
+            "Most Recent Event": "#231: Comedy at Chiang Mai, Thailand, Wed, Jul 7, 2021",
+            "Most Recent Event Date": "2021-07-07T15:00:00.000+02:00",
+            "Name": "Chiang Mai, Thailand"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Koh Phangan, Thailand",
+            "City": "Koh Phangan",
+            "Country": "Thailand",
+            "Local Chapter Leader": [
+              "Mona Singh"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "171371020_892162058028583_1846341714392959116_n.jpeg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "Mona Singh.jpeg"
+              ]
+            ],
+            "LCL Bio": [
+              ""
+            ],
+            "About": "",
+            "Events": [
+              "#224: Free Will at Koh Phangan, Thailand, Thu, Apr 8, 2021",
+              "#207: Psychedelics at Koh Phangan, Thailand, Thu, Jan 7, 2021"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [
+              "Josh Opperman"
+            ],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [
+              "2021.01.09 Psychedelics Koh Phangan by Lucas Eos 8.jpeg"
+            ],
+            "Most Recent Event": "#224: Free Will at Koh Phangan, Thailand, Thu, Apr 8, 2021",
+            "Most Recent Event Date": "2021-04-08T15:00:00.000+02:00",
+            "Name": "Koh Phangan, Thailand"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Pai, Thailand",
+            "City": "Pai",
+            "Country": "Thailand",
+            "Local Chapter Leader": [
+              "Mona Singh"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "Mona - 2BCD8941-D798-4AE6-9876-046FAA25205D - Very Best.jpeg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "Mona Singh.jpeg"
+              ]
+            ],
+            "LCL Bio": [
+              ""
+            ],
+            "About": "",
+            "Events": [
+              "#210: Free Will at Pai, Thailand, Sat, Jan 23, 2021"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [],
+            "Most Recent Event": "#210: Free Will at Pai, Thailand, Sat, Jan 23, 2021",
+            "Most Recent Event Date": "2021-01-23T14:00:00.000+02:00",
+            "Name": "Pai, Thailand"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Singapore, Singapore",
+            "City": "Singapore",
+            "Country": "Singapore",
+            "Local Chapter Leader": [
+              "Amber Tan"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "169937622_477385856741591_3670811923678619821_n.jpeg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "Amber Tan.jpg"
+              ]
+            ],
+            "LCL Bio": [
+              ""
+            ],
+            "About": "",
+            "Events": [
+              "#230: Polyamory at Singapore, Singapore, Tue, May 4, 2021",
+              "#227: Sex Work at Singapore, Singapore, Tue, Apr 20, 2021",
+              "#223: Comedy at Singapore, Singapore, Tue, Apr 6, 2021"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [],
+            "Most Recent Event": "#230: Polyamory at Singapore, Singapore, Tue, May 4, 2021",
+            "Most Recent Event Date": "2021-05-04T15:00:00.000+02:00",
+            "Name": "Singapore, Singapore"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Oakland, California",
+            "City": "Oakland",
+            "Country": "United States",
+            "Local Chapter Leader": [
+              "Charlie Rebich"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "Screen Shot 2566-06-20 at 15.33.33.png"
+            ],
+            "LCL Profile Picture": [
+              [
+                "Charlie Rebich.jpg"
+              ]
+            ],
+            "LCL Bio": [
+              ""
+            ],
+            "About": "",
+            "Events": [],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [],
+            "Most Recent Event": "",
+            "Most Recent Event Date": "",
+            "Name": "Oakland, California"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Harare, Zimbabwe",
+            "City": "Harare",
+            "Country": "Zimbabwe",
+            "Local Chapter Leader": [
+              "Jon Dallas"
+            ],
+            "Notes": "",
+            "Stage": "Full",
+            "Local Currency": "USD",
+            "Cover": [
+              "IMG_1589.jpeg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "2018.09.12 East Brain West Brain by Thu Hoai Nguyen 49 - Very Best.JPG"
+              ]
+            ],
+            "LCL Bio": [
+              "Jon Dallas founded Real Talk Philosophy in Hanoi, Vietnam in March, 2017. Jon is a TEDx speaker, PADI SCUBA Dive Master, yoga instructor, and world traveler. He holds a BA in Theatre Performance from Towson University. Jon is originally from Jarrettsville, MD, USA, but lived for several years in Hanoi, Vietnam and Chiang Mai, Thailand. He now lives in Harare, Zimbabwe with his wife Jess. Find out more at jondallasjr.org."
+            ],
+            "About": "",
+            "Events": [
+              "#233: Comedy at Real Talk Harare, Wed, May 24, 2023",
+              "#234: Rules of Dating, Sex, and Consent at Real Talk Harare, Tue, Jun 27, 2023",
+              "#235: Masculinity: Toxic? (Toxic Masculinity) at Real Talk Harare, Tue, Jul 4, 2023",
+              "#237: Consciousness at Real Talk Harare, Thu, Oct 3, 2024",
+              "#236: The more, the merrier...? (Polyamory) at Real Talk Harare, Thu, Aug 15, 2024",
+              "#238: Sexual Orientation at Real Talk Harare, Thu, Oct 17, 2024",
+              "#239: Artificial Intelligence at Real Talk Harare, Thu, Oct 31, 2024"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "Real Talk Harare",
+            "Team": [
+              "Jon Dallas",
+              "Jess Dallas",
+              "Leanne Saunders",
+              "Tom Brickhill",
+              "LoveDale Makalanga",
+              "Penny",
+              "Ane",
+              "Darryl Dzapasi "
+            ],
+            "Facebook Group": "www.facebook.com/realtalkharare",
+            "WhatsApp Group Join Link": "https://chat.whatsapp.com/HWV18MKpmO6Fj3oDHVPDQq",
+            "Current Venue": "Jon's House (DM for Address)",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAYAAABUmhYnAAAAHnRFWHRTb2Z0d2FyZQBid2lwLWpzLm1ldGFmbG9vci5jb21Tnbi0AAADM0lEQVR4nO2TQW7EMAwD8/9Pt9eiC6xAkJKcZAjkZEqiNc51XdfP8FdJrXfP03nU+vh+AZrNo9YDtPCr5+k8aj1AC796ns6j1rcDTat7odvA1P5pAVTs7wqgRT1Ai/4AfRlQd6HbC+/O6/aL7xegXl6AigIoQK16gJoXcv3d87rvD9Bw/fb9ARqu374/QMP12/d/PVB1vqp0f4CaeVwBVB1YCKAABejf8/RCyoHF+XSe0x60KoCK8wBaDSzOAaoJoOK82wPt/spADz9v3y9AAQpQ4xygDzuf3u+61IDuA3IXdPxCtwXQhwmgDxNATaUv4C54O293v/YHAFCAAtToB9DhvN391oFWgFSA6XyqP523ez9yP4ACFKBCP4AW813/64C6gbaBb+dP18s6bSF3zw9QU6flB6ip0/KvA1UDdfunF3J6Xvu+AD0rL0CrC4r+7bwArS4o+rfzyufpC6mB1HmqtvO6+dV5AG3OC1Cxf7ofQMV6O7Co7bzHAXUHqufp+emFdwO09wNQgFr9AKr1n28g9gOo1j/eIL2AtKaBVX713M3z0R+gWr/Kr567eQBq9qv86rmbB6Bmv8qvnrt5yv7pAN1KP7D0A58GPj8gLIACFKDRAWEB9F99d6A04O0XXwGdnh9vAFCAWgIoQFv7HwfULej2q/XqwrsfnDrP9euGYb9aD1DVMOxX6wGqGob9av3rgdovwLzQ9IXTf8B0v3IeQAH6VQAFKECNvCofG6jr7waSnqequ385cNoP0LAAClCACor3Px3A6QtU75vex0c9QAEKUKEfQEW/qscD3Zb7oNIPxPWrcgEBtNmvCqDFt+1XBdDi2/arigOtGqa/6Qu7/V2g6QdR+gEKUIB+qU+fy36APhxoWuMXKvzdDy5dL58DFKCSAOrVA7Twvx6ou5DtB6PWdz+Y9DzZAFCvHqCiACoaAOrVvw6o289d0Gl5bcAAPSsvQMX6Stt5ASrWV9rOe3ugabkL6QagzlfrARr+3LwANecBVAwAUG++Wt++cDtgc7/Kn37QcYCywRRAAQpQ5z4A/e6/PdDuT52vqnt+NyD7QQMUoAAVvu68dkCAHgz0FxwCJ0dtNFXmAAAAAElFTkSuQmCC",
+            "WhatsApp Group QR Code": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAAHnRFWHRTb2Z0d2FyZQBid2lwLWpzLm1ldGFmbG9vci5jb21Tnbi0AAAEOUlEQVR4nO2TSY4jQQwD/f9PT589jU6BIKVU2UGgTkpRW9Tr9Xr9G/4qbc+v/Kb3Eb8PQGj5AJEuaC7gdj5ApAuaC7id/3VApDXtnz6o24/7fvw+AJHtFyDUgs3+AKEJIIp+AEJsKL3g9MDuQdT51PrdfvZ9AAIgAOLwHiCmC4pxVQDxYUB0A5Kup/oDhOnvCiAAItp/2h8gTH9XAPFwINL10/Vcf1UAEa6fruf6qwKIcP10PddfFUCE66fruf6q1gHhavrgaj/TgKXjrgAiXA8g3IJFHCC0uCuACNf7eCC6v7Ih4sd4+30A4llxgCAOEMT/jk/fZ1zdA6Tz0/Og/wQQ6E0Agd4EEMtUNegebHoB6XnS9br7tfe/riFTAAEQx36rOEBsb8gUQISBSC/ErecOPJ3v+nW/L/0AAiAAojEfIMz32w7q5j8eiErTA6iaBnLaPx139w0Ql/0BwuxPfQ8QogDiy4CYLli9TxPdDeRtP3efv/wBAiAAQoin66X9AEIUQJj77T6wOnBaaj33fTcgbj2AEOsBhFgAIM7vAcLM7xZAnP3iC5oGoBvYdH3VL91f6Q8QAAEQh6+7vuoHEKIAwvMrgbgNSPqA6YNMA5Dup+wPILx+pusBRHN/bj/T9QCiuT+3n+l67UCoA6UX0p1/+4Db/GQBhOe/3U8WQHj+2/1kAYTnv92vXepA3Qd3gdj23vWrFAcGIABCahAgAAIggu9dv0q/8rsHlBsy49s+dR51Pvf9/YKFnxvf9qnzqPO57+8XLPzc+LZPnUedz31/v2Dh58a3feo86nzu+7imDzbdr+rXfYD1gAAEQBwLqg0BhCaACA8AEGZ/2whMA6jmq/1N/zDtPxhAAMSxYXcBrgACIKL9AEQxz/UGCnXXT/fnxtN+cj2AAAiAOPi7/blxgCgEEMP1bi/QBSj9Pt1PN3Dx9wCh9af6A4TYAEB4/cbfA4TWn+r/eCCqhO6FqnL7uQ1Aup49H0AAhNQQQGj1AcJ87woghoFwG1LrdQM1DehtwOR5ASKr2wcFCFEAIRq4BQHiw4FwD+gCpNZT89W4qtv7AwgxX42rur0/gBDz1biq2/sDCDFfjau6vb/0PO1KA1nF3YVuOxhAmHGAWC6AAIg3AcQyINIDqwtxdftgacDc+m49gCj6A4jmLy2AAIjW/it/tX76fXd/4wdL1+9eqOvX/cPE/QECII6GaQEEQEj+APEwINyC6Xj6gOl89336k/sFiGw+QIj5bhwgAAIgjE/udzsQab/uhW7PL98DxLMO6uYDRHge1W9bPkCE51H9tuU/Doi0f1r2ws167fu4fTCA0OoBhOmfFkCI3zb/tL4eCFfphUz7V+9dAKZ/OLmhtACi1w8ghv2r9wAhCiB6/dqB6P7c+urA3QdKz3d9HwCR3UfaDyCmFxDeR9oPIKYXEN5H2m90Hz/BrG5+OdXCSQAAAABJRU5ErkJggg==",
+            "Chapter-Specific Intro Slides": "https://docs.google.com/presentation/d/1R4RhOYuGljB69He7iK_CV4_eS-3xMMXTmAsuq05uGtU/edit",
+            "Chapter-Specific Closing Slides": "https://docs.google.com/presentation/d/12oNk2udIR054ioMyq4OUhGr349tCDigyZB7aMKvZ2wQ",
+            "Royalty": "20%",
+            "Favorite Event Photos": [
+              "Screen Shot 2566-06-28 at 08.23.43.jpeg",
+              "IMG_2351.jpg",
+              "IMG_2352.jpg",
+              "IMG_2356.jpg",
+              "IMG_2367.jpg",
+              "IMG_2373.jpg",
+              "IMG_2374.jpg",
+              "IMG_2390.jpg",
+              "IMG_2407.jpg",
+              "IMG_2411.jpg",
+              "IMG_1590.jpg",
+              "IMG_1589.jpg",
+              "IMG_6610.heic",
+              "8c9d973d-557a-4ba7-bbd3-3b6214dd0027.JPG",
+              "IMG_9972.jpg",
+              "IMG_9862.jpg",
+              "IMG_9935.jpg",
+              "IMG_0021.jpg",
+              "IMG_9854.jpg",
+              "IMG_0019.jpg",
+              "IMG_9906.jpg",
+              "IMG_9848.jpg",
+              "IMG_9837.jpg",
+              "IMG_9826.jpg"
+            ],
+            "Most Recent Event": "#233: Comedy at Real Talk Harare, Wed, May 24, 2023",
+            "Most Recent Event Date": "2023-05-24T15:00:00.000+02:00",
+            "Name": "Real Talk Harare"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Bali, Indonesia",
+            "City": "Bali",
+            "Country": "Indonesia",
+            "Local Chapter Leader": [
+              "Josh Opperman"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "IMG_5556.jpg"
+            ],
+            "LCL Profile Picture": [
+              "IMG_5556.jpg"
+            ],
+            "LCL Bio": [
+              ""
+            ],
+            "About": "",
+            "Events": [
+              "#232: Polyamory at Bali, Indonesia, Fri, Nov 19, 2021"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [
+              "IMG_5546.jpg",
+              "Remini20211204102121072.JPG",
+              "IMG_5556.jpg"
+            ],
+            "Most Recent Event": "#232: Polyamory at Bali, Indonesia, Fri, Nov 19, 2021",
+            "Most Recent Event Date": "2021-11-19T01:42:59.000+02:00",
+            "Name": "Bali, Indonesia"
+          }
+        },
+        {
+          "values": {
+            "Chapter": "Online",
+            "City": "Online",
+            "Country": "Online",
+            "Local Chapter Leader": [
+              "Jon Dallas"
+            ],
+            "Notes": "",
+            "Stage": "On Hiatus",
+            "Local Currency": "",
+            "Cover": [
+              "Online Forum.001 - Very Best.jpeg WEB.jpeg"
+            ],
+            "LCL Profile Picture": [
+              [
+                "2018.09.12 East Brain West Brain by Thu Hoai Nguyen 49 - Very Best.JPG"
+              ]
+            ],
+            "LCL Bio": [
+              "Jon Dallas founded Real Talk Philosophy in Hanoi, Vietnam in March, 2017. Jon is a TEDx speaker, PADI SCUBA Dive Master, yoga instructor, and world traveler. He holds a BA in Theatre Performance from Towson University. Jon is originally from Jarrettsville, MD, USA, but lived for several years in Hanoi, Vietnam and Chiang Mai, Thailand. He now lives in Harare, Zimbabwe with his wife Jess. Find out more at jondallasjr.org."
+            ],
+            "About": "",
+            "Events": [
+              "#179: Free Will at Online, Tue, Jul 28, 2020",
+              "#177: Rules of Dating, Sex, and Consent at Online, Tue, Jul 14, 2020",
+              "#174: White Privilege at Online, Tue, Jun 30, 2020",
+              "#173: Reparations at Online, Tue, Jun 16, 2020",
+              "#172: Defund the Police at Online, Tue, Jun 9, 2020",
+              "#171: Political Violance at Online, Tue, Jun 2, 2020",
+              "#170: Polyamory at Online, Wed, May 27, 2020",
+              "#169: Polyamory at Online, Tue, May 26, 2020",
+              "#168: The Psychological Differences Easterners and Westerners at Online, Tue, May 19, 2020",
+              "#167: Sex Work at Online, Tue, May 12, 2020",
+              "#166: Cultural Appropriation at Online, Tue, May 5, 2020",
+              "#165: Coronavirus at Online, Thu, Apr 30, 2020",
+              "#164: Euthanasia at Online, Thu, Apr 23, 2020",
+              "#163: Comedy at Online, Thu, Apr 16, 2020",
+              "#162: Veganism at Online, Thu, Apr 9, 2020",
+              "#161: Comedy at Online, Thu, Apr 2, 2020"
+            ],
+            "Print Shop Email Address": "",
+            "Local Trade Name": "",
+            "Team": [],
+            "Facebook Group": "",
+            "WhatsApp Group Join Link": "",
+            "Current Venue": "",
+            "Venue Address": "",
+            "Venue Google Maps Link": "",
+            "Venue Description": "",
+            "Facebook Group QR Code": "",
+            "WhatsApp Group QR Code": "",
+            "Chapter-Specific Intro Slides": "",
+            "Chapter-Specific Closing Slides": "",
+            "Royalty": "",
+            "Favorite Event Photos": [],
+            "Most Recent Event": "#179: Free Will at Online, Tue, Jul 28, 2020",
+            "Most Recent Event Date": "2020-07-28T15:00:00.000+02:00",
+            "Name": "Online"
+          }
+        }
+      ]
+    }
+  }

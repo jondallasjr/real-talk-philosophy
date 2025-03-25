@@ -1,0 +1,99 @@
+{
+    "Press": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Publication",
+          "display": true,
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Title",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Link",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Date",
+          "format": {
+            "type": "date",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Type",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Embed",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          },
+          "formula": "embed(Link,850,1100,true)"
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Publication": "Saigoneer",
+            "Title": "Intellectual Debate Bridges Communities at Real Talk Philosophy",
+            "Link": "https://urbanisthanoi.com/hanoi-culture/13240-intellectual-debate-bridges-communities-at-hanoi-philosophy-forum",
+            "Date": "2018-07-04T00:00:00.000+02:00",
+            "Type": "Article",
+            "Embed": "https://urbanisthanoi.com/hanoi-culture/13240-intellectual-debate-bridges-communities-at-hanoi-philosophy-forum"
+          }
+        },
+        {
+          "values": {
+            "Publication": "Chao Hanoi",
+            "Title": "Real Talk Philosophy: creating a community space for engaging conversations",
+            "Link": "https://chaohanoi.com/2019/12/01/hanoi-philosophy-forum/",
+            "Date": "2019-11-30T00:00:00.000+02:00",
+            "Type": "Article",
+            "Embed": "https://chaohanoi.com/2019/12/01/hanoi-philosophy-forum/"
+          }
+        },
+        {
+          "values": {
+            "Publication": "Sharing Vietnam",
+            "Title": "Promoting Passion for Philosophy in Vietnam",
+            "Link": "https://youtu.be/bpR_K2YZjqE?t=75",
+            "Date": "2017-04-23T00:00:00.000+02:00",
+            "Type": "Video Interview",
+            "Embed": "https://youtu.be/bpR_K2YZjqE?t=75"
+          }
+        },
+        {
+          "values": {
+            "Publication": "Big 7 Travel",
+            "Title": "The 7 Best Places To Meet Expats In Hanoi",
+            "Link": "https://bigseventravel.com/meet-expats-in-hanoi/",
+            "Date": "2020-02-11T00:00:00.000+02:00",
+            "Type": "Article",
+            "Embed": "https://bigseventravel.com/meet-expats-in-hanoi/"
+          }
+        }
+      ]
+    }
+  }

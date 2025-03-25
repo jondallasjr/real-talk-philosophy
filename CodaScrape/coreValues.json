@@ -1,0 +1,4031 @@
+{
+    "Core Values": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Summary",
+          "display": true,
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Visibility",
+          "format": {
+            "type": "select",
+            "isArray": false
+          },
+          "defaultValue": "\"Public\""
+        },
+        {
+          "type": "column",
+          "name": "Add  to Tasks",
+          "format": {
+            "label": "",
+            "action": "ModifyRows(thisRow, Summary, Activate(AddRow(Tasks, Task, Summary, Details, Description)))",
+            "type": "button",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Description",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Read",
+          "format": {
+            "type": "reaction",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Date",
+          "format": {
+            "type": "date",
+            "isArray": false
+          },
+          "defaultValue": "Today()"
+        },
+        {
+          "type": "column",
+          "name": "Tags",
+          "format": {
+            "type": "select",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Type",
+          "format": {
+            "type": "select",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Author",
+          "format": {
+            "table": {
+              "id": "Global-Document-People",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/Global-Document-People",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tuGlobal-Document-People",
+              "name": "_Global Document People"
+            },
+            "type": "person",
+            "isArray": false
+          },
+          "formula": "thisRow.CreatedBy()"
+        },
+        {
+          "type": "column",
+          "name": "Location",
+          "format": {
+            "table": {
+              "id": "grid-nvrwHTYMG_",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-nvrwHTYMG_",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-nvrwHTYMG_",
+              "name": ""
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Images",
+          "format": {
+            "type": "image",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Favorite",
+          "format": {
+            "type": "reaction",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Where Will It Be Posted?",
+          "format": {
+            "table": {
+              "id": "grid-ZGdu3vH0AI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-ZGdu3vH0AI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-ZGdu3vH0AI",
+              "name": ""
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Where Has It Been Posted",
+          "format": {
+            "table": {
+              "id": "grid-ZGdu3vH0AI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-ZGdu3vH0AI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-ZGdu3vH0AI",
+              "name": ""
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Topics",
+          "format": {
+            "table": {
+              "id": "grid-M0YiAzU-5x",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-M0YiAzU-5x",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-M0YiAzU-5x",
+              "name": ""
+            },
+            "type": "lookup",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Link",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Roles",
+          "format": {
+            "table": {
+              "id": "grid-PI6_yrnbPX",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-PI6_yrnbPX",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-PI6_yrnbPX",
+              "name": ""
+            },
+            "type": "lookup",
+            "isArray": true
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Summary": "Practicality",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We strive to bridge the gap between theoretical knowledge and real-world action. By encouraging the application of insights gained through dialogue, we aim to catalyze positive change in individuals and communities.",
+            "Read": "",
+            "Date": "2024-08-11T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Holistic Understanding",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We recognize that meaningful discussions incorporate various elements: scientific evidence, emotional intelligence, spiritual insights, and personal experiences. This multifaceted approach leads to richer, more nuanced understanding.",
+            "Read": "",
+            "Date": "2024-08-11T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Accessibility",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We make complex philosophical ideas relevant and understandable. By connecting abstract concepts to contemporary issues, we empower individuals to engage more deeply with the world around them.",
+            "Read": "",
+            "Date": "2024-08-11T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Open and Constructive Dialogue",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We champion the power of respectful, open communication to bridge divides and view conflict as an opportunity for deeper understanding. By teaching the art of productive disagreement, we turn potential friction into a catalyst for creative problem-solving.. By facilitating conversations that embrace diverse viewpoints, we work towards mutual understanding and societal progress.",
+            "Read": "",
+            "Date": "2024-08-11T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Coda Cross Doc Workaround ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Although Cross Doc Data does not sync both ways, data from one spreadsheet can be imported to another via Cross Doc, then it can be made interactive and within that sheet.\n",
+            "Read": "",
+            "Date": "2022-11-08T00:00:00.000+02:00",
+            "Tags": [
+              "Cross Doc",
+              "Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Coda can easily sync Elevator Pitch, etc. EVERYWHERE!",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-08T00:00:00.000+02:00",
+            "Tags": [
+              "Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Test Announcement",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Test announcement text ",
+            "Read": "Jon Dallas",
+            "Date": "2022-11-23T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Announcement",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Add Filtered Notes and Tasks to each relevant subpage",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Whenever a new table is added, add a recurring task (probably monthly) to check that it’s up to date",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Add subtitle and page description at the top of each subpage. What’s in it, what’s not, how to interact, who to contact for help. ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Coda",
+              "Making New Pages and Subpages"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Which rows are displayed can be determined by the specific user logged in",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Using simple coding, Coda can determine the logged-in user’s name, email, teams, tasks, etc. and vary the information displayed accordingly. There was no way to make this happen in Google Sheets.",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Things I Love About Coda",
+              "Coda",
+              "Tech"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "“Last Edited” can be added automatically to every page",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Coda",
+              "Tech",
+              "Things I Love About Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Information is synced across all tables",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Coda",
+              "Tech",
+              "Things I Love About Coda"
+            ],
+            "Type": "Thing I've Learned",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Auxiliary information is displayed when hovering over a cell linked to another table",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Things I Love About Coda",
+              "Coda",
+              "Tech"
+            ],
+            "Type": "Thing I've Learned",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Rather than many separate sheets, have just a few master sheets and employ different filtered views. ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-09T00:00:00.000+02:00",
+            "Tags": [
+              "Coda",
+              "Things I Love About Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "If a page is under construction, add a collapsible Call Out with a nested checklist of construction steps",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-10T00:00:00.000+02:00",
+            "Tags": [
+              "Coda",
+              "Tech",
+              "Making New Pages and Subpages",
+              "Things I Love About Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "As an Presenter, if someone doesn’t understand what you’re saying, it’s your responsibility to make sure that they do; they are not dense. Figure out a way to help them understand. That’s your responsibility. ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-13T00:00:00.000+02:00",
+            "Tags": [
+              "Presenting"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Build Notes-Blog like in Life",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-14T00:00:00.000+02:00",
+            "Tags": [
+              "Video Lectures"
+            ],
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Everything is either a Note or a Task",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Tasks\nA Task is any specific deed that that will be accomplished. \nAll Tasks should be entered, assigned, categorized, and tracked in the /_suMNT table. \nAny Task can be converted to a Note by clicking the “Add Note” button next to the Task in the /_suMNT table. \nNotes\nA Note is any bit of information that might be useful to our mission or organization. \nAll Notes should be entered, categorized, and tracked in the /_suWpE table. \nAny Note can be converted to a Task by clicking the “Add Note” button next to the Note in the /_suWpE table. \n \nBefore starting ANY task, make sure it is being tracked in the tasks table. \nWhen any idea pops into your head that is not a ANY note can ",
+            "Read": "",
+            "Date": "2022-11-14T00:00:00.000+02:00",
+            "Tags": [
+              "Coda",
+              "How to Use Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Slogan/Subtitle: Social Philosophy",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-21T00:00:00.000+02:00",
+            "Tags": [
+              "Brand",
+              "Slogan"
+            ],
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Add “Read Receipt” reaction columns to tables with important information",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-21T00:00:00.000+02:00",
+            "Tags": [
+              "Admin",
+              "Coda",
+              "How to Use Coda",
+              "Tech",
+              "Making New Pages and Subpages"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Rainy Day in Zimbabwe - working on converting past event information to Coda",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "I woke up around 5am, left Jess in bed, and worked on the veranda some. When Jess awoke, we shared breakfast and tea over a game of chess. At 8am I taught my first ashtanga yoga class at She of Earth. Then a quick shop at Kava with Jess. Vegetable pies for lunch. \nI worked on the veranda today, listening to a Spotify Radio based on Sufjan Stevens. A rainstorm came and I had to take down all that was on the clothesline. Thankfully it had mostly dried. The day stayed mostly gray. \nPast Events: Today I mostly worked on converting all of our past event details from Google Sheets to Coda /_suZma. This required creating a new /_suQ_M table. \nMetrics: One of the most incredible things about Coda is that all of the different spreadsheets all communicate seamlessly with one another. This made creating a metrics sheet a snap. \nCurrency Conversion: Migrating over historical financial information is tricky. In Google Sheets, I used its built-in currency converter to more easily hand calculations. But exchange rates today are very different than they were years ago, so the information is no longer technically accurate. Instead of calculating currency conversion in the spreadsheet, I’ll \nProjects: I also created a new /_suYUt page with all projects that are currently active, on hiatus, complete, or planned for the future. This is now linked in Coda to our /_suWpE and /_suMNT tables.\nPress: I also updated the /_suYqS page with a Google search for “Hanoi Philosophy Forum”\nAround 2pm I treated myself to a glass of wine. Maybe I’ll have another before the day is through [edit: I did]. \nThere has been some tension (just a bit) between me and Jess about my desire to continue working on this project while she wants us to have an easy, relaxed time transitioning to life in Zimbabwe. She has taken me on some excellent adventures to Mana Pools, Nyanga, Mukuvisi, and Ngomakurira. And she doesn’t want me to fret about work right now. \nFor better or for worse, so much of my sense of self-worth and identity is tied up in Opening Up. And most of my social network for the last several years has come from these events. I’m pretty socially awkward otherwise. And Jess first met me at a Opening Up event and fell in love with me while I was leading weekly events. I can’t help but think that a part of her attraction to me is based on being the MC at live events. I’ve always considered Opening Up to, in a way, be a bower. \nNow we’re off to a family quiz night! \n",
+            "Read": "",
+            "Date": "2022-11-22T00:00:00.000+02:00",
+            "Tags": [
+              "Coda"
+            ],
+            "Type": "Journal",
+            "Author": "Jon Dallas",
+            "Location": "Harare, Zimbabwe",
+            "Images": [
+              "1B169BF7-29DC-4E08-9322-46FA0D955DEF.jpeg",
+              "Screen Shot 2565-11-23 at 15.01.36.png",
+              "Screen Shot 2565-11-23 at 15.02.50.png",
+              "Screen Shot 2565-11-23 at 15.03.08.png",
+              "Screen Shot 2565-11-23 at 15.05.09.png"
+            ],
+            "Favorite": "",
+            "Where Will It Be Posted?": "Blog",
+            "Where Has It Been Posted": "Blog",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Started working on Opening Up behind the computer at 9am today. \nLast night was Quiz Night at Tin Roof with some more of Jess’ family-friends. We woke up a bit hungover. Cuddled in bed, smashed the NY Times Thursday Crossword (our favorite day) over breakfast, then studied world geography with an app. Kibbles and bone broth for Maxy. Then I did the dishes while listening to a Hidden Brain episode on the evolution of marriage. \nToday’s Plan\nToday I’d like to set up a proper public blog Doc on Coda. One that is different from the Doc I’m currently using (which contains many unpolished ideas that aren’t for public eyes). \nToday’s Accomplishments\nWell, I did not achieve what I set out to achieve, but I got several things done anyway.\nAdded a Dashboard: I set up a new Dashboard view in the Team Doc on Coda.io for any team members to see the most important information\nAdded System for Announcements: I added a view to the dashboard of the Notes table. This shows only entries labeled as Announcements and that have not yet been marked as read by the current logged-in user. \nActive Recurring Tasks: Having a list of recurring tasks to complete every day/week/month/year is really useful. But I realized today that I’ve added many recurring tasks to the list that will be necessary only once a team is formed again and once we have active events. But right now, we don’t \nCleared Email: I haven’t checked my inbox since the collapse of events in Colorado Springs (and subsequent choice to put all events on hiatus). Today I worked through about 1,200 emails, setting up automatic filters in Gmail. \n",
+            "Read": "",
+            "Date": "2022-11-23T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "Harare, Zimbabwe",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "Blog",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Projects vs. Tasks",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "\nIn Project Management, there is an important difference between Projects and Tasks. \nA project has a tangible benefit/outcome. Tasks are everything that needs to get done in order to complete the project. \nA Project is something we can be proud of completing and usually take several days/weeks/years to complete in collaboration with multiple people. Projects are usually the product of several completed tasks. As the project advances, new tasks will likely be added (i.e. we learn along the way new things we need to do to complete the project). \nA Useful Distinction\nThis is a useful/necessary distinction in effective Project Management. Much of Project Management is simply defining what to-dos to focus on, to not overwhelm our staff with too much  because a whole slew of tasks can be eliminated  ",
+            "Read": "",
+            "Date": "2022-11-26T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "Blog",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-26T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "When creating a new page/entry/post/etc. on Coda, add a checklist to the top of the page with ideas for what you want it to be. Then, while you write, if there is a new ",
+            "Read": "",
+            "Date": "2022-11-26T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Two blind men hitting each other with canes",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-11-28T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Conversation Workshops",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Find something to agree with first. ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "If things are tense/sensitive, verbalize agreement before verbalizing disagreement. ",
+            "Read": "",
+            "Date": "2022-11-28T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Conversation Workshops",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Instead of adding a to-do task in any table, add a Button column to add a task to the primary Tasks table, then a column to find any tasks related to this table/row. ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-12-01T00:00:00.000+02:00",
+            "Tags": [
+              "How to Use Coda"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "Blog",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-12-18T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Incest AI Summary ",
+            "Visibility": "Staff",
+            "Add  to Tasks": "",
+            "Description": "Incest, or sexual relationships between close family members, is a controversial topic, and there are philosophical arguments on both sides of the debate about whether or not it should be criminalized.\nOne argument in favor of criminalizing incest is that it can be harmful to the individuals involved, both physically and emotionally. Incestuous relationships may be associated with an increased risk of physical harm, such as sexually transmitted infections and unwanted pregnancies, as well as emotional harm, such as feelings of shame, guilt, and isolation. Additionally, some argue that incest is a form of abuse, as it involves a power imbalance between family members and may involve coercion or manipulation.\nOn the other hand, some argue that criminalizing incest infringes upon the right to personal autonomy and privacy. Some people believe that consenting adults should be able to make their own decisions about their relationships, regardless of whether or not those relationships are considered taboo or socially unacceptable. Some also argue that criminalizing incest disproportionately affects marginalized communities, such as LGBTQ+ individuals, who may face discrimination and persecution for engaging in relationships that are considered \"deviant\" or \"unnatural.\"\nUltimately, the decision to criminalize incest involves weighing the potential harm that may be caused by such relationships against the right to personal autonomy and privacy. It is a complex and sensitive issue that requires careful consideration of a variety of ethical and moral factors.",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Incest"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Nicotine Vape Pen AI Summary ",
+            "Visibility": "Staff",
+            "Add  to Tasks": "",
+            "Description": "There are both potential health benefits and risks associated with the use of nicotine vape pens.\nOn the positive side, some research suggests that using nicotine vape pens may be less harmful than smoking cigarettes. This is because e-cigarettes do not produce the same harmful byproducts as cigarettes, such as tar and carbon monoxide. Additionally, nicotine vape pens can provide a way for people to wean themselves off of cigarettes and potentially quit smoking altogether.\nHowever, there are also potential risks associated with the use of nicotine vape pens. Some research has suggested that the chemicals used in e-cigarette liquids may be harmful when inhaled. In addition, nicotine itself is a highly addictive substance, and using nicotine vape pens can lead to dependence and withdrawal symptoms when trying to quit. There have also been reports of serious respiratory issues, including lung injury and death, associated with the use of some e-cigarette products.\nIt is important to note that the long-term health effects of using nicotine vape pens are not yet fully understood, and more research is needed to fully understand the potential risks and benefits. If you are considering using a nicotine vape pen, it is important to carefully weigh the potential risks and benefits, and to discuss your options with a healthcare professional.",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Nicotine Vape Pens"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Mental Health Benefits of Nicotine Vape Pens AI",
+            "Visibility": "Staff",
+            "Add  to Tasks": "",
+            "Description": "One potential benefit of using a nicotine vape pen is that it may help people to reduce or quit smoking, which has been linked to a number of mental health problems. Smoking has been associated with an increased risk of anxiety, depression, and other mental health disorders, and quitting smoking may improve mental health.\nIn addition, some research has suggested that nicotine itself may have some potential mental health benefits. For example, nicotine has been shown to improve memory and cognitive function in some studies, and it may also have some antidepressant and anti-anxiety effects",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Nicotine Vape Pens"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "mental health benefits of nicotine cigarettes from not being ostricized ",
+            "Visibility": "Staff",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Ceremonial use of nicotine",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "AI Logical Fallacies eating meat ",
+            "Visibility": "Staff",
+            "Add  to Tasks": "",
+            "Description": "There are several logical fallacies that may be committed in arguments for and against eating meat. Some common examples include:\nAd hominem: This fallacy occurs when someone attacks the person making the argument, rather than addressing the argument itself. For example, someone might say “you can’t trust vegans, they’re all preachy and self-righteous” as a way to dismiss an argument made by a vegan.\nStraw man: This fallacy occurs when someone misrepresents or exaggerates an opposing argument in order to make it easier to attack. For example, someone might argue that vegans believe that all animal agriculture is inherently wrong, even though this may not be the case.\nAppeal to authority: This fallacy occurs when someone appeals to the authority or expertise of someone else as a way to support their argument, without providing any actual evidence. For example, someone might argue that we should eat meat because “experts say it’s healthy,” without providing any actual evidence from experts to support their claim.\nSlippery slope: This fallacy occurs when someone suggests that a small change will lead to a series of unintended and undesirable consequences. For example, someone might argue that if we stop eating meat, it will lead to the collapse of the entire agricultural industry.\nFalse dilemma: This fallacy occurs when someone presents two options as if they are the only ones available, when in fact there may be other options. For example, someone might argue that we must either eat meat or starve, when in fact there are many plant-based sources of protein and other nutrients.",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Veganism"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Research Technique: AI Logical Fallacies About Topic",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2022-12-21T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": [
+              "IMG_7862.JPG"
+            ],
+            "Favorite": "Jon Dallas",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Plausibility vs. Probability (just because something could be true, doesn’t mean it is likely true. Just because something could be false or a lie, doesn’t mean it is false or a lie). ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": " ",
+            "Read": "",
+            "Date": "2022-12-27T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Conversation Workshops",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "The unreliability and intentional misreading of statistics ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-01-01T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Conversation Workshops",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Exporting Speaker Notes",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Open the Google Slides file on a Mac\nDownload the Google Slides file as a .pptx \nDownload and run the Copy Keynote Presentation Notes to Clipboard.scpt script (this script exports just the Speaker Notes from presentations opened in Keynote, whether a .key or .pptx)\nYou will be prompted to select a presentation file. Select the downloaded .pptx file\nYou will get no notification, but the Speaker Notes are now in your computer’s clipboard. Paste the notes into a new document (likely the Scripts-Only for Video Editing document).\nPlease note, there is more in Speaker Notes than just a script for presenters. After the Speaker Notes are exported, the next step is to clean them us. Please follow the Technical Guide on Cleaning Up Exported Speaker Notes",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Technical Guide",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Keynote for iCloud",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Keynote is the presentation design software preferred by Real Talk Philosophy, similar to PowerPoint, Prezi, and Google Slides. Although the Keynote app is available only on Apple products, Keynote for iCloud is a browser-based \n\n\nKeynote for iCloud Support Guide from Apple\nhttps://support.apple.com/guide/keynote-icloud/intro-to-keynote-for-icloud-gilf2fb004e2/icloud\n\n\nBrowser\nIt is recommended that you use Google Chrome to access Keynote for iCloud\n\n\nSign-in to Keynote for iCloud\nGo to www.icloud.com. \nSign-in to iCloud with your personal iCloud account\nChoose Keynote\n\n\nRequest Access to the Appropriate Keynote File\nAsk your manager for access to the Keynote file you would like to update. \n\n\nFunctionality\nAs of January 2021, the following functions are available in Keynote for iCloud:\nSlides\nAdd new slides\nCopy/paste slides\nDuplicate slides\nDelete slides\nSkip (i.e. hide) slides\nAdd/edit presenter notes\nObjects\ne.g. text boxes, images, tables\nMove objects\nResize objects\nCenter objects with grid lines\nStyle\nChoose text font, color, size\nUnderline, bold, and italicize text \nChoose text \nInsert\nAdd images\nDownload Slides\nBe sure to hide unwanted slides first! \nDownload slides as PDF \nDownload slides as Keynote file\nDownload slides as Powerpoint file\n\n\nKeyboard Shortcuts\nhttps://support.apple.com/guide/keynote-icloud/keyboard-shortcuts-gilf0fb207d1/icloud\n\n\nLimitations \nThe following features are unavailable in Keynote for iCloud:\nEditing Master Slides (aka slide templates)\nCopy/paste slides from one iCloud for Keynote window/tab into another\nDownloading as JPG \n\n\nCopy/Paste Slides\nRight click a slide and choose Copy\nOr press ctrl+c then ctrl+v\n\n\nDuplicate Slides\nRight-click a slide and choose Duplicate\n\n\nGrid Lines\nTo help \n\n",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "EFL Racism Study Preliminary Findings",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2020-07-21T00:00:00.000+02:00",
+            "Tags": [
+              "EFL",
+              "Racism"
+            ],
+            "Type": "In-House Study",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "White Privilege",
+              "Ethics of Teaching English"
+            ],
+            "Link": "https://docs.google.com/document/d/1G2P1A7lAZIpHq_Ck-XYTQWEFyGsKDJ3d-JBZEz2dwH4/edit",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is a social movement and community that is passionate about meaningful discourse, education, and helping reweave the fabric of our hyper-partisan communities. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We're using thought leadership + media + events to explore polarizing issues from all sides. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We want to tear down barriers and bridge social divides with critical thinking, meaningful conversation, artwork, and fun! ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy provides a judgment-free haven for individuals and groups seeking an alternative to conventional conflict-based debate. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "By using the simple but proven tools of facilitated small-group discussion, impartial lectures, artwork analysis, games, and panelist Q&As, we create a space in which anyone can openly discuss divisive issues without fear of being labeled or shamed.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is a social philosophy collective that hosts events exploring the most polarizing topics of our time and facilitates small group discussions surrounding them, alongside music, art, games, lectures, panelist Q&As, and more. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We promote empathy as an antidote to political polarization.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Politics is inherently divisive, but it doesn’t have to be.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "In a world of dueling soundbites on cable news and posts on social media, we set out to create a space where people can engage with each other thoughtfully—a neutral space for conversation. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy creates community events with a humanist approach to combatting social and political polarization. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Leading with identity rather than ideology, we intentionally seek out \"opponents\" in our communities in order to better understand each other. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We creating sincere spaces for face-to-face discussions on current affairs and issues relevant to real people, we search for the \"fundamental unity of ideas\" – broad themes like solidarity, rather than specific ideologies like veganism or anti-fascism, that we can agree upon regardless of our background or self-identification. Our events are enjoyable, enlightening and entertaining, including facilitated small-group discussions, impartial presentations, themed music, art, games, and more. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Our events are OPEN to the public. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "No question is off limits, no statement is too bold, and there's no telling who will show up to engage everyone in a system of diverse viewpoints. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is an ongoing community that brings people from all walks of life—regardless of identity, opinion, or belief—together in an ongoing discussion about today's challenging issues.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is a series of events that explore divisive issues in a civil manner to reduce political polarization. We also put on performances, art shows, and social gatherings around these issues.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy creates events that are simultaneously serious and fun, where we can have honest conversation about identity and the convergence of humanism and politics. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We intentionally create conversation with people who hold opposing views to better understand the other side. We search for fundamental themes of unity like solidarity, which we can all agree on, despite our differences.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is a group that promotes civil discussion of current affairs and societal issues. We put our identity and experiences above our ideology. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "By intentionally creating an open forum for people with differing points of view, we are able to find common ground. By doing so, we aim to create a community based on unity rather than divisiveness.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy hosts events that encourage honest dialogues about identity and the convergence of humanism and politics. We connect with people who hold opposing views to better understand one another while tackling the difficult issues of our time. Facing these challenges together allows us to find common ground and stand with each other in solidarity.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy creates events to help people engage in dialogue. We create a space for people to share their stories and strengthen their relationships across differences.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We create events where people discuss serious and important topics but we do it with a twist. We have fun. We savor food and drink. And we talk about views that may be different from our own in a safe space where everyone is welcome.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is a series of events that expose people to all sides of divisive issues in an evidence-based, entertaining and thoughtful way, and facilitate genuine cross-community dialogue. We do this through small group discussions and impartial experts whose goal is not to persuade you but rather share their knowledge so you can make up your own mind. These are just some of the many features we offer:",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy creates community with moderated, small group discussions on meaningful issues, while also encouraging participants (from all sides of the issue) to have fun and share a meal together. We're a social club for anyone who wants to join us in actively combating political polarization. We use food, art, games, and music to get people up close and personal, creating a setting where people often discover they actually have a lot in common.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Summary of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Through Real Talk Philosophy, we bring people with diverse beliefs and backgrounds together to build meaningful, respectful relationships, and mend our fractured society. We do this via community events where we discuss all sides of divisive issues. These events take place in a welcoming setting for participants to engage each other on topics they would otherwise avoid. We also welcome speakers with conflicting views to further advance dialogue and understanding. With love above all else, let's address the challenges we face in today's world together.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Summary of Opening Up",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "You may leave inspired, infuriated, intrigued, amused--but one thing is certain: you won't be the same person as when you came in.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Let’s talk about it. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Truth over Ideology. Understanding over Debate. Cooperation over Conflict.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We believe in the power of facilitating conversations with the goal of thorough understanding, opening minds, instilling hope, and coming out the other side with real friendships. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We use art and conversation to deconstruct barriers.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We use art and conversation to break down the barriers that keep people from connecting with each other.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy is a forum for free speech and independent thinking. It’s a place to discuss the things that matter – without the ideological baggage.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Our mission is to depolarize communities, countries, and perhaps even the world one conversation at a time.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real Talk Philosophy aims to gather people together across lines of questioning that have historically divided them. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We are committed to creating real connections and fostering honest communication, especially in today's increasingly divided political climate.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We can disagree without being disagreeable.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "At Real Talk Philosophy, we inspire people to think critically and question the world around them in a safe, unintimidating space.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We engage in honest dialogue that discusses the relevant questions and concerns of our day. We need this conversation now more than ever.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "When we put our differences aside, speak our minds, and listen to one another's stories, we can begin to create mutual understanding and bridge the divides",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Through the shared experience of difference, we can cultivate a greater empathy for all people, and together we can create social change that leaves no one behind.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Difference is not a threat, but an opportunity for learning and growth. By respecting difference, we make room for new ideas and ways to do things, and in turn, we create better spaces and communities.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We believe that by having uncomfortable conversations with friends and family, we can cultivate a culture of inclusiveness. By listening to different perspectives, we can break barriers and make the world a better place.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Bridges not walls. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "What if it's not us vs. them?",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Join us for an evening of stimulating discussion and fun in our ongoing efforts to overcome the growing social ills that keep humanity divided.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Our goal is to usher in a new era of respectful, measured discourse that leads to genuine understanding and - even more importantly - meaningful connections.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We're against hate, not ideas.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We Come Together To Talk It Out",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Transcending polarization. Creating meaningful community.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We use art and conversation to create spaces for dialogue about issues that matter.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "inspires happiness and sanity through serious talks on hot topics",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "RTP. Creating the kind of conversations that are needed now.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "By the end of this experience, you will have better internalized more generous and thoughtful perspectives from both \"sides\" ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Real talk deals with the issues that matter. The kind of conversations that don’t happen enough around the dinner table. In print and on stage.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We create spaces of inclusion, thoughtfulness, and productive dialogue.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Community and conversation are the best antidotes for division and fear.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Creating a more inclusive and understanding society one conversation at a time.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We believe that less bias and more dialogue leads to a better understanding of the world around us, which ultimately leads to a better society.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Collectively, we are building a community that can disagree productively and come to peaceful resolutions.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Helping people explore their most deeply held values and overcome ideological rigidity through deep conversation.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Helping people identify underlying values and overcome ideology through friendly conversation that is both open-minded and empathetic.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We believe that deep conversation can spark progress, so we create spaces for that to happen.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Part community center, part social club, this grassroots collective...",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "The most effective way to combat social and political polarization is to create the conditions for people to get real and honest about the beliefs that they hold close to",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Let's talk about it. Join us as we use art and conversation to deconstruct barriers. ",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Alternative Motto of Opening Up",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We make it easier to understand the world around you by sharing intelligence and experiences.",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Motto",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Response to an Unknown Scheduled Meeting",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Dear Name, \nThank you for booking a time to meet with me on Calendly. I do not see any emails, Facebook messages, or website form submissions including your name or email address. Have you contacted us in the past? Were you perhaps using a different name email address? What is this meeting concerning? \nThanks so much! \nName\n\n",
+            "Read": "",
+            "Date": "2023-01-03T00:00:00.000+02:00",
+            "Tags": [
+              "Scheduling"
+            ],
+            "Type": "Email Template",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Print Game Cards",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Dear Name,\nOn Date, Chapter Name will be hosting an event exploring debates around Topic. As a part of this event, we will be playing a card game. Could you please print the attached game cards, cut them, arrange them, and send them to our Local Chapter Leader in Colorado Springs, Shahin Kaveh?\nPDF\nGame Cards PDF: URL to Game Cards PDF, for examplehttps://drive.google.com/file/d/1wp-aYqoiGMHuJ0eibeLzLG_LpGGgd3Hs/view?usp=sharing\nSpecific Instructions\nThe goal is to have 9 decks of 25 unique cards. The PDF is 25 pages long. Each page has 9 copies of the same card. \nPlease print 1 copy of link to the PDF (# pages) on 200-400 gsm paper (whichever weight in this range is least expensive). The back of the cards can remain white. \nPlease cut out the individual cards (9 x 25 = 225 cards in total)\nPlease arrange the cards into 9 decks of 25 unique cards, fastened with rubberbands or similar. \nPlease deliver the package of 9 decks of 25 cards each to Name at Address, to receive on or before Date. \nScrap Paper\nAlso, do you have any scrap paper (with at least 1 side blank) that we could use at our event?\nPlease let me know if you have any questions. My phone number is xxx-xxx-xxxx\nBest,\nName",
+            "Read": "",
+            "Date": "2023-02-09T00:00:00.000+02:00",
+            "Tags": [
+              "Game Cards"
+            ],
+            "Type": "Email Template",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": [
+              "Local Chapter Leader"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Summary": "July 6 2021 Vlog",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Hey! This is Jon and I’d like to quickly update everyone on what we are working on at Real Talk Philosophy. \nThis is my home. And this is where most of the action takes place day to day. \nWe have a big team spread out all over the world in the US, the UK, Vietnam, Thailand, Singapore, Indonesia. But here, it’s just me. \nSuthaphat was able to come over for a bit today; that was nice. \nSo, at the time of recording, 6 July 2021, we have had 229 events in 8 cities for 8,292 guests. But, all of our chapters are currently shut down due to Coronavirus. \nThat hasn’t stopped us though. We are still working on a lot here at Real Talk! \nChiang Mai: We are prepping for our first event in Chiang Mai, Thailand since December, which will be happening this Thursday. \nOnline: We have also been working to move the in-person experience online. \nWe’ve recorded and edited lecture videos for several topics including psychedelics, polyamory, the origins of sexual orientation, the ethics of comedy, and the psychological differences between easterners and westerners. \nWe’ve also been creating online games and quizzes for guests to play during our online events. \nAnd we’ve been working with the developers at Junto to help create our first automated online events \nPresentations: We’ve been migrating all of our most popular presentations from Keynote, which is Mac’s version of Powerpoint, to Google Slides so more people can collaborate and to integrate more easily with other systems. \nAnd updating our presentations with legal, licensed images from our partners at Envato Elements\nUSA: We’ve also been preparing for our expansion to the United States \nApplying to accelerators and incubators/ \nApplying to pitch to Investors, which is challenging from abroad. \nApplying to post on university job boards looking for Local Chapter Leaders \nResearch: Our Research Team has continued to create new content for future explorations\nWebsite: We’ve been updating our website, giving anyone access to all of our research for free, hopefully as a way to spread the word about our online and in-person events events. \nAdmin: We’ve been revamping the way our team tracks their hours and communicates their progress \nEFL: Developing our EFL (English as a Foreign Language) program\nCreating vocabulary sheets\nCreating course completion certificates \nHosted demo lessons \nCreated marketing materials ",
+            "Read": "",
+            "Date": "2021-07-05T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Vlog Script",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "#r196",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Summary\nBefore hosting full events (i.e. events with music, artwork, etc.), LCLs are asked to first host regularly scheduled, free, MVP events in parks, libraries, etc. until their regular attendance reaches at least 25 non-staff guests. It is 100% our hope that these events will ”graduate” to full Opening Up Philosophy Events. \n“Dream big; start small.” \n\nWhat are “MVP” Events? \nMVP stands for Minimum Viable Product. What is required at minimum to produce a Opening Up event? \nA host \nGuests\nA topic\nDiscussion Questions\nMVP Events do not (i.e. needn’t necessarily) offer experts, music, artwork, presentations, haiku/drawing contests, games, etc. As events progress, the inclusion of additional Event Elements is encouraged, but not required. \nMVP events are offered for free/donation. As such, we try to elliminate event costs (e.g. advertising, paid-venues, etc.).  \nRationale\nAsking LCLs to host free MVP events before hosting full Opening Up Events has many benefits. \nAccelerated Onboarding: Rather than asking LCLs to complete a months-long onboarding process peraring for rather complex events (including music, games, etc.), LCLs can instead begin hosting MVP events within a number of weeks.\nHost Practice: Hosting MVP Events will allow LCLs the opportunity to practice facilitating divisive issue conversations. They will grow an understanding of the art of discussion facilitation without concern for all the other bells and whistles. \nGradual Event Complexity Build: Ideally, the events will grow increasingly, incrementally complex over time. Additional Event Elements (e.g. music, artwork) will be added slowly according to the LCL’s comfort. \nGradual Team Build: Hosting MVP Events will allow potential collaborators (e.g. visual artists, musicians, volunteers, etc.) to sign-up, join the local team, and understand the intention and “vibe” of our events. \nGradual Community Build: Hosting free MVP events will allow the local community to grow familiar with our events and ensure that these events are even wanted. Hosting free events will also allow some to join and build the community who may not be able to join once the events are not free. \nLCL Empowerment: Expecting new LCLs to begin hosting full RTP events requires a lot of specific direction and decision-making from the Central Team, decreasing LCL involvement in top-level decision making for the chapter. This accelerated MVP system will allow local chapters to develop slowly, organicaly, allowing LCLs to understand more fully the events, event responsibilities, and their audience, before launching into full RTP events. \nDecreased Central Responsibility: Much of the Central Team’s responsibility has been putting out fires caused by expecting LCLs to host full RTP events too quickly. This accelerated MVP system will decrease the need for Central involvement \nDecreased Central Financial Exposure: Gauranteeing LCL salaries comes at a great financial risk for the Central Team. \nProvided Resources\nTopical Google Slides Presentation\nThe intention of providing the Topical Google Slides Presentation is not for LCLs to present the presentation (this only occurs once the event is \nHosting Outline & Suggested Scripts\nDiscussion Questions\nHealthy Conversation Guidelines\nAgenda of MVP Events\nPre-Requisites\nPost an event online \nExplore and attempt to fully understand the arguments on both sides of the topic/issue\nPrint discussion questions, healthy conversation, necessary announcements, and email and team signup forms\nSetup\nThe LCL sets up the space to be comfortable and inviting (e..g with signs, blankets, pillows, tea, etc.) \nThe LCL sets up the email and team signup forms\nGuest Arrival & Individual Welcomes: Guests arrive at the space. They don’t know exactly where to go, who to talk to, etc. As guests arrive, the host welcomes them individually, hands them conversation guidelines and questions, and leads them to join small-group discussion groups. \nSmall-Group Discussion Questions #1: Guests are invited to form groups of 3-5 to explore pre-devised questions related to the topic.\nSummary of Both Sides: The host will speak for 5-10 minutes ad hoc exploring the major arguments on each side of the topic. \nSmall-Group Discussion Questions #2: Guests are invited to form NEW groups of 3-5 to explore pre-devised questions related to the topic.\nAfter Party: Guests are invited to stay and continue conversing in a less structured context. \nPossible Free Locations\nPark\nLibrary\nBeach\nCafe\nBar\nRestaurant\nRecreation Center\nScript\n",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "LCL Role Description",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Encourage Local Chapter Leaders to create presentations about LOCAL topics",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "LCL Role Description",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "LCL Role Description",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "LCLs Host Free Events Before Full Events",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "LCL Role Description",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "LCL Role Description",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Parable of two blind men hitting each other with their canes",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Conversation Workshops",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Non-Judgment",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We create safe spaces for free expression of ideas. By suspending judgment, we allow for the exploration of diverse thoughts without fear of ridicule or discrimination.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Curiosity",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We nurture a spirit of inquiry and continuous learning. By encouraging questions and exploration, we foster an environment where intellectual growth flourishes.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Intellectual Humility and Empathy",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We encourage an open-minded approach to different perspectives. Recognizing our own limitations and striving to understand others' viewpoints are key to productive dialogue and personal growth.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Community Building",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We foster environments where diverse individuals connect through meaningful dialogue. Our events transform strangers into collaborators, creating a network of engaged thinkers.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Core Value",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Diversity and Inclusivity",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We actively work to create a representative community. By bringing together individuals from various backgrounds, we enrich our discussions and broaden our collective understanding.\nThis includes promoting diversity in terms of race, ethnicity, gender, sexual orientation, age, ability, religion, and socio-economic status, and more. ",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Impartiality",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We present multiple perspectives fairly and objectively, without allowing personal biases to influence the presentation of information. Our role is to illuminate various viewpoints, allowing participants to form their own informed opinions. Our should never be used as a pulpit for any one person’s ideas, opinions, or beliefs. ",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": [],
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Radical Transparency",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We commit to open and honest communication. By sharing information freely and trusting our audience with complex ideas, we build credibility and foster deeper engagement.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Meticulous Preparation",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We pay careful attention to every aspect of our events. Through thorough planning and execution, we create polished, professional experiences that respect our participants' time and engagement.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Thoughtful Aesthetics",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We recognize the role of aesthetics in enhancing intellectual experiences. By creating visually appealing and engaging events, we stimulate both mind and senses.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Collaborative Problem-Solving",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We leverage collective wisdom to address complex issues. By fostering teamwork and idea-sharing, we tap into the diverse expertise of our community.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Continuous Improvement",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We embrace a growth mindset, viewing challenges as opportunities for learning and innovation. By consistently refining our approach, we ensure our practices evolve with our community's needs.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Sustainability and Regeneration",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "We incorporate environmentally responsible practices into our operations. By considering our ecological impact, we ensure our pursuit of wisdom doesn't come at the cost of our planet's health.",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Operational Standard",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "The Story Behind Our Name",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "“What’s in a name?” For us, quite a lot. The name of our organization is a moniker that rencompasses all of our countless guests, events, staff, contributors, content, resources, songs, artwork, games, etc. Our name is the very first thing people hear about us and our #1 marketing tool. \nThe Hanoi Philosophy Forum\nWe began in March 2017 as The Hanoi Philosophy Forum. Back then, we were little more than a philosophy book club, exploring books like Nietzsche’s Beyond Good and Evil, Foucault’s The History of Madness, or Kierkegaard’s Fear and Trembling. We were located in Hanoi; we read philosophy; and we weren’t just lecture-based but a forum. The name was clear and direct (and easily understood by non-native english speakers). \nBy September 2018, it became clear that our attendees came because they were desperate for a space to candidly talk about important issues, not just academic philosophy. Our focus shifted away from academic philosophy and towards divisive social issues (e.g. polyamory, toxic masculinity, veganism, etc). Also around this time, to make the events more entertaining and appealing, we started incorporating themed artwork, music, and games. We wanted these events to be accessible to all, but “philosophy” conjured up images of old, white men smoking pipes debating the definition of dialectical materialism. The term “philosophy” was intimidating, cumbersome, and no longer a good match for us. \nWe started brainstorming hundreds of potential new names (e.g. The Other Side, The Depolarization Project, Likewise), but every time we fell in love with one, we discovered to our chagrin that the URL was already taken or a Facebook page already existed. So, despite the name:vision mismatch, HPF persisted. \nReal Talk Philosophy\nIn 2020 we began expanding operations internationally from Vietnam to Thailand, Singapore, Indonesia, and the US. A new name, one unlinked from any particular locale, was necessary. Through a series of intense discussions with our most loyal members, we voted for the name Real Talk Philosophy (#2 was Nomad Philosophy Forum). \nAdopting a new name is no easy task. In addition to updating website URLs, Social Media handles, logos, marketing materials, and website content; changing the name of an organization requires the consideration of legal registrations, financial account information, and trademarks. Also, we lose some familiarity and street-cred each time we switch to a new name. \nUrban Dictionary defines Real Talk as “The philosophy of talking candidly and openly and honestly without fear of what others might think” and “usually for another's benefit to let them know of something that is typically hard to discuss.” This is a 100% match for the kind of space we want to create. Real Talk easily rolls off the tongue; it’s colloquial, memorable, and easy to type. Real Talk highlights that we are discussion-based, and juxtaposes well against our arch-nemesis, the reviled “small talk.” \nBut, unfortunately, we found that Real Talk is also ubiquitous, trite almost (just search for podcasts, articles, apps, magazines, school newspaper columns, etc. sharing this name). And where tried were to attempt to overcome this by tacking on “Philosophy,” the name became unnecessarily cumbersome, too difficult to type, and too long to put on an event poster. It’s also a bit arrogant. ‘Forget about that silly fake talk they’re having over there; here we have REAL talk!’ \nOpening Up\nIn early 2022, the prolonged COVID rules on public gatherings forced us to make the difficult decision to put all chapters on indefinite hiatus. I was, for the first time in 5 years, able to take a break, a step back, a rest. \nWhile reading Michael Singer’s The Untethered Soul, a single phrase kept reappearing and concretizing in my mind - “open up.” One bit of Michael’s advice that I found poignant: whenever your mind is stuck on some problem, some persistent negative thought, whenever the world feels like it is collapsing, rather than try to push the thought away, simply practice “opening up.” Open up to all the sounds and sights in the space around you; to any smells, tastes, or physical sensations. Open up to everything you have to be grateful for.\nOpening up means to explore, inspect, and dissect with curiosity. It means to speak vulnerably, honestly, and emotionally. Opening up means to release a covering, to allow things to more easily flow in and flow out. It refers to starting a new novel, a new adventure; to being a novice, not an expert. In a game of billiards, Opening Up means to clear the table so the good game can begin, without all the rubbish getting in the way.\nAnd best of all, the .org was available for purchase! This final step of adopting a new name has so often undermined us in the past. \n\n",
+            "Read": "",
+            "Date": "2023-01-04T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Blog Post",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "Blog",
+            "Where Has It Been Posted": "Blog",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "AI Research Logical Fallacies",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "While researching for an event, ask ChatGPT “what are the common logical fallacies committed when discussing the arguments for and against [topic]”",
+            "Read": "",
+            "Date": "2023-01-15T00:00:00.000+02:00",
+            "Tags": [
+              "Research"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Use AI to summarize the existing research and conversation, then highlight what new/‘over arguments we include ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-01-15T00:00:00.000+02:00",
+            "Tags": [
+              "Research"
+            ],
+            "Type": "Best Practice",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": [
+              "767DCD9A-107D-4F25-B17C-D77CA12DA75E.jpeg"
+            ],
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Parental income might influence the probability of homosexuality and bisexuality in adult children",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2023/01/parental-income-might-influence-the-probability-of-homosexuality-and-bisexuality-in-adult-children-64795",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Origins of Sexual Orientation"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "When women do more household labor, they see their partner as a dependent and sexual desire dwindles",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/12/when-women-do-more-household-labor-they-see-their-partner-as-a-dependent-and-sexual-desire-dwindles-64497",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Psychological Similarities and Differences Between Men and Women"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Bored couples plan fewer dates which lowers passion over time ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://out.reddit.com/t3_v4on2i?app_name=ios&token=AQAAAE3SY837FoNkVzPzDK1V5KQ-WAJKaB4pUnRhhN1wlEj2tegD&url=https%3A%2F%2Fwww.psychologytoday.com%2Fus%2Fblog%2Fdating-toxic-or-tender%2F202205%2Fhow-spice-bland-relationship",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Rules of Dating, Sex, and Consent"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Is the Comparison between Exercise and Pharmacologic Treatment of Depression in the Clinical Practice Guideline of the American College of Physicians Evidence-Based?",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5430071/",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Pharmaceuticals"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "People who endorse conspiracy theories tend to be more religious, and this may be due to ideological overlap",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/04/people-who-endorse-conspiracy-theories-tend-to-be-more-religious-and-this-may-be-due-to-ideological-overlap-63020",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Conspiracy Theories"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Republicans and Democrats are equally susceptible to conspiracy theories, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/08/republicans-and-democrats-are-equally-susceptible-to-conspiracy-theories-study-finds-63630",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Conspiracy Theories"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Boys and men experience more social isolation than girls and women, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/09/boys-and-men-experience-more-social-isolation-than-girls-and-women-study-finds-63947",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Toxic Masculinity"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Abortion associated with lower psychological distress compared to both adoption and unwanted birth, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "\nhttps://www.psypost.org/2023/01/abortion-associated-with-lower-psychological-distress-compared-to-both-adoption-and-unwanted-birth-study-finds-64678",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Abortion"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Science opponents believe their knowledge ranks among the highest, but it is actually among the lowest",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/08/science-opponents-believe-their-knowledge-ranks-among-the-highest-but-it-is-actually-among-the-lowest-63762",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Conspiracy Theories"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Phantom vibrations",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://nypost.com/2016/01/05/your-smartphone-is-making-you-hallucinate/",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Social Media",
+              "Should We Get Rid of Our Cellphones?"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Men who pose shirtless on Tinder are perceived as less competent and more prone to risky sexual behavior",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/05/men-who-pose-shirtless-on-tinder-are-perceived-as-less-competent-and-more-prone-to-risky-sexual-behavior-63186",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Rules of Dating, Sex, and Consent"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Owning a pet is linked to having better cognitive health in advanced age, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/12/owning-a-pet-is-linked-to-having-better-cognitive-health-in-advanced-age-study-finds-64604",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Animal Husbandry"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Republicans and Democrats feel “grossed out” and “nauseated” by each other",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/02/republicans-and-democrats-feel-grossed-out-and-nauseated-by-each-other-62531",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Polarization"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Antidepressants can cause ‘emotional blunting’, study shows",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.theguardian.com/society/2023/jan/23/antidepressants-emotional-blunting-study",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Pharmaceuticals"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Male school bullies and their victims are more likely to commit violent offenses as adults",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/11/male-school-bullies-and-their-victims-are-more-likely-to-commit-violent-offenses-as-adults-64209",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Toxic Masculinity"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Older adults who own dogs report better overall health and more physical activity",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "\nhttps://www.psypost.org/2022/12/older-adults-who-own-dogs-report-better-overall-health-and-more-physical-activity-64560",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Animal Husbandry"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Timeline of the domestication of dogs",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "The domestication of dogs is a complex process that likely occurred over thousands of years, and the exact timeline is still a subject of ongoing research. However, some key milestones in the evolution of dogs include:\n20,000-30,000 years ago: Early human societies begin to settle down and form communities, leading to the formation of a symbiotic relationship between humans and wolves. Wolves that were more tolerant of human presence were more likely to survive and reproduce, and as a result, their offspring became increasingly domesticated.\n15,000-20,000 years ago: Dogs have evolved to the point where they are visibly different from wolves, and have developed a number of traits that are associated with domestication, such as smaller teeth and jaws, shorter snouts, and rounder skulls.\n10,000-15,000 years ago: Humans begin to selectively breed dogs for specific traits, such as hunting ability, herding ability, or guarding ability. This leads to the development of different breeds of dogs, each with their own set of characteristics and abilities.\n5,000-10,000 years ago: The earliest known dog breeds, such as the Saluki, the Basenji, and the Afghan Hound, are believed to have emerged around this time. These breeds were likely developed for specific hunting or herding tasks.\n2,000-5,000 years ago: The ancient Egyptians and Greeks begin to breed dogs for specific purposes, such as hunting and guarding. This leads to the development of a number of new breeds, including the Mastiff, the Greyhound, and the Spitz.\n1,000 years ago: Many of the breeds that we know today begin to emerge, such as the Poodle, the Labrador Retriever, and the Bulldog. These breeds were likely developed for specific tasks such as retrieving game, herding livestock, and guarding property.\nIt’s worth noting that this is a very rough timeline and that various researchers may have different opinions and details on the exact timing and development of different breeds.",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Animal Husbandry"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Timeline of the evolution of domestic cats ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "The domestication of cats is a less well-understood process than the domestication of dogs, but some key milestones in the evolution of domestic cats include:\n10,000-12,000 years ago: The domestication of cats is believed to have begun around this time, as early human settlements began to accumulate large amounts of grain and other foodstuffs, which attracted wild felines (proto-domestic cats) that preyed on the rodents that were attracted to the stored food.\n8,000-10,000 years ago: The first evidence of cats living in close association with humans is found in the Near East.\n4,000-5,000 years ago: Cats were domesticated by the ancient Egyptians, who valued them for their ability to control rodents.\n2,000-3,000 years ago: Cats were spread throughout the Mediterranean by Roman traders and merchants, and were valued for their hunting abilities.\n1,000 years ago: The earliest known cat breeds, such as the Siamese and the Persian, are believed to have emerged around this time. These breeds were likely developed for specific aesthetic or behavioral characteristics.\nIt’s worth noting that the timeline for cat domestication is less clear and less studied than that of dogs, and some researchers have argued that cats were never fully domesticated and have instead adopted a symbiotic relationship with humans. Also, as with the dog timeline, different researchers may have different opinions on the exact timing and development of different breeds.",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Animal Husbandry"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Early sexual experiences likely lead to healthier sex later in life: UTM study",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.utm.utoronto.ca/main-news/early-sexual-experiences-likely-lead-healthier-sex-later-life-utm-study",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Rules of Dating, Sex, and Consent"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "People with insecure attachment styles tend to have strong emotional bonds with pets, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/10/people-with-insecure-attachment-styles-tend-to-have-strong-emotional-bonds-with-pets-study-finds-64161",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Animal Husbandry"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Antidepressants are not associated with improved mental health in the long run ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://pubmed.ncbi.nlm.nih.gov/35442954/",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Pharmaceuticals"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Men Think They’re Brighter Than They Are and Women Underestimate Their IQ. Why?",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://neurosciencenews.com/male-female-iq-20228/",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Psychological Similarities and Differences Between Men and Women"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "New study identifies an increasing disinterest in fatherhood among childless men in the United States",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/10/new-study-identifies-an-increasing-disinterest-in-fatherhood-among-childless-men-in-the-united-states-64072",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Antinatalism"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Topic: antiwork\nhttps://www.eurekalert.org/news-releases/708076",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Pharmaceuticals"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Young people don’t need to be convinced to have more children, study suggests",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.news-medical.net/news/20230112/Young-people-dont-need-to-be-convinced-to-have-more-children-study-suggests.aspx",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Antinatalism"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Overweight people are seen as less capable of thinking and acting autonomously, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Topic: fattism\nhttps://www.psypost.org/2022/11/overweight-people-are-seen-as-less-capable-of-thinking-and-acting-autonomously-study-finds-64349",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Joint republican and democratic campaign ad decreased polarization in the US ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.newsnationnow.com/solutions/utah-opponents-made-a-campaign-ad-together-what-it-achieved/",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Polarization"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "63% of men use dates to become ‘a better version of themselves’—for the other person, it can feel like a therapy session",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.cnbc.com/2022/12/21/63percent-of-men-use-dates-to-become-a-better-version-of-themselves.html",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Rules of Dating, Sex, and Consent"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Women like working with people, men like working with things, all across the world",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/12/women-like-working-with-people-men-like-working-with-things-all-across-the-world-64485",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Psychological Similarities and Differences Between Men and Women"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Misleading videos about ADHD are being widely disseminated on TikTok, study finds",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/03/misleading-videos-about-adhd-are-being-widely-disseminated-on-tiktok-study-finds-62705",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Social Media"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Men’s Feminist Identification and Reported Use of Prescription Erectile Dysfunction Medication",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.tandfonline.com/doi/full/10.1080/00224499.2022.2029810",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Feminism",
+              "Toxic Masculinity"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "White children are especially likely to be overdiagnosed and overtreated for ADHD, according to a new study",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://theconversation.com/white-children-are-especially-likely-to-be-overdiagnosed-and-overtreated-for-adhd-according-to-a-new-study-185102",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "White Privilege",
+              "Pharmaceuticals"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Psychedelic experiences and mindfulness linked to better psychological wellbeing",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2022/05/psychedelic-experiences-and-mindfulness-linked-to-better-psychological-wellbeing-63070",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Psychedelics",
+              "Buddhism"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Owning a pet may have helped people with low resilience cope during the pandemic",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "https://www.psypost.org/2023/01/owning-a-pet-may-have-helped-people-with-low-resilience-cope-during-the-pandemic-64808",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Research",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Animal Husbandry"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Opening Up Flyer on Canva",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-01-25T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "LCL Onboarding",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "https://www.canva.com/design/DAFYwCr4J34/tkZ7cJOjgoDxZ7vjNEY02A/edit?utm_content=DAFYwCr4J34&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Looking for a Venue Post",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "*Venue Recommendations?*\nHello lovely humans! @realtalkphilosophy is opening a new chapter in city. Which venues would be best to host us?\n*Venue Requirements*\nProjection screen/TV\nMicrophone and PA System\nSeating for 30-60 people arranged so that everyone can see the screen and breakout into small-group discussions\nDrink and Food menu with veggie options\nChapter Name will host weekly events exploring divisive social issues - from polyamory to antinatalism - with discussions, lectures, music, games, artwork, and more. For more information, visit www.openingup.org or watch our Explainer Video at https://youtu.be/RNpl2oWi3ug\nScreen Shot 2564-10-22 at 13.02.48.png\nBe sure to tag Opening Up Philosophy, your Local Opening Up Facebook Group and to include photos of past events in your post so potential venues can get a sense of the energy and crowd-size of an Opening Up event. ",
+            "Read": "",
+            "Date": "2023-02-09T00:00:00.000+02:00",
+            "Tags": [
+              "Venue"
+            ],
+            "Type": "Email Template",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": [
+              "Local Chapter Leader"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Summary": "First Email to a Potential Venue",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Dear Name,\nThank you for all the work you do hosting community events in city! Would you be interested in hosting a new weekly event? \nChapter Name is looking for a new home to host our weekly events, each with music, artwork, games, presentations, community conversations, and more.\nSince 2017 Opening Up has hosted more than 200 community events exploring contemporary, divisive issues (like polyamory, psychedelics, feminism, conspiracy theories, fetishes, etc.) with guided small-group discussions, unbiased talks, themed music, artwork, games, and more. Events in Da Nang, Hanoi, and Chiang Mai range from 40-130 guests per event. See our explainer video at www.youtu.be/RNpl2oWi3ug or find out more at www.openingup.org. \nOur events are 2.5 hours long, and are scheduled for eating hours, so most people order food and several drinks. This is an excellent opportunity for venues to find more customers. \nOur events require a projector and screen (or large television), microphone and speakers, and seating for 30-40+ people. Could your venue accommodate? \nWe would like to host our first event in city on date. Once you and I confirm, my team will begin advertising. \nThanks so much!\nName\nOf course, spicing up the email with more local, colloquial jargon is invited.",
+            "Read": "",
+            "Date": "2023-02-09T00:00:00.000+02:00",
+            "Tags": [
+              "Venue"
+            ],
+            "Type": "Email Template",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": [
+              "Local Chapter Leader"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Summary": "Response to an LCL Applicant",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Dear Name,\nThank you for expressing interest in becoming a Local Chapter Leader with Real Talk Philosophy!\nCould you please send your CV/resume and cover letter to us on Facebook @realtalkphilosophy or to admin@realtalkphilosophy.org?\nLooking forward to hearing from you soon,\nName",
+            "Read": "",
+            "Date": "2023-02-09T00:00:00.000+02:00",
+            "Tags": [
+              "LCL Hiring"
+            ],
+            "Type": "Email Template",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": [
+              "LCL Coordinator",
+              "President",
+              "Project Assistant"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Summary": "Influence Poll",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Display a QR code that leads to a form asking people whether they are:\nMostly influenced by cultural practices and beliefs that originate in Africa (e.g. \nMostly influenced by cultural practices and beliefs that originate in the West (e.g. Greek myths, Christianity) \nEqually influenced by both cultures\nThe form then asks them a series of questions about their thinking styles",
+            "Read": "",
+            "Date": "2023-02-12T00:00:00.000+02:00",
+            "Tags": [
+              "Poll"
+            ],
+            "Type": "Event Resource",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": [
+              "Thinking Style Differences Between Africa and the West"
+            ],
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "Avoid the word “should” ",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "In conversations around divisive social issues, the word “should” can come up a lot. For example, you might hear “The government should pay for tertiary education” or “you should be able to stomach killing an animal if you’re willing to eat meat.” \nBut what does the word “should” mean? \nIn conversations where we want our beliefs to be understood by others (and hopefully learn something about ourselves through the process), it can be really beneficial to \nThe word “should” is lazy. What I mean is, the word “should” can be used in a variety of circumstances where it would be beneficial for someone to do something. But “should” is unspecific as to what that benefit might be (or what detriment it might be shielding us from). And identifying the specific benefits and detriments is exactly what’s necessary when attempting to inform someone of what we believe. And it is the only way to understand in ourselves why we believe what we believe. \nPlease include information about the etymology of the word “should” and if it ever had moral/religious connotations. \nPlease include any other topics that would be relatively on-topic and/or entertaining\nUse a friendly, playful, humble, philosophical tone\nPlease add examples\nPlease define any jargon\nPlease include any studies or scholastic work that have been written on the subject\n\n—\nAI Generated:\nThe Pitfalls of Using the Word \"Should\"\nIntroduction\nThe word \"should\" is often used in conversations to express a belief or expectation about what someone else ought to do or think. For example, you might hear someone say, \"You should be more concerned about immigrants at the border\" or \"You should be able to stomach killing an animal if you're willing to eat meat.\" While the word \"should\" can be a useful tool for expressing our beliefs, it can also be problematic as it tends to be unspecific and may not adequately explain the reasons behind a particular belief or policy. This can lead to misunderstandings, miscommunication, and even conflict.\nIn this guide, we will explore the problems with using the word \"should\" in conversations, and offer strategies for promoting healthier and more productive dialogues. \nThe Meaning of \"Should\"\n\"Should\" is a modal verb that is used to express obligation, expectation, or advisability. It is derived from the Old English word \"sceolde,\" which means \"obligation\" or \"duty.\" \nInterestingly, \"should\" is a past tense form of the word \"shall,\" which originally meant \"owe\" or \"be under obligation.\" \"Shall\" and \"should\" were once interchangeable, with \"shall\" used for first person subjects (I, we) and \"should\" used for second and third person subjects (you, he/she/it/they). However, over time, \"shall\" became more associated with expressing a future intention, while \"should\" retained its obligation or expectation connotations.\nIn the past, “should” was used to talk about what was expected of someone based on religious beliefs. Today, \"should\" has evolved to have a more general meaning, and it is often used to express opinions or recommendations without necessarily invoking any specific moral or religious code.\nThe Pitfalls of Using \"Should\"\nThe word \"should\" can be problematic when used in conversations, as it can be vague and unspecific. For example, saying \"You should recycle more\" doesn't really explain why you believe that or how it would benefit the environment. Additionally, using \"should\" can come across as prescriptive or judgmental, which can put the listener on the defensive and make them less likely to engage in a productive conversation.\nStrategies for Promoting Healthier Conversations\nInstead of using \"should,\" it is more effective to use specific and descriptive language that explains the benefits and drawbacks of a particular action or belief. For example, instead of saying \"You should go vegan,\" you might explain the health benefits of a plant-based diet or the environmental impact of animal agriculture. Additionally, using open-ended questions and active listening can help promote healthier and more productive conversations. By asking questions that invite different perspectives and listening actively to what others have to say, we can foster a more inclusive and collaborative dialogue.\nConclusion\nIn conclusion, using the word \"should\" in conversations can be problematic as it tends to be unspecific and may not adequately explain the reasons behind a particular belief or policy. Instead, using descriptive language and open-ended questions can help promote healthier and more productive conversations, even on divisive issues. By explaining the benefits and drawbacks of a particular belief or policy, we can encourage a more informed and respectful dialogue, and find common ground with others who may have different perspectives.",
+            "Read": "",
+            "Date": "2023-03-17T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "Conversation Workshops",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "",
+            "Read": "",
+            "Date": "2023-03-28T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        },
+        {
+          "values": {
+            "Summary": "GPT Formatting",
+            "Visibility": "Public",
+            "Add  to Tasks": "",
+            "Description": "Academic style\n[Writing style guideline: Use a formal and academic tone paired with sophisticated vocabulary and grammar. Provide a thorough and in-depth analysis of the subject matter. Explain complex scientific concepts in a clear and accessible way. Use examples from a variety of fields, such as psychology and cognitive science. Present counter-arguments and dissenting opinions in a balanced and objective way.]\nHow to define yearly goals effectively?\nExecutive-level summary\nExecutive-level summary — it is similar to the 5th grader style (YIKES), but here we are asking to make the information as “dense” as possible.\nIdentify in writing style guidelines the specific response requested\n[Writing style guidelines: Return only the category]\nI want you to act as a personal assistant. I will provide you with categories and I want you to respond with the best one. My first request is \"Identify which category is most closely related to the stance: The 'Bro Code' promotes harmless male bonding.\" \nCategories: \n- Toxic masculinity is a harmful societal construct that perpetuates negative behaviors and reinforces gender inequality.\n- Toxic masculinity unfairly demonizes men and ignores positive aspects of masculinity.\n- Toxic masculinity and toxic femininity are both harmful and need to be addressed to promote healthy forms of masculinity and femininity.\n- The focus on toxic masculinity detracts from more important issues facing society and is used to promote an agenda.\n\nTemplates\nWrite a five multiple-choice questions on U.S. History. Please use the format template. Do not repeat answers.\n---BEGIN FORMAT TEMPLATE---\n${QUESTION}\nA) ${ANSWER 1}\nB) ${ANSWER 2}\nC) ${ANSWER 3}\nD) ${ANSWER 4}\nCorrect Answer: ${CHOICE A, B, C, or D}\n---END FORMAT TEMPLATE---\n---BEGIN QUESTIONS---",
+            "Read": "",
+            "Date": "2023-03-28T00:00:00.000+02:00",
+            "Tags": "",
+            "Type": "",
+            "Author": "Jon Dallas",
+            "Location": "",
+            "Images": "",
+            "Favorite": "",
+            "Where Will It Be Posted?": "",
+            "Where Has It Been Posted": "",
+            "Topics": "",
+            "Link": "",
+            "Roles": ""
+          }
+        }
+      ]
+    }
+  }

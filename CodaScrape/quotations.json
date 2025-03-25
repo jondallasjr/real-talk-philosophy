@@ -1,0 +1,177 @@
+{
+    "Quotations": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Quotation",
+          "display": true,
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Favorite",
+          "format": {
+            "type": "reaction",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Notes",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Source",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Quotation": "\"In order to be an effective activist, you must deeply understand what your opposition believes, and why they believe it.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Jon Dallas"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“He who knows only his own side of the case knows little of that.”",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "John Stuart Mill"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“Progress is impossible without change. And those who can not change their minds can not change anything.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "George Bernard Shaw"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“First, our wrong opinions are shielded in filter bubbles , where we feel pride when we see only information that supports our convictions. Then our beliefs are sealed in echo chambers, where we hear only from people who intensify and validate them. Although the resulting fortress can appear impenetrable, there's a growing community of experts who are determined to break through.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Adam Grant, Think Again"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“Presented with someone else’s argument, we’re quite adept at spotting the weaknesses. Almost invariably, the positions we’re blind about are our own.”",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "Elizabeth Kolbert, The New Yorker"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“If you want to tell people the truth, make them laugh. Otherwise they’ll kill you.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Oscar Wilde"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“Experience without theory is blind, but theory without experience is mere intellectual play.”",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "Immanuel Kant"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "\"The world is a comedy to those that think; a tragedy to those that feel.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Horace Walpole"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“The ability to observe without evaluating is the highest form of intelligence.”`",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "Jiddu Krishnamurti"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“The man of knowledge must be able not only to love his enemies but also to hate his friends.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Friedrich Nietzsche"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“I would rather be a devil in alliance with truth, than an angel in alliance with falsehood.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Ludwig Feuerbach"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“If the truth shall kill them, let them die.”",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "Immanuel Kant"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“When dealing with people, remember you are not dealing with creatures of logic, but creatures of emotion.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Dale Carnegie "
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“Neglecting to broaden their view has kept some people doing one thing all their lives.”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Napoleon Hill"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“Understanding is the very foundation of love. When you understand someone, you cannot help but love them.”",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "Thich Nhat Hanh"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“It is the mark of an educated mind to be able to entertain a thought without accepting it.”",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Source": "Aristotle (misattributed)"
+          }
+        },
+        {
+          "values": {
+            "Quotation": "“Consider it: every person you have ever met, every person will suffer the loss of his friends and family. All are going to lose everything they love in this world. Why would one want to be anything but kind to them in the meantime?”",
+            "Favorite": "",
+            "Notes": "",
+            "Source": "Sam Harris"
+          }
+        }
+      ]
+    }
+  }

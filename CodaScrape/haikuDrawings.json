@@ -1,0 +1,4015 @@
+{
+    "Haiku/Drawings": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Event",
+          "display": true,
+          "format": {
+            "table": {
+              "id": "grid-NzRsjzbDhI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-NzRsjzbDhI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-NzRsjzbDhI",
+              "name": "Events"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Image",
+          "format": {
+            "type": "image",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Categorization JSON",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Notes",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Chapter",
+          "format": {
+            "table": {
+              "id": "grid-_MuMmBB_9n",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-_MuMmBB_9n",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-_MuMmBB_9n",
+              "name": "Chapters"
+            },
+            "type": "lookup",
+            "isArray": false
+          },
+          "formula": "Event.Chapter"
+        },
+        {
+          "type": "column",
+          "name": "Date",
+          "format": {
+            "type": "date",
+            "isArray": false
+          },
+          "formula": "Event.Date"
+        },
+        {
+          "type": "column",
+          "name": "Topic",
+          "format": {
+            "table": {
+              "id": "grid-bkc6AUt8Zz",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-bkc6AUt8Zz",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-bkc6AUt8Zz",
+              "name": "Topics"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Favorite",
+          "format": {
+            "type": "reaction",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Best Ever",
+          "format": {
+            "displayType": "toggle",
+            "type": "checkbox",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Split",
+          "format": {
+            "label": "",
+            "disableIf": "Image.count()<2",
+            "action": "RUNACTIONS(\n  Image\n    .FormulaMap(\n      addrow(\n        [Haiku/Drawings],\n        Image,\n        CurrentValue,\n        Topic,\n        Topic,\n        Event,\n        Event\n      )\n    ),\n  thisRow.DeleteRows()\n)",
+            "type": "button",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Transcribe & Categorize",
+          "format": {
+            "label": "",
+            "disableIf": "[Text Transcription].IsNotBlank() or [Drawing Description].IsNotBlank()",
+            "action": "RunActions(\n  ModifyRows(\n    thisRow,\n    [Categorization JSON],\n    [OpenAI Vision]Vision(\n      [Jon Dallas],\n      parsejson(Image._merge() + \"\", \"publicUrl\"),\n      \"This image was a submission to our Haiku/Drawing contest for a community event exploring the arguments on all sides of \" +\n        Topic.ToText() +\n        \". Help me categorize it. Respond in JSON with 4 keys: Transcription, Drawing Description, Haiku, and Analysis. 'Transcription' should be a verbatim transcription of any text in the image. If there is no text, leave this field blank. 'Drawing Description' should be a description of the drawing. If there is no drawing, leave this field blank. 'Analysis' should be a philosophical analysis of the image/haiku, exploring its meaning within the topic of\" +\n        Topic.ToText() +\n        \", written concisely, punchy, directly, boldly, colloquially.\" +\n        \"'Valid Haiku' should be a boolean true or false value indicating whether the text is a valid Haiku (3 lines, 17 total syllables: 5, then 7, then 5). If there is no text, leave this field blank. Ensure all you writing is encoded for JSON.\",\n      200,\"high\",\"gpt-4-vision-preview\"\n    )\n      .split(\n        LineBreak()\n      )\n      .Filter(\n        not(CurrentValue.left(3) = \"```\")\n      )\n      .Concatenate()\n  ),\n  ModifyRows(\n    thisRow,\n    [Text Transcription],\n    [Categorization JSON].ParseJSON(\"Transcription\"),\n    [Drawing Description],\n    [Categorization JSON].ParseJSON(\"Drawing Description\"),\n    [Valid Haiku],[Categorization JSON].ParseJSON(\"Haiku\"),\n    Analysis,[Categorization JSON].ParseJSON(\"Analysis\")\n  )\n)",
+            "type": "button",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Text Transcription",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Valid Haiku",
+          "format": {
+            "displayType": "check",
+            "type": "checkbox",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Analysis",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Drawing Description",
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Veganism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Veganism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Veganism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Veganism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Rules of Dating, Sex, and Consent",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Rules of Dating, Sex, and Consent",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Rules of Dating, Sex, and Consent",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Rules of Dating, Sex, and Consent",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Rules of Dating, Sex, and Consent",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Teaching English",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Teaching English",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Teaching English",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Teaching English",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sexual Orientation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Indigenous American Philosophy",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Indigenous American Philosophy",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Indigenous American Philosophy",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Indigenous American Philosophy",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Indigenous American Philosophy",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Indigenous American Philosophy",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Free Will",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Free Will",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Fetishes",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Euthanasia",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Euthanasia",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Euthanasia",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Euthanasia",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Euthanasia",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Cultural Appropriation",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Conspiracy Theories",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Abortion",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Abortion",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "image.png"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Abortion",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Abortion",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Abortion",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "image.png",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Abortion",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4314.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4315.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4316.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4319.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4331.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4332.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4333.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4334.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4335.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4336.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4337.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4317.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4318.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "White Privilege",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3531.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Toxic Masculinity",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3537.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Toxic Masculinity",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3538.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Toxic Masculinity",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3535.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Toxic Masculinity",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3536.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Toxic Masculinity",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3534.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Toxic Masculinity",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3461.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Animal Dilemma",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3462.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Animal Dilemma",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3463.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Animal Dilemma",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3464.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Animal Dilemma",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.08.21 - 22 Surveillance Capitalism Images.083.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Surveillance Capitalism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.08.21 - 22 Surveillance Capitalism Images.085.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Surveillance Capitalism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.08.21 - 22 Surveillance Capitalism Images.082.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Surveillance Capitalism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.08.21 - 22 Surveillance Capitalism Images.084.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Surveillance Capitalism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "IMG_4253.jpg"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Social Media",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4271.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4272.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4273.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4274.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4275.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4276.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Sex Work",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4412.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4413.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4414.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4415.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4416.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4417.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4418.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4419.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4420.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Polyamory",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190911_221237.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190911_221251.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190911_221323.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190911_221303.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.055.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.056.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.057.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.058.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.059.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.060.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "Political Correctness.061.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190829_233321.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190829_233340.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190829_233401.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190829_233417.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190829_233425.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190829_233546.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "20190910_141649.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Political Correctness",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3627.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3628.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3629.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3631.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3632.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3633.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3634.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3635.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3636.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3637.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3638.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3639.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3640.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3641.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3655.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3656.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3657.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3658.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3659.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3660.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3661.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3662.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3663.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3664.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3665.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3666.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3667.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3668.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3669.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3670.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3671.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3672.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3673.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3674.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_3630.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Penises & Vaginas",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0956.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Occultism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0958.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Occultism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0960.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Occultism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0961.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Occultism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0962.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Occultism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0957.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Occultism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64283706_403363253722180_1106924913127587840_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64478122_2378968052124768_1489966967216406528_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64600410_359747491348083_8357538945315110912_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64816042_2233646530258743_5274398016206274560_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64865796_559978861073067_3221975661052690432_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64871354_2523084381076938_2618459909024382976_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "64906243_2244916035822542_5908199030042656768_n.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Feminism",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.012 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.012.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.013 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.013.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.094 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.094.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.095 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.095.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.096 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.096.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.097 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.097.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.098 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.098.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.099 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.099.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.100 (1).jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "2019.04.24-24 The Fashion Industry.100.jpeg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "The Fashion Industry",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4345.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4468.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4469.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4470.HEIC",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4469.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4470.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4344.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4350.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4468.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4346.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4347.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4348.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4349.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_4472.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "East Brain West Brain",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": [
+              "Drawing Activity .001.jpeg"
+            ],
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Drugs",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0888.JPG",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "drag",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0889.JPG",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "drag",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0890.JPG",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "drag",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0893.JPG",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "drag",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0891.JPG",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "drag",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_0892.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "drag",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_1051.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Climate Change",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_1052.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Climate Change",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_1053.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Climate Change",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_1054.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Climate Change",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_1055.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Climate Change",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        },
+        {
+          "values": {
+            "Event": "",
+            "Image": "IMG_1056.jpg",
+            "Categorization JSON": "",
+            "Notes": "",
+            "Chapter": "",
+            "Date": "",
+            "Topic": "Climate Change",
+            "Favorite": "",
+            "Best Ever": false,
+            "Split": "{\"formatType\":\"button\",\"disabled\":true}",
+            "Transcribe & Categorize": "{\"formatType\":\"button\",\"disabled\":false}",
+            "Text Transcription": "",
+            "Valid Haiku": false,
+            "Analysis": "",
+            "Drawing Description": ""
+          }
+        }
+      ]
+    }
+  }

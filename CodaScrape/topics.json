@@ -1,0 +1,3833 @@
+{
+    "Topics": {
+      "columns": [
+        {
+          "type": "column",
+          "name": "Status",
+          "format": {
+            "table": {
+              "id": "grid-U_wkm0bCZQ",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-U_wkm0bCZQ",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-U_wkm0bCZQ",
+              "name": "Resource Statuses"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Topic",
+          "display": true,
+          "format": {
+            "type": "text",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Page",
+          "format": {
+            "display": "iconOnly",
+            "type": "link",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Details",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Favorite",
+          "format": {
+            "type": "reaction",
+            "isArray": true
+          }
+        },
+        {
+          "type": "column",
+          "name": "Notes",
+          "format": {
+            "type": "canvas",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Type",
+          "format": {
+            "table": {
+              "id": "grid-j61yY2J4qR",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-j61yY2J4qR",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-j61yY2J4qR",
+              "name": "Event Type"
+            },
+            "type": "lookup",
+            "isArray": false
+          }
+        },
+        {
+          "type": "column",
+          "name": "Events",
+          "format": {
+            "table": {
+              "id": "grid-NzRsjzbDhI",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-NzRsjzbDhI",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-NzRsjzbDhI",
+              "name": "Events"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "Events.Filter(Topic.Contains(thisRow))"
+        },
+        {
+          "type": "column",
+          "name": "Subtopics",
+          "format": {
+            "table": {
+              "id": "grid-b-4zQg8qR8",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-b-4zQg8qR8",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-b-4zQg8qR8",
+              "name": "Subtopics"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "Subtopics.Filter(Topic.Contains(thisRow))"
+        },
+        {
+          "type": "column",
+          "name": "Event Resources",
+          "format": {
+            "table": {
+              "id": "grid-17foCEjm39",
+              "type": "table",
+              "tableType": "table",
+              "href": "https://coda.io/apis/v1/docs/u41r59VdhB/tables/grid-17foCEjm39",
+              "browserLink": "https://coda.io/d/_du41r59VdhB#_tugrid-17foCEjm39",
+              "name": "Event Materials DB"
+            },
+            "type": "lookup",
+            "isArray": true
+          },
+          "formula": "[Event Materials DB].Filter(Topic.Contains(thisRow))"
+        },
+        {
+          "type": "column",
+          "name": "Banner",
+          "format": {
+            "type": "image",
+            "isArray": true
+          },
+          "formula": "IfBlank(\n  [Artwork DB].filter(Topic.contains(thisRow))\n    .Image\n    .first(),\n  [Haiku/Drawings DB]\n    .Filter(\n      Topic.Contains(thisRow).first()\n    )\n    .Image\n)"
+        }
+      ],
+      "rows": [
+        {
+          "values": {
+            "Status": "",
+            "Topic": "East Brain West Brain",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": [
+              "IMG_4345.HEIC",
+              "IMG_4468.HEIC",
+              "IMG_4469.HEIC",
+              "IMG_4470.HEIC",
+              "IMG_4469.jpg",
+              "IMG_4470.jpg",
+              "IMG_4344.jpg",
+              "IMG_4350.jpg",
+              "IMG_4468.jpg",
+              "IMG_4346.jpg",
+              "IMG_4347.jpg",
+              "IMG_4348.jpg",
+              "IMG_4349.jpg",
+              "IMG_4472.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "drag",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": [
+              "IMG_0888.JPG",
+              "IMG_0889.JPG",
+              "IMG_0890.JPG",
+              "IMG_0893.JPG",
+              "IMG_0891.JPG",
+              "IMG_0892.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Bhagavad Gita",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": [
+              "Slide Images.062.jpeg",
+              "Slide Images.063.jpeg",
+              "Slide Images.064.jpeg",
+              "Slide Images.065.jpeg",
+              "Slide Images.066.jpeg",
+              "Slide Images.067.jpeg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Vietnamese Folk Religion",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Vietnamese Folk Religion",
+              "Presentation - Vietnamese Folk Religion"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "The Animal Dilemma",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - The Animal Dilemma",
+              "Event Recording - The Animal Dilemma",
+              "Event Recording - The Animal Dilemma",
+              "Presentation - The Animal Dilemma"
+            ],
+            "Banner": [
+              "IMG_3461.HEIC",
+              "IMG_3462.HEIC",
+              "IMG_3463.HEIC",
+              "IMG_3464.HEIC"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Penises & Vaginas",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Penises & Vaginas"
+            ],
+            "Banner": [
+              "IMG_3627.HEIC",
+              "IMG_3628.HEIC",
+              "IMG_3629.HEIC",
+              "IMG_3631.HEIC",
+              "IMG_3632.HEIC",
+              "IMG_3633.HEIC",
+              "IMG_3634.HEIC",
+              "IMG_3635.HEIC",
+              "IMG_3636.HEIC",
+              "IMG_3637.HEIC",
+              "IMG_3638.HEIC",
+              "IMG_3639.HEIC",
+              "IMG_3640.HEIC",
+              "IMG_3641.HEIC",
+              "IMG_3655.HEIC",
+              "IMG_3656.HEIC",
+              "IMG_3657.HEIC",
+              "IMG_3658.HEIC",
+              "IMG_3659.HEIC",
+              "IMG_3660.HEIC",
+              "IMG_3661.HEIC",
+              "IMG_3662.HEIC",
+              "IMG_3663.HEIC",
+              "IMG_3664.HEIC",
+              "IMG_3665.HEIC",
+              "IMG_3666.HEIC",
+              "IMG_3667.HEIC",
+              "IMG_3668.HEIC",
+              "IMG_3669.HEIC",
+              "IMG_3670.HEIC",
+              "IMG_3671.HEIC",
+              "IMG_3672.HEIC",
+              "IMG_3673.HEIC",
+              "IMG_3674.HEIC",
+              "IMG_3630.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Drugs",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Drugs",
+              "Presentation - Drugs"
+            ],
+            "Banner": [
+              [
+                "Drawing Activity .001.jpeg"
+              ]
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Violence in Protests",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Interview - Violence in Protests",
+              "Interview - Violence in Protests",
+              "Interview - Violence in Protests",
+              "Interview - Violence in Protests",
+              "Interview - Violence in Protests",
+              "Interview - Violence in Protests",
+              "Event Recording - Violence in Protests",
+              "Event Recording - Violence in Protests",
+              "Event Recording - Violence in Protests",
+              "Event Recording - Violence in Protests",
+              "Presentation - Violence in Protests"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Community Voices",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "The Biology of Love",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#14: The Biology of Love at Real Talk Hanoi, Sat, Sep 16, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Descartes: Meditations on First Philosophy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#154: Descartes: Meditations on First Philosophy at Real Talk Hanoi, Sat, Nov 2, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Sam Harris: Free Will",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#151: Sam Harris: Free Will at Real Talk Hanoi, Sun, Oct 27, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Metaphors We Live By",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#150: Metaphors We Live By at Real Talk Hanoi, Sat, Oct 19, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Bertrand Russell",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#143: Bertrand Russell at Real Talk Hanoi, Fri, Sep 27, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Simone De Beauvoir",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#140: Simone De Beauvoir at Real Talk Hanoi, Sun, Sep 22, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Plato: Republic",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#139: Plato: Republic at Real Talk Hanoi, Fri, Sep 20, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Schopenhauer: The World as Will and Idea",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#110: Schopenhauer: The World as Will and Idea at Real Talk Hanoi, Fri, Jul 12, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Marcus Aurelius: Meditations",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#107: Marcus Aurelius: Meditations at Real Talk Hanoi, Fri, Jul 5, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Community Voices",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#115: Open Mic Vol. 5 (Community Voices) at Real Talk Hanoi, Wed, Jul 24, 2019",
+              "#114: Open Mic Vol. 5 (Community Voices) at Real Talk Hanoi, Tue, Jul 23, 2019",
+              "#93: Open Mic Vol. 4 (Community Voices) at Real Talk Hanoi, Wed, May 22, 2019",
+              "#92: Open Mic Vol. 4 (Community Voices) at Real Talk Hanoi, Tue, May 21, 2019",
+              "#65: Open Mic Vol. 3 (Community Voices) at Real Talk Hanoi, Tue, Dec 11, 2018",
+              "#60: Open Mic Vol. 2 (Community Voices) at Real Talk Hanoi, Tue, Nov 6, 2018",
+              "#51: Open Mic Vol. 1 (Community Voices) at Real Talk Hanoi, Tue, Aug 28, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices",
+              "Video Essay - Community Voices"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Alan Watts",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#47: Alan Watts at Real Talk Hanoi, Tue, Jul 31, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Alan Watts",
+              "Event Recording - Alan Watts",
+              "Event Recording - Alan Watts",
+              "Event Recording - Alan Watts",
+              "Event Recording - Alan Watts"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Why We Play Games",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#38: Why We Play Games at Real Talk Hanoi, Tue, May 15, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Alain de Botton’s Religion for Atheists",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#36: Alain de Botton’s Religion for Atheists at Real Talk Hanoi, Tue, May 1, 2018",
+              "#35: Alain de Botton’s Religion for Atheists at Real Talk Hanoi, Tue, Apr 24, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Albert Camus: The Outsider",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#33: Albert Camus: The Outsider at Real Talk Hanoi, Tue, Apr 10, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Albert Camus: The Myth of Sisyphus",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#121: Albert Camus: The Myth of Sisyphus at Real Talk Hanoi, Fri, Aug 9, 2019",
+              "#32: Albert Camus: The Myth of Sisyphus at Real Talk Hanoi, Tue, Apr 3, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus",
+              "Event Recording - Albert Camus: The Myth of Sisyphus"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Immanuel Kant: Critique of Pure Reason",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#27: Immanuel Kant: Critique of Pure Reason at Real Talk Hanoi, Tue, Feb 27, 2018",
+              "#25: Immanuel Kant: Critique of Pure Reason at Real Talk Hanoi, Tue, Jan 30, 2018",
+              "#22: Immanuel Kant: Critique of Pure Reason at Real Talk Hanoi, Sat, Dec 16, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Hume on Human Understanding",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#124: Hume on Human Understanding at Real Talk Hanoi, Fri, Aug 16, 2019",
+              "#21: Hume on Human Understanding at Real Talk Hanoi, Sat, Nov 25, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Berkeley’s “A Treatise Concerning the Principles of Human Knowledge”",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#18: Berkeley’s “A Treatise Concerning the Principles of Human Knowledge” at Real Talk Hanoi, Sat, Oct 21, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "John Locke’s “An Essay Concerning Human Understanding”",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#15: John Locke’s “An Essay Concerning Human Understanding” at Real Talk Hanoi, Sat, Sep 23, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Reinhold Niebuhr",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#9: Reinhold Niebuhr at Real Talk Hanoi, Sat, May 6, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Reinhold Niebuhr",
+              "Event Recording - Reinhold Niebuhr",
+              "Event Recording - Reinhold Niebuhr",
+              "Event Recording - Reinhold Niebuhr",
+              "Event Recording - Reinhold Niebuhr",
+              "Event Recording - Reinhold Niebuhr",
+              "Event Recording - Reinhold Niebuhr"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Albert Ellis",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#10: Albert Ellis at Real Talk Hanoi, Sat, May 13, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Schopenhauer",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#8: Schopenhauer at Real Talk Hanoi, Wed, Apr 19, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "The Tao Te Ching",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#7: The Tao Te Ching at Real Talk Hanoi, Sat, Apr 15, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Carl Jung: The Collective Unconscious",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#6: Carl Jung: The Collective Unconscious at Real Talk Hanoi, Sat, Apr 8, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Carl Jung: Man and His Symbols",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#145: Carl Jung: Man and His Symbols at Real Talk Hanoi, Fri, Oct 4, 2019",
+              "#5: Carl Jung: Man and His Symbols at Real Talk Hanoi, Sat, Apr 1, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Nietzsche: Beyond Good and Evil",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#113: Nietzsche: Beyond Good and Evil at Real Talk Hanoi, Fri, Jul 19, 2019",
+              "#29: Nietzsche: Beyond Good and Evil at Real Talk Hanoi, Mon, Mar 12, 2018",
+              "#2: Nietzsche: Beyond Good and Evil at Real Talk Hanoi, Thu, Mar 9, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Nietzsche: Beyond Good and Evil"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Michel Foucault’s History of Madness",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#133: Michel Foucault’s History of Madness at Real Talk Hanoi, Sun, Sep 8, 2019",
+              "#4: Michel Foucault’s History of Madness at Real Talk Hanoi, Sat, Mar 25, 2017",
+              "#3: Michel Foucault’s History of Madness at Real Talk Hanoi, Thu, Mar 16, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Kierkegaard - Fear and Trembling",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#116: Kierkegaard - Fear and Trembling at Real Talk Hanoi, Fri, Jul 26, 2019",
+              "#30: Kierkegaard - Fear and Trembling at Real Talk Hanoi, Tue, Mar 20, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Communism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Is the world getting better or worse?",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "",
+            "Topic": "Antinatalism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Artwork - Should We Have Children?, Antinatalism",
+              "Game - Should We Have Children?, Antinatalism",
+              "Song - Should We Have Children?, Antinatalism",
+              "A father holding his daughter - Should We Have Children?, Antinatalism",
+              "Arguments Against Antinatalism - Should We Have Children?, Antinatalism",
+              "Arguments for Antinatalism - Should We Have Children?, Antinatalism",
+              "What is Antinatalism? - Should We Have Children?, Antinatalism",
+              "Webpage - Should We Have Children?, Antinatalism",
+              "Interview - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Haiku/Drawing Submissions - Should We Have Children?, Antinatalism",
+              "Presentation - Should We Have Children?, Antinatalism",
+              "Banner Image - Should We Have Children?, Antinatalism",
+              "Do you have or want to have children? Why or why n - Should We Have Children?, Antinatalism",
+              "Is it ethically/morally right to have children? - Should We Have Children?, Antinatalism",
+              "Should there be less people? - Should We Have Children?, Antinatalism",
+              "Is human life distinct from non-human animal life? - Should We Have Children?, Antinatalism",
+              "Is a universe with life better than a universe wit - Should We Have Children?, Antinatalism",
+              "Should we encourage non-human animals to stop proc - Should We Have Children?, Antinatalism",
+              "Should the state require parenting classes and lic - Should We Have Children?, Antinatalism",
+              "How could governments enact antinatalist policy? - Should We Have Children?, Antinatalism",
+              "What are the qualities of a good parent in the 21s - Should We Have Children?, Antinatalism",
+              "Is birth consensual? - Should We Have Children?, Antinatalism",
+              "Is human consciousness different from non-human an - Should We Have Children?, Antinatalism",
+              "Is it possible to raise a child as a nomad? - Should We Have Children?, Antinatalism",
+              "Do morals exist in a world absent of human life? - Should We Have Children?, Antinatalism",
+              "Does the joy of life justify its suffering? - Should We Have Children?, Antinatalism",
+              "Should human/sentient life continue forever? Why? - Should We Have Children?, Antinatalism",
+              "Is a world with life better than a world without l - Should We Have Children?, Antinatalism",
+              "Is the world getting better or getting worse? - Should We Have Children?, Antinatalism"
+            ],
+            "Banner": [
+              "Antinatalism Haiku.JPG.001.jpeg",
+              "Antinatalism Haiku.JPG.003.jpeg",
+              "Antinatalism Haiku.JPG.004.jpeg",
+              "Antinatalism Haiku.JPG.007.jpeg",
+              "Antinatalism Haiku.JPG.008.jpeg",
+              "Antinatalism Haiku.JPG.010.jpeg",
+              "Antinatalism Haiku.JPG.015.jpeg",
+              "Antinatalism Haiku.JPG.016.jpeg",
+              "Antinatalism Haiku.JPG.017.jpeg",
+              "Antinatalism Haiku.JPG.018.jpeg",
+              "Antinatalism Haiku.JPG.002.jpeg",
+              "Antinatalism Haiku.JPG.005.jpeg",
+              "Antinatalism Haiku.JPG.006.jpeg",
+              "Antinatalism Haiku.JPG.009.jpeg",
+              "Antinatalism Haiku.JPG.011.jpeg",
+              "Antinatalism Haiku.JPG.012.jpeg",
+              "Antinatalism Haiku.JPG.013.jpeg",
+              "Antinatalism Haiku.JPG.014.jpeg",
+              "Antinatalism Haiku.JPG.019.jpeg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Should We Have Children?",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#214: Antinatalism (Should We Have Children?) at Da Nang, Vietnam, Tue, Feb 23, 2021",
+              "#212: Should We Have Children? at Saigon, Vietnam, Wed, Jan 27, 2021",
+              "#211: Should We Have Children? at Real Talk Hanoi, Tue, Jan 26, 2021",
+              "#193: Should We Have Children? at Chiang Mai, Thailand, Tue, Oct 27, 2020",
+              "#149: Should We Have Children? at Real Talk Hanoi, Wed, Oct 16, 2019",
+              "#148: Should We Have Children? at Real Talk Hanoi, Tue, Oct 15, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Artwork - Should We Have Children?, Antinatalism",
+              "Game - Should We Have Children?, Antinatalism",
+              "Song - Should We Have Children?, Antinatalism",
+              "A father holding his daughter - Should We Have Children?, Antinatalism",
+              "Arguments Against Antinatalism - Should We Have Children?, Antinatalism",
+              "Arguments for Antinatalism - Should We Have Children?, Antinatalism",
+              "What is Antinatalism? - Should We Have Children?, Antinatalism",
+              "Webpage - Should We Have Children?, Antinatalism",
+              "Interview - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Event Recording - Should We Have Children?, Antinatalism",
+              "Presentation - Should We Have Children?, Should We Have Children?",
+              "Banner Image - Should We Have Children?, Should We Have Children?",
+              "Haiku/Drawing Submissions - Should We Have Children?, Antinatalism",
+              "Haiku/Drawing Submissions - Should We Have Children?, Should We Have Children?",
+              "Presentation - Should We Have Children?, Antinatalism",
+              "Banner Image - Should We Have Children?, Antinatalism",
+              "Do you have or want to have children? Why or why n - Should We Have Children?, Antinatalism",
+              "Is it ethically/morally right to have children? - Should We Have Children?, Antinatalism",
+              "Should there be less people? - Should We Have Children?, Antinatalism",
+              "Is human life distinct from non-human animal life? - Should We Have Children?, Antinatalism",
+              "Is a universe with life better than a universe wit - Should We Have Children?, Antinatalism",
+              "Should we encourage non-human animals to stop proc - Should We Have Children?, Antinatalism",
+              "Should the state require parenting classes and lic - Should We Have Children?, Antinatalism",
+              "How could governments enact antinatalist policy? - Should We Have Children?, Antinatalism",
+              "What are the qualities of a good parent in the 21s - Should We Have Children?, Antinatalism",
+              "Is birth consensual? - Should We Have Children?, Antinatalism",
+              "Is human consciousness different from non-human an - Should We Have Children?, Antinatalism",
+              "Is it possible to raise a child as a nomad? - Should We Have Children?, Antinatalism",
+              "Do morals exist in a world absent of human life? - Should We Have Children?, Antinatalism",
+              "Does the joy of life justify its suffering? - Should We Have Children?, Antinatalism",
+              "Should human/sentient life continue forever? Why? - Should We Have Children?, Antinatalism",
+              "Is a world with life better than a world without l - Should We Have Children?, Antinatalism",
+              "Is the world getting better or getting worse? - Should We Have Children?, Antinatalism"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Artificial Intelligence",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#219: Artificial Intelligence at Da Nang, Vietnam, Tue, Mar 23, 2021",
+              "#201: Artificial Intelligence at Chiang Mai, Thailand, Tue, Dec 1, 2020",
+              "#104: Artificial Intelligence at Real Talk Hanoi, Wed, Jun 26, 2019",
+              "#103: Artificial Intelligence at Real Talk Hanoi, Tue, Jun 25, 2019",
+              "#239: Artificial Intelligence at Real Talk Harare, Thu, Oct 31, 2024"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Artwork - Artificial Intelligence",
+              "I’d also like to thank our sponsor stoprobotabuse. - Artificial Intelligence",
+              "Crowdsourcing A.I. Development - Artificial Intelligence",
+              "What is Artificial Intelligence - Artificial Intelligence",
+              "The Benefits of Artificial Intelligence - Artificial Intelligence",
+              "The Dangers of Artificial Intelligence - Artificial Intelligence",
+              "Can Machines Think? Can Machines Gain Consciousnes - Artificial Intelligence",
+              "Presenter Notes - Artificial Intelligence",
+              "Webpage - Artificial Intelligence",
+              "Presentation - Artificial Intelligence",
+              "Presentation - Artificial Intelligence",
+              "Banner Image - Artificial Intelligence",
+              "What is intelligence? What is Artificial Intellige - Artificial Intelligence",
+              "Are computers already more intelligent than humans - Artificial Intelligence",
+              "Are humans already cyborgs? - Artificial Intelligence",
+              "Can you prove that you are not a robot? - Artificial Intelligence",
+              "Will it ever be possible to upload your consciousn - Artificial Intelligence",
+              "Would an artificially intelligent being have consc - Artificial Intelligence",
+              "Is creativity uniquely human? - Artificial Intelligence",
+              "Should AI be regulated? How? - Artificial Intelligence",
+              "Would the world be better after an AI-led human-ge - Artificial Intelligence",
+              "What differentiates AI from a standard computer? - Artificial Intelligence",
+              "Will intelligent machines replace us, coexist with - Artificial Intelligence",
+              "Should countries ban future investment and develop - Artificial Intelligence",
+              "Who is better suited for making sentencing decisio - Artificial Intelligence"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Consciousness",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#218: Consciousness at Real Talk Hanoi, Tue, Mar 23, 2021",
+              "#203: Expert Voices: Consciousness (Consciousness) at Chiang Mai, Thailand, Tue, Dec 15, 2020",
+              "#157: Consciousness at Real Talk Hanoi, Sat, Nov 9, 2019",
+              "#120: Consciousness at Real Talk Hanoi, Wed, Aug 7, 2019",
+              "#119: Consciousness at Real Talk Hanoi, Tue, Aug 6, 2019",
+              "#237: Consciousness at Real Talk Harare, Thu, Oct 3, 2024"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Artwork - Consciousness",
+              "Game - Consciousness",
+              "Song - Consciousness",
+              "Soft Introduction - Consciousness",
+              "Why Talk About Consciousness? - Consciousness",
+              "The Problem of Other Minds - Consciousness",
+              "Animal Consciousness - Consciousness",
+              "Consciousness is a phenomenon that is heavily deba - Consciousness",
+              "Presenter Notes - Consciousness",
+              "Webpage - Consciousness",
+              "Banner Image - Consciousness",
+              "Event Recording - Consciousness",
+              "Event Recording - Consciousness",
+              "Event Recording - Consciousness",
+              "Event Recording - Consciousness",
+              "Event Recording - Consciousness",
+              "Event Recording - Consciousness",
+              "Event Recording - Consciousness",
+              "Presentation - Consciousness",
+              "What is consciousness? - Consciousness",
+              "Have you had experiences with altered states of co - Consciousness",
+              "Is there an evolutionary advantage to consciousnes - Consciousness",
+              "Can an entity have consciousness and NOT Free Will - Consciousness",
+              "Is consciousness individual or collective? - Consciousness",
+              "Are you your body? Are you experiencing your body? - Consciousness",
+              "Could it be possible one day to upload your consci - Consciousness",
+              "Which things are conscious (humans, comatose human - Consciousness",
+              "Are you conscious? Can you prove it? - Consciousness",
+              "Why do we tend to value beings with consciousness - Consciousness",
+              "Is it possible to define or discuss consciousness - Consciousness",
+              "Is reality made of just matter/energy (Monism), or - Consciousness",
+              "Is intelligence correlated to consciousness? - Consciousness",
+              "Do groups (e.g. homo sapiens, Vietnamese, etc.) ha - Consciousness",
+              "How is consciousness connected to our personal ide - Consciousness",
+              "When you die, will your consciousness cease to be? - Consciousness",
+              "Are other people conscious? Can you prove it - Consciousness",
+              "Are zombies (human form and behavior without consc - Consciousness",
+              "Why does consciousness exist? - Consciousness",
+              "What would it mean to have a higher level of consc - Consciousness",
+              "Will it one day be possible to upload your conscio - Consciousness",
+              "Will AI ever reach consciousness? - Consciousness",
+              "Are non-human animals conscious? - Consciousness",
+              "Are all humans conscious, or do some humans lack c - Consciousness"
+            ],
+            "Banner": [
+              "Olga Raski 1.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Cultural Appropriation",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#229: Cultural Appropriation at Da Nang, Vietnam, Tue, Apr 27, 2021",
+              "#183: Cultural Appropriation at Chiang Mai, Thailand, Tue, Sep 1, 2020",
+              "#166: Cultural Appropriation at Online, Tue, May 5, 2020",
+              "#76: Cultural Appropriation at Real Talk Hanoi, Wed, Mar 20, 2019",
+              "#75: Cultural Appropriation at Real Talk Hanoi, Tue, Mar 19, 2019",
+              "#40: Cultural Appropriation at Real Talk Hanoi, Tue, Jun 5, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Banner Image - Cultural Appropriation",
+              "Presenter Notes - Cultural Appropriation",
+              "Group Activities - Cultural Appropriation",
+              "Question Cards - Cultural Appropriation",
+              "Activity Cards - Cultural Appropriation",
+              "Presentation - Cultural Appropriation",
+              "Presentation - Cultural Appropriation",
+              "What is culture? What is cultural appropriation? - Cultural Appropriation",
+              "Has your culture ever been appropriated? Have you - Cultural Appropriation",
+              "How could cultural appropriation be harmful? - Cultural Appropriation",
+              "How could claims of cultural appropriation be harm - Cultural Appropriation",
+              "Does Black culture exist? Asian culture? White cul - Cultural Appropriation",
+              "Should all museum artifacts be returned to their o - Cultural Appropriation",
+              "Should cultural appropriation be illegal? - Cultural Appropriation",
+              "Do cultural artifacts and practices hold real powe - Cultural Appropriation",
+              "Can cultural appropriation only be committed by a - Cultural Appropriation",
+              "Should groups be compensated when their culture is - Cultural Appropriation",
+              "Who “owns” cultural artifacts? What does it mean t - Cultural Appropriation",
+              "Do dominant group members have a responsibility to - Cultural Appropriation",
+              "Why would someone get offended by cultural appropr - Cultural Appropriation",
+              "What is the difference between cultural appreciati - Cultural Appropriation",
+              "Are claims of cultural appropriation mostly harmfu - Cultural Appropriation",
+              "Is the world better off with the interweaving of c - Cultural Appropriation",
+              "Should cultural artifacts be the property of the h - Cultural Appropriation",
+              "How can we reliably determine who is a cultural in - Cultural Appropriation",
+              "What is Cultural Appropriation? - Cultural Appropriation",
+              "How could Cultural Appropriation Be Harmful? - Cultural Appropriation",
+              "How Could Claims of Cultural Appropriation be Harm - Cultural Appropriation",
+              "Proposed Solutions - Cultural Appropriation",
+              "Haiku/Drawing Submissions - Cultural Appropriation",
+              "Haiku/Drawing Submissions - Cultural Appropriation",
+              "Haiku/Drawing Submissions - Cultural Appropriation",
+              "Haiku/Drawing Submissions - Cultural Appropriation",
+              "Haiku/Drawing Submissions - Cultural Appropriation"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Comedy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#233: Comedy at Real Talk Harare, Wed, May 24, 2023",
+              "#231: Comedy at Chiang Mai, Thailand, Wed, Jul 7, 2021",
+              "#223: Comedy at Singapore, Singapore, Tue, Apr 6, 2021",
+              "#213: Comedy at Da Nang, Vietnam, Tue, Feb 16, 2021",
+              "#180: Comedy at Chiang Mai, Thailand, Tue, Aug 11, 2020",
+              "#178: Comedy at Da Nang, Vietnam, Tue, Jul 21, 2020",
+              "#163: Comedy at Online, Thu, Apr 16, 2020",
+              "#161: Comedy at Online, Thu, Apr 2, 2020",
+              "#159: Comedy at Real Talk Hanoi, Wed, Nov 13, 2019",
+              "#158: Comedy at Real Talk Hanoi, Tue, Nov 12, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "What is Laughter? - Comedy",
+              "Implications of the false Alarm Theory of Laughter - Comedy",
+              "Laughing Villains VS. Serious Heroes - Comedy",
+              "Just a Joke - Comedy",
+              "Presenter Notes - Comedy",
+              "Webpage - Comedy",
+              "Event Recording - Comedy",
+              "Video Essay - Comedy",
+              "Video Essay - Comedy",
+              "Video Essay - Comedy",
+              "Song - Comedy",
+              "Banner Image - Comedy",
+              "Presentation - Comedy",
+              "What is a joke? - Comedy",
+              "Why do humans laugh? - Comedy",
+              "Are there some things we shouldn’t make jokes abou - Comedy",
+              "Is there a correlation between telling sexist joke - Comedy",
+              "Think of your favorite joke. Why is it funny? - Comedy",
+              "Have you ever heard a joke that you think went too - Comedy",
+              "Why does it feel bad when people laugh at us? - Comedy",
+              "Why is it funny to see someone fall and hurt thems - Comedy",
+              "Are men more likely than women to make jokes of se - Comedy",
+              "Is life a joke? What does this imply? - Comedy",
+              "Why would the Dalai Lama consider himself a profes - Comedy"
+            ],
+            "Banner": [
+              "Ethics of Comedy by Lara Hardie Stewart.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Pornography",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#182: Pornography at Chiang Mai, Thailand, Tue, Aug 25, 2020",
+              "#132: Pornography at Real Talk Hanoi, Wed, Sep 4, 2019",
+              "#131: Pornography at Real Talk Hanoi, Tue, Sep 3, 2019",
+              "#70: Pornography at Real Talk Hanoi, Tue, Feb 19, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Pornography",
+              "Banner Image - Pornography",
+              "Presentation - Pornography"
+            ],
+            "Banner": [
+              "Ethics of Pornography by Travis Risner OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Sex Work",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#227: Sex Work at Singapore, Singapore, Tue, Apr 20, 2021",
+              "#221: Sex Work at Da Nang, Vietnam, Tue, Mar 30, 2021",
+              "#184: Sex Work at Chiang Mai, Thailand, Tue, Sep 8, 2020",
+              "#167: Sex Work at Online, Tue, May 12, 2020",
+              "#112: Sex Work at Real Talk Hanoi, Wed, Jul 17, 2019",
+              "#111: Sex Work at Real Talk Hanoi, Tue, Jul 16, 2019",
+              "#52: Sex Work at Real Talk Hanoi, Tue, Sep 4, 2018",
+              "#17: Sex for Sale (Sex Work) at Real Talk Hanoi, Wed, Oct 11, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Sex Work",
+              "Webpage - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Event Recording - Sex Work",
+              "Banner Image - Sex Work",
+              "Presentation - Sex Work"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Free Will",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#224: Free Will at Koh Phangan, Thailand, Thu, Apr 8, 2021",
+              "#210: Free Will at Pai, Thailand, Sat, Jan 23, 2021",
+              "#208: Free Will at Real Talk Hanoi, Tue, Jan 12, 2021",
+              "#188: Free Will at Da Nang, Vietnam, Tue, Sep 29, 2020",
+              "#189: Free Will at Chiang Mai, Thailand, Tue, Sep 29, 2020",
+              "#179: Free Will at Online, Tue, Jul 28, 2020",
+              "#156: Free Will at Real Talk Hanoi, Wed, Nov 6, 2019",
+              "#155: Free Will at Real Talk Hanoi, Tue, Nov 5, 2019"
+            ],
+            "Subtopics": [
+              "Diving into Free Will",
+              "Philosophical Arguments Around Free Will",
+              "Religion and Free Will",
+              "Unique Views of Free Will",
+              "Belief in Free Will and its Effects on Behavior",
+              "Belief in Free Will Across Cultures"
+            ],
+            "Event Resources": [
+              "Presenter Notes - Free Will",
+              "Webpage - Free Will",
+              "Game - Free Will",
+              "Presentation - Free Will",
+              "Banner, Roadmap, Contest - Free Will",
+              "Artwork - Free Will",
+              "Free Will, Brain Damage, and The Law - Free Will",
+              "Presentation - Free Will",
+              "Presentation - Free Will",
+              "Banner Image - Free Will",
+              "Puppeteer by M - Free Will"
+            ],
+            "Banner": [
+              "Free Will Artwork.JPG"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Sexual Orientation",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#226: Sexual Orientation at Da Nang, Vietnam, Tue, Apr 13, 2021",
+              "#202: On The Origins of Sexual Orientation (Sexual Orientation) at Chiang Mai, Thailand, Tue, Dec 8, 2020",
+              "#118: LGBTQ+ (Sexual Orientation) at Real Talk Hanoi, Wed, Jul 31, 2019",
+              "#117: LGBTQ+ (Sexual Orientation) at Real Talk Hanoi, Tue, Jul 30, 2019",
+              "#238: Sexual Orientation at Real Talk Harare, Thu, Oct 17, 2024"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Sexual Orientation",
+              "Webpage - Sexual Orientation",
+              "Song - Sexual Orientation",
+              "Banner Image - Sexual Orientation",
+              "Presentation - Sexual Orientation"
+            ],
+            "Banner": [
+              "Seth Rogers.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Polyamory",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#230: Polyamory at Singapore, Singapore, Tue, May 4, 2021",
+              "#225: Polyamory at Real Talk Hanoi, Tue, Apr 13, 2021",
+              "#216: Polyamory at Da Nang, Vietnam, Tue, Mar 9, 2021",
+              "#187: Polyamory at Chiang Mai, Thailand, Tue, Sep 22, 2020",
+              "#175: Polyamory at Da Nang, Vietnam, Tue, Jul 7, 2020",
+              "#170: Polyamory at Online, Wed, May 27, 2020",
+              "#169: Polyamory at Online, Tue, May 26, 2020",
+              "#160: Polyamory at Chiang Mai, Thailand, Sat, Feb 1, 2020",
+              "#74: Polyamory at Real Talk Hanoi, Wed, Mar 13, 2019",
+              "#73: Polyamory at Real Talk Hanoi, Tue, Mar 12, 2019",
+              "#69: Polyamory at Chiang Mai, Thailand, Fri, Feb 1, 2019",
+              "#49: Polyamory at Real Talk Hanoi, Tue, Aug 14, 2018",
+              "#13: Polyamory at Real Talk Hanoi, Sun, Sep 3, 2017",
+              "#236: The more, the merrier...? (Polyamory) at Real Talk Harare, Thu, Aug 15, 2024",
+              "#232: Polyamory at Bali, Indonesia, Fri, Nov 19, 2021"
+            ],
+            "Subtopics": [
+              "ASD and Polyamory",
+              "Raising Kids: Polyamory vs. Monogamy"
+            ],
+            "Event Resources": [
+              "Presenter Notes - Polyamory",
+              "Webpage - Polyamory",
+              "Video Essay - Polyamory",
+              "Video Essay - Polyamory",
+              "Video Essay - Polyamory",
+              "Game - Polyamory",
+              "Full Presentation - Polyamory",
+              "Banner Image - Polyamory",
+              "Banner Image - Polyamory",
+              "Banner Image - Polyamory",
+              "Banner Image - Polyamory",
+              "Capacity for Love - Polyamory",
+              "What is monogamy? What is polyamory? - Polyamory",
+              "Have you explored non-monogamy? Where do you fall - Polyamory",
+              "Have you ever experienced jealousy? What was that - Polyamory",
+              "Do you believe in “the one?” Is it possible to sim - Polyamory",
+              "Are there benefits of romantic and sexual exclusiv - Polyamory",
+              "Would you feel differently about your partner shar - Polyamory",
+              "Why are bisexuals most likely to practice polyamor - Polyamory",
+              "Why is sexual non-exclusivity a dealbreaker for mo - Polyamory",
+              "Is monogamy natural? Is there an evolutionary adva - Polyamory",
+              "How might biological or neurological factors influ - Polyamory",
+              "Have you ever cheated on a partner? - Polyamory",
+              "Is sexual and romantic exclusivity necessary for d - Polyamory",
+              "Are you more triggered by the thought of your part - Polyamory",
+              "How do cultural differences affect attitudes towar - Polyamory",
+              "If humans lived forever, how long would the ideal - Polyamory",
+              "Should we allow children to be raised in polyamoro - Polyamory",
+              "Why have governments, institutions, religions, etc - Polyamory",
+              "Which is more intimate: sex or kissing? - Polyamory",
+              "How would your family feel if you came to dinner w - Polyamory",
+              "Are polyamorous relationships less deep than monog - Polyamory",
+              "Do you have enough time for one partner? For sever - Polyamory",
+              "Is there any benefit to sacrifice? - Polyamory",
+              "If polyamory were normalized, would it result in m - Polyamory",
+              "How has technology and social media affected moder - Polyamory",
+              "What skills or traits are most important for succe - Polyamory",
+              "How might the normalization of polyamory affect so - Polyamory",
+              "Which groups of people are most likely to practice - Polyamory",
+              "Compersion Cooler - Polyamory",
+              "The Polycule Punch - Polyamory",
+              "The New Relationship Energy (NRE) Fizz - Polyamory",
+              "Stock Image - Polyamory",
+              "“Capacity for Love” Slides - Polyamory",
+              "Haiku and Drawing Contest - Polyamory",
+              "Marquee Video Slides - Polyamory",
+              "Which is More Natural? - Polyamory",
+              "What is Polyamory? - Polyamory",
+              "Opening Discussion Questions - Polyamory",
+              "parallel - Polyamory",
+              "Goddess - Polyamory",
+              "you. - Polyamory",
+              "Home - Polyamory",
+              "The World And I (A Poly Love Story) - Polyamory",
+              "Monogamy? In this economy? - Polyamory",
+              "Are you really surprised polyamorous people can’t - Polyamory",
+              "We have a proposition - Polyamory",
+              "Poly-jam-orous - Polyamory",
+              "Rick and Morty Monogamy - Polyamory",
+              "Gregorian Calendar - Polyamory",
+              "How does Mr. Hippy count his wives? - Polyamory",
+              "Happy birthday John - Polyamory"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Psychedelics",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#217: Psychedelics at Real Talk Hanoi, Tue, Mar 16, 2021",
+              "#207: Psychedelics at Koh Phangan, Thailand, Thu, Jan 7, 2021",
+              "#199: Psychedelics at Da Nang, Vietnam, Sat, Nov 21, 2020",
+              "#198: Psychedelics at Chiang Mai, Thailand, Tue, Nov 17, 2020",
+              "#123: Psychedelics at Real Talk Hanoi, Wed, Aug 14, 2019",
+              "#122: Psychedelics at Real Talk Hanoi, Tue, Aug 13, 2019",
+              "#54: Psychedelics at Real Talk Hanoi, Tue, Sep 25, 2018"
+            ],
+            "Subtopics": [
+              "Knowing God Through Psychedelics"
+            ],
+            "Event Resources": [
+              "Presenter Notes - Psychedelics",
+              "Webpage - Psychedelics",
+              "Event Recording - Psychedelics",
+              "Event Recording - Psychedelics",
+              "Event Recording - Psychedelics",
+              "Event Recording - Psychedelics",
+              "Event Recording - Psychedelics",
+              "Event Recording - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Video Essay - Psychedelics",
+              "Song - Psychedelics",
+              "Game - Psychedelics",
+              "Banner Image - Psychedelics",
+              "Presentation - Psychedelics"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Rules of Dating, Sex, and Consent",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#228: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Wed, Apr 21, 2021",
+              "#205: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Tue, Jan 5, 2021",
+              "#204: Rules of Dating, Sex, and Consent at Saigon, Vietnam, Wed, Dec 16, 2020",
+              "#190: Rules of Dating, Sex, and Consent at Chiang Mai, Thailand, Tue, Oct 6, 2020",
+              "#177: Rules of Dating, Sex, and Consent at Online, Tue, Jul 14, 2020",
+              "#106: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Wed, Jul 3, 2019",
+              "#105: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Tue, Jul 2, 2019",
+              "#56: Rules of Dating, Sex, and Consent at Real Talk Hanoi, Tue, Oct 9, 2018",
+              "#234: Rules of Dating, Sex, and Consent at Real Talk Harare, Tue, Jun 27, 2023"
+            ],
+            "Subtopics": [
+              "Is it possible to love multiple people simultaneously?",
+              "Arranged Marriages",
+              "What does consent mean to you?",
+              "What should the age of consent be? Why? ",
+              "AI-ranged Marriages"
+            ],
+            "Event Resources": [
+              "Presenter Notes - Rules of Dating, Sex, and Consent",
+              "Webpage - Rules of Dating, Sex, and Consent",
+              "Discussion Cards - Rules of Dating, Sex, and Consent",
+              "Event Recording - Rules of Dating, Sex, and Consent",
+              "Event Recording - Rules of Dating, Sex, and Consent",
+              "Game - Rules of Dating, Sex, and Consent",
+              "Game - Rules of Dating, Sex, and Consent",
+              "Banner Image - Rules of Dating, Sex, and Consent",
+              "Presentation - Rules of Dating, Sex, and Consent",
+              "Artwork - Rules of Dating, Sex, and Consent",
+              "Presentation - Rules of Dating, Sex, and Consent",
+              "Haiku/Drawing Contest Prompt - Rules of Dating, Sex, and Consent",
+              "Artwork - Rules of Dating, Sex, and Consent"
+            ],
+            "Banner": [
+              "Fetishes by Lara Hardie Stewart OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "The Psychological Differences Easterners and Westerners",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#215: The Psychological Differences Easterners and Westerners at Da Nang, Vietnam, Tue, Mar 2, 2021",
+              "#185: The Psychological Differences Easterners and Westerners at Chiang Mai, Thailand, Tue, Sep 15, 2020",
+              "#176: The Psychological Differences Easterners and Westerners at Da Nang, Vietnam, Tue, Jul 14, 2020",
+              "#168: The Psychological Differences Easterners and Westerners at Online, Tue, May 19, 2020",
+              "#96: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Mon, Jun 3, 2019",
+              "#95: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Wed, May 29, 2019",
+              "#94: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Tue, May 28, 2019",
+              "#53: The Psychological Differences Easterners and Westerners at Real Talk Hanoi, Tue, Sep 11, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - The Psychological Differences Easterners and Westerners",
+              "Webpage - The Psychological Differences Easterners and Westerners",
+              "Video Essay - The Psychological Differences Easterners and Westerners",
+              "Video Essay - The Psychological Differences Easterners and Westerners",
+              "Game - The Psychological Differences Easterners and Westerners",
+              "Banner Image - The Psychological Differences Easterners and Westerners",
+              "Presentation - The Psychological Differences Easterners and Westerners"
+            ],
+            "Banner": "East Brain West Brain by Lara Hardie Stewart 2.jpg"
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Toxic Masculinity",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#220: Toxic Masculinity at Real Talk Hanoi, Tue, Mar 30, 2021",
+              "#200: Toxic Masculinity at Chiang Mai, Thailand, Tue, Nov 24, 2020",
+              "#186: Toxic Masculinity at Da Nang, Vietnam, Tue, Sep 22, 2020",
+              "#80: Toxic Masculinity at Real Talk Hanoi, Wed, Apr 3, 2019",
+              "#79: Toxic Masculinity at Real Talk Hanoi, Tue, Apr 2, 2019",
+              "#235: Masculinity: Toxic? (Toxic Masculinity) at Real Talk Harare, Tue, Jul 4, 2023"
+            ],
+            "Subtopics": [
+              "What is masculinity? Toxic masculinity? Toxic femininity?",
+              "Criticisms, Men's Issues, and Moving Forward"
+            ],
+            "Event Resources": [
+              "Artwork - Toxic Masculinity",
+              "Haiku/Drawing Contest Prompt - Toxic Masculinity",
+              "Presenter Notes - Toxic Masculinity",
+              "Webpage - Toxic Masculinity",
+              "Game - Toxic Masculinity",
+              "Presentation - Toxic Masculinity",
+              "Presentation - Toxic Masculinity",
+              "Presentation - Toxic Masculinity",
+              "Intro Discussion Questions - Toxic Masculinity",
+              "Artwork - Toxic Masculinity",
+              "Banner Image - Toxic Masculinity",
+              "Banner Image - Toxic Masculinity",
+              "Roadmap - Toxic Masculinity"
+            ],
+            "Banner": [
+              "Seth Rogers.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Veganism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#197: Veganism at Da Nang, Vietnam, Sat, Nov 14, 2020",
+              "#181: Veganism at Chiang Mai, Thailand, Tue, Aug 18, 2020",
+              "#162: Veganism at Online, Thu, Apr 9, 2020",
+              "#100: Veganism at Real Talk Hanoi, Wed, Jun 12, 2019",
+              "#99: Veganism at Real Talk Hanoi, Tue, Jun 11, 2019",
+              "#57: Veganism at Real Talk Hanoi, Tue, Oct 16, 2018",
+              "#28: Veganism at Real Talk Hanoi, Tue, Mar 6, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Haiku - Veganism",
+              "Haiku - Veganism",
+              "Haiku - Veganism",
+              "Presenter Notes - Veganism",
+              "Webpage - Veganism",
+              "Event Recording - Veganism",
+              "Event Recording - Veganism",
+              "Event Recording - Veganism",
+              "Banner Image - Veganism",
+              "Presentation - Veganism"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Conspiracy Theories",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#222: Conspiracy Theories at Real Talk Hanoi, Tue, Apr 6, 2021",
+              "#194: Conspiracy Theories at Da Nang, Vietnam, Sat, Oct 31, 2020",
+              "#191: Conspiracy Theories at Chiang Mai, Thailand, Tue, Oct 20, 2020",
+              "#129: Conspiracy Theories at Real Talk Hanoi, Wed, Aug 28, 2019",
+              "#128: Conspiracy Theories at Real Talk Hanoi, Tue, Aug 27, 2019",
+              "#48: Conspiracy Theories at Real Talk Hanoi, Tue, Aug 7, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "What are conspiracy theories - Conspiracy Theories",
+              "Reasons to believe in conspiracy theories - Conspiracy Theories",
+              "Flat Earth Theory - Conspiracy Theories",
+              "Personality traits - Conspiracy Theories",
+              "Quote by Professor Adam Galinsky - Conspiracy Theories",
+              "How conspiracy theories pose public danger - Conspiracy Theories",
+              "Presenter Notes - Conspiracy Theories",
+              "Webpage - Conspiracy Theories",
+              "Game - Conspiracy Theories",
+              "Banner Image - Conspiracy Theories",
+              "Presentation - Conspiracy Theories",
+              "What are conspiracy theories? What are their commo - Conspiracy Theories",
+              "Do you have a favorite conspiracy theory? - Conspiracy Theories",
+              "Are there conspiracy theories you believe/disbelie - Conspiracy Theories",
+              "Are there similarities amongst people who believe - Conspiracy Theories",
+              "How are conspiracy theories different from establi - Conspiracy Theories",
+              "Is the earth round? How do you know? - Conspiracy Theories",
+              "Is there a relationship between psychedelics and c - Conspiracy Theories",
+              "Is there a relationship between the decline of rel - Conspiracy Theories",
+              "Are religions conspiracy theories? - Conspiracy Theories",
+              "Do we have a moral/ethical obligation to believe i - Conspiracy Theories",
+              "What is belief and how does it relate to truth? - Conspiracy Theories",
+              "Does the rise of conspiracy theories imply anythin - Conspiracy Theories",
+              "Is there a relationship between spirituality/polit - Conspiracy Theories",
+              "Do you trust institutions (e.g. governments, news - Conspiracy Theories",
+              "How do you differentiate between reliable and unre - Conspiracy Theories",
+              "Why are most conspiracy theories based around the - Conspiracy Theories",
+              "Are conspiracy theories a new phenomenon? - Conspiracy Theories",
+              "What are the main ways conspiracy theories spread? - Conspiracy Theories",
+              "Are there things that you believe that you’ve neve - Conspiracy Theories"
+            ],
+            "Banner": [
+              "20190828_220211.jpg",
+              "20190828_220218.jpg",
+              "20190828_220235.jpg",
+              "20190829_233321.jpg",
+              "20190828_220242.jpg",
+              "20190828_220308.jpg",
+              "20190828_220329.jpg",
+              "20190828_220349.jpg",
+              "20190828_220841.jpg",
+              "20190828_220853.jpg",
+              "20190829_233340.jpg",
+              "20190829_233401.jpg",
+              "20190829_233417.jpg",
+              "20190829_233425.jpg",
+              "20190829_233546.jpg",
+              [
+                "image.png"
+              ]
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Fetishes",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#196: Fetishes at Chiang Mai, Thailand, Tue, Nov 10, 2020",
+              "#138: Fetishes at Real Talk Hanoi, Wed, Sep 18, 2019",
+              "#137: Fetishes at Real Talk Hanoi, Tue, Sep 17, 2019",
+              "#62: Fetishes at Real Talk Hanoi, Tue, Nov 27, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Fetishes",
+              "Event Recording - Fetishes",
+              "Event Recording - Fetishes",
+              "Event Recording - Fetishes",
+              "Event Recording - Fetishes",
+              "Game - Fetishes",
+              "Banner Image - Fetishes",
+              "Presentation - Fetishes"
+            ],
+            "Banner": [
+              "Fetishes by Lara Hardie Stewart OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Ready",
+            "Topic": "Social Media",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#209: Social Media at Real Talk Hanoi, Tue, Jan 19, 2021",
+              "#206: Social Media at Saigon, Vietnam, Wed, Jan 6, 2021",
+              "#195: Social Media at Chiang Mai, Thailand, Tue, Nov 3, 2020",
+              "#192: Social Media at Da Nang, Vietnam, Sat, Oct 24, 2020",
+              "#89: Social Media at Real Talk Hanoi, Mon, May 13, 2019",
+              "#88: Social Media at Real Talk Hanoi, Wed, May 8, 2019",
+              "#87: Social Media at Real Talk Hanoi, Tue, May 7, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Social Media",
+              "Webpage - Social Media",
+              "Event Recording - Social Media",
+              "Song - Social Media",
+              "Game - Social Media",
+              "Game - Social Media",
+              "Game - Social Media",
+              "Banner Image - Social Media",
+              "Presentation - Social Media"
+            ],
+            "Banner": [
+              "Social Media by Dino Carobene OG.jpeg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Birth Control",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Summary - Birth Control",
+              "Presenter Notes - Birth Control"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Circumcision",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Cryptocurrency",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#43: Cryptocurrency at Real Talk Hanoi, Tue, Jun 26, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Cryptocurrency",
+              "Presentation - Cryptocurrency"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "The Existence of God",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#98: The Existence of God at Real Talk Hanoi, Wed, Jun 5, 2019",
+              "#97: The Existence of God at Real Talk Hanoi, Tue, Jun 4, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - The Existence of God",
+              "Presentation - The Existence of God"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Teaching English",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#67: Teaching English at Real Talk Hanoi, Tue, Jan 22, 2019",
+              "#45: Teaching English at Real Talk Hanoi, Tue, Jul 10, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Teaching English",
+              "Event Recording - Teaching English",
+              "Presentation - Teaching English",
+              "Banner Image - Teaching English"
+            ],
+            "Banner": [
+              "Picture1.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Games",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Abortion",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#71: Abortion at Real Talk Hanoi, Tue, Feb 26, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Abortion",
+              "Discussion Cards - Abortion",
+              "Presentation - Abortion",
+              "Event Recording - Abortion",
+              "Haiku/Drawing Submissions - Abortion",
+              "Banner Image - Abortion",
+              "Haiku/Drawing Submissions - Abortion",
+              "Haiku/Drawing Submissions - Abortion"
+            ],
+            "Banner": [
+              "image.png",
+              "image.png",
+              "image.png",
+              [
+                "image.png"
+              ],
+              [
+                "image.png"
+              ],
+              [
+                "image.png"
+              ]
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Ancient Yogic Philosophy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Ancient Yogic Philosophy",
+              "Presentation - Ancient Yogic Philosophy",
+              "Banner Image - Ancient Yogic Philosophy"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Buddhism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#142: Buddhism at Real Talk Hanoi, Wed, Sep 25, 2019",
+              "#141: Buddhism at Real Talk Hanoi, Tue, Sep 24, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Buddhism",
+              "Presentation - Buddhism"
+            ],
+            "Banner": [
+              "IMG_3448.JPG",
+              "IMG_3442.jpg",
+              "IMG_3443.jpg",
+              "IMG_3444.jpg",
+              "IMG_3445.jpg",
+              "IMG_3446.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Climate Change",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#61: Climate Change at Real Talk Hanoi, Tue, Nov 13, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Climate Change",
+              "Event Recording - Climate Change",
+              "Event Recording - Climate Change",
+              "Event Recording - Climate Change",
+              "Event Recording - Climate Change",
+              "Event Recording - Climate Change",
+              "Presentation - Climate Change"
+            ],
+            "Banner": [
+              "climate change artwork.JPG"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Coronavirus",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#165: Coronavirus at Online, Thu, Apr 30, 2020"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Coronavirus",
+              "Presentation - Coronavirus"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Cults",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#109: Cults at Real Talk Hanoi, Wed, Jul 10, 2019",
+              "#108: Cults at Real Talk Hanoi, Tue, Jul 9, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Cults",
+              "Presentation - Cults",
+              "Banner Image - Cults"
+            ],
+            "Banner": [
+              "Cults by by Hà \"In Our Leader We Trust\" OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Drag Performance",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#58: Drag Performance at Real Talk Hanoi, Tue, Oct 23, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Drag Performance",
+              "Event Recording - Drag Performance",
+              "Presentation - Drag Performance"
+            ],
+            "Banner": [
+              "44728477_530122964131669_3286397653641854976_n.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Euthanasia",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#164: Euthanasia at Online, Thu, Apr 23, 2020",
+              "#66: Euthanasia (Euthanasia) at Real Talk Hanoi, Tue, Jan 15, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Euthanasia",
+              "Event Recording - Euthanasia",
+              "Event Recording - Euthanasia",
+              "Presentation - Euthanasia"
+            ],
+            "Banner": [
+              "Euthanasia by Lara Hardie Stewart OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Existentialism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Feminism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#102: Feminism at Real Talk Hanoi, Wed, Jun 19, 2019",
+              "#101: Feminism at Real Talk Hanoi, Tue, Jun 18, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Feminism"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Globalization",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Hard Drugs",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": [
+              "Drugs by Christine Pham BlueDrug1.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Hunting, Zoos, and Aquariums",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Indigenous American Philosophy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#68: Indigenous American Philosophy (Indigenous American Philosophy) at Real Talk Hanoi, Tue, Jan 29, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Indigenous American Philosophy"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Modern Debates in Yoga",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Poetry - Modern Debates in Yoga",
+              "Poetry - Modern Debates in Yoga",
+              "Summary - Modern Debates in Yoga"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Nihilism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Hinduism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#63: Bhagavad Gita (Hinduism) at Real Talk Hanoi, Tue, Dec 4, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Hinduism",
+              "Event Recording - Hinduism",
+              "Event Recording - Hinduism",
+              "Event Recording - Hinduism",
+              "Event Recording - Hinduism",
+              "Presentation - Hinduism",
+              "Banner Image - Hinduism"
+            ],
+            "Banner": [
+              "Bhagavad Gita Artwok by Lara Hardie Stewart..JPG"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Chakras",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presenter Notes - Chakras"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "Trans",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": [
+              "gender-fluidity1.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "Requires Update",
+            "Topic": "White Privilege",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#174: White Privilege at Online, Tue, Jun 30, 2020",
+              "#91: White Privilege at Real Talk Hanoi, Wed, May 15, 2019",
+              "#90: White Privilege at Real Talk Hanoi, Tue, May 14, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - White Privilege",
+              "Event Recording - White Privilege",
+              "Event Recording - White Privilege",
+              "Presentation - White Privilege"
+            ],
+            "Banner": [
+              "White Privilege by Hà OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Abstinence",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Alcohol",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Cacao Ceremonies",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Chakras",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Dreams",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Domestic Work",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Family",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Freedom of Speech",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Human Gene Editing",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Marijuana",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Haiku - Marijuana",
+              "Summary - Marijuana",
+              "Summary - Marijuana",
+              "Summary - Marijuana",
+              "Summary - Marijuana",
+              "Summary - Marijuana"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Masturbation",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Menstruation",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Neuralink",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Nicotine Vape Pens",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Overpopulation",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Pharmaceuticals",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Psychological Similarities and Differences Between Men and Women",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": [
+              "Biao Wen.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Segregation by Sex",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Should We Get Rid of Our Cellphones?",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Tattoos",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Afterlife",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Psychological Differences Between Left and Right",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Thinking Style Differences Between Africa and the West",
+            "Page": "",
+            "Details": "Disclaimer\nIt is important to note that making generalizations about psychological differences between races is not scientifically valid, as race is a social construct and does not correspond to any biologically determined differences. Additionally, any attempts to make such claims have been used in the past to justify discriminatory practices and beliefs.\nThere have been many academic discussions about the social and cultural factors that have shaped the experiences and perspectives of people from different racial and ethnic groups. However, there is no credible scientific evidence to support the notion of inherent psychological differences between Europeans and Africans.\nIn the field of psychology, researchers have instead focused on studying individual differences and cultural variations in psychological traits and behaviors. This work has emphasized the role of cultural, socioeconomic, and historical factors in shaping individuals' experiences and outcomes, and has shown that psychological differences are complex and cannot be reduced to simple, racial or ethnic categories.\nCulture can play a significant role in shaping individuals' beliefs, values, behaviors, and ways of thinking. However, it is important to note that culture is complex and multi-faceted, and that individuals within a culture can have diverse experiences and perspectives.\nSummary\nCollectivism vs. Individualism: In many African cultures, collectivism is highly valued, with a strong emphasis on community, interdependence, and mutual support. In contrast, individualism is often more highly valued in Western cultures. This difference can influence the way people think about relationships, community, and responsibility.\nOral Tradition: In many African cultures, oral tradition is an important aspect of cultural identity and history, with stories, songs, and proverbs passed down from generation to generation. In contrast, written texts and books often play a more central role in Western cultures.\nHolistic vs. Analytic Thinking: In many African cultures, a holistic and intuitive approach to problem-solving is emphasized, where the big picture and context are given priority over details and analysis. In contrast, a more analytical and detail-oriented approach is often encouraged in Western cultures.\nEmotionality: In many African cultures, emotions are seen as a fundamental part of the human experience and are often expressed openly and directly. In contrast, in some Western cultures, there is a tendency to suppress or downplay emotions in certain situations.\nTime Perception: In many African cultures, time is perceived as a more flexible and cyclical concept, rather than a linear and absolute one. In contrast, time is often seen as a linear and absolute concept in Western cultures.\nSpirituality: Spirituality and religious beliefs often play a central role in many African cultures, influencing the way individuals understand the world and their place in it. In contrast, spirituality and religion may not be as central to some Western cultures.\nPerception of causality: In many African cultures, people tend to explain events in terms of supernatural forces, spirits, or the actions of ancestors, while Western cultures tend to have a more materialist and scientific explanation of causality.\nConcept of self: African cultures tend to have a more communitarian concept of self, in which the individual is seen as part of a larger social network, while Western cultures tend to have a more individualistic concept of self.\nEpistemology: African cultures tend to have a more participatory and experiential approach to knowledge, in which knowledge is seen as something that is acquired through direct engagement with the environment and through communal interaction, while Western cultures tend to have a more rational and empirical approach to knowledge, in which knowledge is seen as something that is acquired through observation and scientific inquiry.\nApproach to problem solving: African cultures tend to emphasize consensus and cooperation in problem solving, while Western cultures tend to emphasize competition and individual achievement.\nAttitudes towards authority: African cultures tend to have a more hierarchical and deferential attitude towards authority, while Western cultures tend to have a more egalitarian and critical attitude towards authority.\nConcept of space: African cultures tend to have a more embodied and relational concept of space, in which space is seen as connected to social relationships and personal experience, while Western cultures tend to have a more abstract and objective concept of space, in which space is seen as a neutral and objective entity.\nAttitudes towards nature: African cultures tend to have a more animistic and spiritual attitude towards nature, in which nature is seen as having spiritual agency and being interrelated with human beings, while Western cultures tend to have a more mechanistic and utilitarian attitude towards nature, in which nature is seen as a resource to be exploited for human benefit.\nPerception of reality: African cultures tend to have a more flexible and multi-layered perception of reality, in which reality is seen as fluid and open to multiple interpretations, while Western cultures tend to have a more fixed and single-layered perception of reality, in which reality is seen as objective and unchanging.\nConcept of justice: African cultures tend to have a more restorative and community-focused concept of justice, in which the emphasis is on restoring relationships and repairing harm, while Western cultures tend to have a more retributive and individual-focused concept of justice, in which the emphasis is on punishment and retribution.\nStories\nThe News and Recent Events\nCOVID-19: The COVID-19 pandemic has exposed differences in how African and Western cultures approach public health and individual responsibility. In many African countries, traditional healers and herbal remedies have been embraced as a complementary approach to conventional medicine, reflecting a more holistic and communitarian approach to health. In contrast, Western countries have tended to rely more heavily on science-based interventions and individual responsibility, reflecting a more analytical and individualistic approach.\nConflict Resolution: Another example can be seen in the ways in which African and Western cultures approach conflict resolution. African cultures often place a strong emphasis on consensus-building and finding common ground, reflecting a more holistic and communitarian approach. In contrast, Western cultures tend to prioritize individual rights and interests, and may be more likely to resort to legal and institutional mechanisms to resolve conflicts, reflecting a more analytical and individualistic approach.\nActivities\n\n\nRelated Notes",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Universal Basic Income",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Yogic Philosophy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#147: Yogic Philosophy at Real Talk Hanoi, Wed, Oct 9, 2019",
+              "#146: Yogic Philosophy at Real Talk Hanoi, Tue, Oct 8, 2019",
+              "#55: Yogic Philosophy at Real Talk Hanoi, Tue, Oct 2, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Yogic Philosophy",
+              "Event Recording - Yogic Philosophy",
+              "Event Recording - Yogic Philosophy",
+              "Event Recording - Yogic Philosophy",
+              "Event Recording - Yogic Philosophy",
+              "Event Recording - Yogic Philosophy"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Adoption",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Animal Husbandry",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#78: The Animal Dilemma (Animal Husbandry) at Real Talk Hanoi, Wed, Mar 27, 2019",
+              "#77: The Animal Dilemma (Animal Husbandry) at Real Talk Hanoi, Tue, Mar 26, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Animal Testing",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Aztec Philosophy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Black Holes",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Cancel Culture",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Cannibalism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Capital Punishment",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Carl Jung",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Confucius",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#144: Confucius at Real Talk Hanoi, Sun, Sep 29, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Corporal Punishment",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Death",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Defund the Police",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#172: Defund the Police at Online, Tue, Jun 9, 2020"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Defund the Police",
+              "Event Recording - Defund the Police",
+              "Interview - Defund the Police",
+              "Presentation - Defund the Police"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Disability and ableism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Effective Altruism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#12: Effective Altruism at Real Talk Hanoi, Sat, Jul 22, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Eugenics",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Festival Culture",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Gender Fluidity",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#82: Gender Fluidity at Real Talk Hanoi, Wed, Apr 10, 2019",
+              "#81: Gender Fluidity at Real Talk Hanoi, Tue, Apr 9, 2019",
+              "#41: Gender Pronouns & Political Correctness (Gender Fluidity) at Real Talk Hanoi, Tue, Jun 12, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Gender Fluidity"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Genetalia",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#84: Genetalia at Real Talk Hanoi, Wed, Apr 17, 2019",
+              "#83: Genetalia at Real Talk Hanoi, Tue, Apr 16, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Greek Mythology",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Gun Control",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Gurdjieff",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#50: Gurdjieff at Real Talk Hanoi, Tue, Aug 21, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Gurdjieff",
+              "Event Recording - Gurdjieff"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Incest",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Is Life a Computer Simulation?",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Political Violance",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#171: Political Violance at Online, Tue, Jun 2, 2020"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Islam",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Jean-Paul Sartre’s Existentialism is a Humanism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#127: Jean-Paul Sartre’s Existentialism is a Humanism at Real Talk Hanoi, Sun, Aug 25, 2019",
+              "#31: Jean-Paul Sartre’s Existentialism is a Humanism at Real Talk Hanoi, Tue, Mar 27, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Meditation",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [
+              "Summary - Meditation"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Meritocracy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Modernism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#20: Modernism at Real Talk Hanoi, Sat, Nov 18, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Mother Goddess",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#34: Mother Goddess at Real Talk Hanoi, Tue, Apr 17, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Nationalism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#26: Nationalism at Real Talk Hanoi, Tue, Feb 6, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Noam Chomsky",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#130: Noam Chomsky at Real Talk Hanoi, Sun, Sep 1, 2019",
+              "#11: Noam Chomsky at Real Talk Hanoi, Sat, May 20, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Nonviolent Communication",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#19: Nonviolent Communication at Real Talk Hanoi, Tue, Nov 7, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Norse Mythology",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Occultism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#153: Occultism at Real Talk Hanoi, Wed, Oct 30, 2019",
+              "#152: Occultism at Real Talk Hanoi, Tue, Oct 29, 2019",
+              "#59: Occultism at Real Talk Hanoi, Tue, Oct 30, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Occultism",
+              "Presentation - Occultism"
+            ],
+            "Banner": [
+              "Occultism by Lara Hardie Stewart 1 OG.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Orientalism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#46: Orientalism at Real Talk Hanoi, Tue, Jul 17, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Orientalism"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Palestine",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Polarization",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Political Correctness",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#135: Political Correctness at Real Talk Hanoi, Wed, Sep 11, 2019",
+              "#134: Political Correctness at Real Talk Hanoi, Tue, Sep 10, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Political Correctness"
+            ],
+            "Banner": [
+              "20190911_221237.jpg",
+              "20190911_221251.jpg",
+              "20190911_221323.jpg",
+              "20190911_221303.jpg",
+              "Political Correctness.055.jpeg",
+              "Political Correctness.056.jpeg",
+              "Political Correctness.057.jpeg",
+              "Political Correctness.058.jpeg",
+              "Political Correctness.059.jpeg",
+              "Political Correctness.060.jpeg",
+              "Political Correctness.061.jpeg",
+              "20190829_233321.jpg",
+              "20190829_233340.jpg",
+              "20190829_233401.jpg",
+              "20190829_233417.jpg",
+              "20190829_233425.jpg",
+              "20190829_233546.jpg",
+              "20190910_141649.jpg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Prisons",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Qigong",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#39: Qigong at Real Talk Hanoi, Tue, May 29, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - Qigong"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Reparations",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#173: Reparations at Online, Tue, Jun 16, 2020"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Interview - Reparations",
+              "Event Recording - Reparations",
+              "Event Recording - Reparations",
+              "Presentation - Reparations",
+              "Banner Image - Reparations"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Socialism vs. Capitalism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#16: Socialism vs. Capitalism at Real Talk Hanoi, Wed, Oct 4, 2017"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "String Theory",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Suicide",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Surveillance Capitalism",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#126: Surveillance Capitalism at Real Talk Hanoi, Wed, Aug 21, 2019",
+              "#125: Surveillance Capitalism at Real Talk Hanoi, Tue, Aug 20, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Surveillance Capitalism",
+              "Event Recording - Surveillance Capitalism",
+              "Event Recording - Surveillance Capitalism",
+              "Event Recording - Surveillance Capitalism",
+              "Event Recording - Surveillance Capitalism",
+              "Presentation - Surveillance Capitalism"
+            ],
+            "Banner": [
+              "2019.08.21 - 22 Surveillance Capitalism Images.083.jpeg",
+              "2019.08.21 - 22 Surveillance Capitalism Images.085.jpeg",
+              "2019.08.21 - 22 Surveillance Capitalism Images.082.jpeg",
+              "2019.08.21 - 22 Surveillance Capitalism Images.084.jpeg"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Tao Te Ching",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#44: Tao Te Ching at Real Talk Hanoi, Tue, Jul 3, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Event Recording - Tao Te Ching",
+              "Presentation - Tao Te Ching"
+            ],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Alt Right",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Bible",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#42: The Psychological Significance of the Biblical Stories (The Bible) at Real Talk Hanoi, Tue, Jun 19, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Fashion Industry",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [
+              "#86: The Fashion Industry at Real Talk Hanoi, Wed, Apr 24, 2019",
+              "#85: The Fashion Industry at Real Talk Hanoi, Tue, Apr 23, 2019",
+              "#37: The Fashion Industry at Real Talk Hanoi, Tue, May 8, 2018"
+            ],
+            "Subtopics": [],
+            "Event Resources": [
+              "Presentation - The Fashion Industry"
+            ],
+            "Banner": [
+              "image.png"
+            ]
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Patriarchy",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "The Presocratics",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [
+              "#136: The Presocratics at Real Talk Hanoi, Sun, Sep 15, 2019"
+            ],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Time",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Hardcore Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Vaccines",
+            "Page": "",
+            "Details": "",
+            "Favorite": "Jon Dallas",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "Video Games",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        },
+        {
+          "values": {
+            "Status": "New Suggestion",
+            "Topic": "War",
+            "Page": "",
+            "Details": "",
+            "Favorite": "",
+            "Notes": "",
+            "Type": "Social Philosophy",
+            "Events": [],
+            "Subtopics": [],
+            "Event Resources": [],
+            "Banner": []
+          }
+        }
+      ]
+    }
+  }
